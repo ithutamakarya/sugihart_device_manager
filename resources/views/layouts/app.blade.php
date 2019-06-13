@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>AEGISLITE</title>
+  <meta name="description" content="Elmer is a Dashboard & Admin Site Responsive Template by hencework." />
+  <meta name="keywords" content="admin, admin dashboard, admin template, cms, crm, Elmer Admin, Elmeradmin, premium admin templates, responsive admin, sass, panel, software, ui, visualization, web app, application" />
+  <meta name="author" content="hencework"/>
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="{{asset('/images/ic_aegis.jpeg') }}" />
+  
+  <!-- Data table CSS -->
+  <link href="{{ asset('elmer/vendors/bower_components/datatables/media/css/jquery.dataTables.min.css') }}" rel="stylesheet" type="text/css"/>
+  
+  <link href="{{ asset('elmer/vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.css') }}" rel="stylesheet" type="text/css">
+    
+  <link rel="stylesheet" href="{{asset('bootstrap-daterangepicker/daterangepicker.css')}}">
+  
+  <!-- Custom CSS -->
+  <link href="{{ asset('elmer/dist/css/style.css') }}" rel="stylesheet" type="text/css">
+
+
+  <!-- Sweet Alert -->
+  <link rel="stylesheet" href="{{asset('css/sweetalert.css')}}">
+  @yield('style')
+    <style type="text/css">
+      .invisible_data{
+        display: none;
+      }
+    </style>
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div class="preloader-it">
+    <div class="la-anim-1"></div>
+  </div>
+  <!-- /Preloader -->
+    <div class="wrapper  theme-1-active pimary-color-blue">
+    
+    @include('_main_header')
+
+    <!-- sidebar -->
+    @include('_main_sidebar')
+    
+        <!-- Main Content -->
+    <div class="page-wrapper">
+      
+      @yield('content')
+
+      @include('_main_footer')
+
+      <!-- /Footer -->
+      
+    </div>
+        <!-- /Main Content -->
+
+    </div>
+    <!-- /#wrapper -->
+  
+  <!-- JavaScript -->
+  
+    <!-- jQuery -->
+    <script src="{{ asset('elmer/vendors/bower_components/jquery/dist/jquery.min.js') }}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{ asset('elmer/vendors/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    
+  <!-- Data table JavaScript -->
+  <script src="{{ asset('elmer/vendors/bower_components/datatables/media/js/jquery.dataTables.min.js') }}"></script>
+  <script src="{{ asset('elmer/dist/js/dataTables-data.js') }}"></script>
+  
+
+  <!-- Slimscroll JavaScript -->
+  <script src="{{ asset('elmer/dist/js/jquery.slimscroll.js') }}"></script>
+  
+  <!-- Progressbar Animation JavaScript -->
+  <script src="{{ asset('elmer/vendors/bower_components/waypoints/lib/jquery.waypoints.min.js') }}"></script>
+  <script src="{{ asset('elmer/vendors/bower_components/jquery.counterup/jquery.counterup.min.js') }}"></script>
+  
+  <!-- Fancy Dropdown JS -->
+  <script src="{{ asset('elmer/dist/js/dropdown-bootstrap-extended.js') }}"></script>
+  
+  <!-- Sparkline JavaScript -->
+  <script src="{{ asset('elmer/vendors/jquery.sparkline/dist/jquery.sparkline.min.js') }}"></script>
+  
+  <!-- Owl JavaScript -->
+  <script src="{{ asset('elmer/vendors/bower_components/owl.carousel/dist/owl.carousel.min.js') }}"></script>
+  
+  <!-- Switchery JavaScript -->
+  <script src="{{ asset('elmer/vendors/bower_components/switchery/dist/switchery.min.js') }}"></script>
+  
+  <!-- EChartJS JavaScript -->
+  <script src="{{ asset('elmer/vendors/bower_components/echarts/dist/echarts-en.min.js') }}"></script>
+  <script src="{{ asset('elmer/vendors/echarts-liquidfill.min.js') }}"></script>
+  
+  <!-- Toast JavaScript -->
+  <script src="{{ asset('elmer/vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.js') }}"></script>
+  
+  <!-- Init JavaScript -->
+  <script src="{{ asset('elmer/dist/js/init.js') }}"></script><!-- 
+  <script src="{{ asset('elmer/dist/js/dashboard-data.js') }}"></script> -->
+
+<script src="{{asset('js/sweetalert.min.js')}}"></script>
+
+  <script type="text/javascript">
+    
+/*****Load function start*****/
+$(window).load(function(){
+
+    //prevent a # target
+    $(document).on('click', 'a[href="#"]', function(e) {
+      e.preventDefault();
+    });
+
+    //Delete Function
+    $(".delete_data").on("click",function(){
+      var url = $(this).attr("data-url");
+
+      swal({
+        title: "Apakah Anda Yakin?",
+        text: "Jika anda Klik Iya Data Anda Akan Hilag untuk selamanya",
+        type: "warning",
+        showCancelButton: true,
+        confirmButtonClass: "btn-danger",
+        confirmButtonText: "Iya",
+        cancelButtonText: "Tidak",
+        closeOnConfirm: false,
+        closeOnCancel: false
+      },
+      function(isConfirm) {
+        if (isConfirm) {
+          window.location.href = url;
+          /*swal("Deleted!", "Your imaginary file has been deleted.", "success");*/
+        } else {
+          swal("Cancelled", "Data Anda Aman :)", "error");
+        }
+      });
+    
+    })
+
+  @if (Session::has('message_alert'))
+    window.setTimeout(function(){
+      $.toast({
+        heading: 'Information',
+        text: '{{ Session::get("message_alert") }}',
+        position: 'bottom-left',
+        loaderBg:'#f8b32d',
+        icon: '{{ Session::get('status_alert') }}',
+        hideAfter: 3500, 
+        stack: 1
+      });
+    }, 1000);
+  @endif
+
+
+});
+  </script>
+
+      @yield('scripts')
+</body>
+
+</html>

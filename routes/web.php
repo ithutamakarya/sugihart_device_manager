@@ -11,6 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Auth::routes();
+
+Route::get('/', 'HomeController@index')->name('home');
+
+Route::get('/logout','UserController@logout');
+
+//User
+Route::get('/user_list', 'UserController@index');
+Route::post('/create_user', 'UserController@create');
+Route::post('/update_user', 'UserController@update');
+Route::get('/delete_user/{id}', 'UserController@delete');
+
