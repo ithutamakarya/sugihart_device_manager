@@ -31,12 +31,9 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
-        return view('user.index', compact('users'));
+        return view('admin.user.index', compact('users'));
     }
-    public function logout(){
-        Auth::logout();
-        return Redirect::to('');
-    }
+    //users
     public function create(Request $request){
         $data = new User();
         
@@ -45,45 +42,44 @@ class UserController extends Controller
         $data->username = $request->email;
         $data->address = $request->address;
         $data->phone = $request->phone;
-        
         $data->password =  Hash::make($request->password);
-        
         $data->save();
-
+        $this->CreateLogActivity("Simpan","User");
         $this->setMessageCRUD("Simpan","success");
-
-        return Redirect::to('user_list');
+        return Redirect::to('admin/user_list');
     }
 
     public function update(Request $request){
         $data = User::where('id', $request->id)->first();
+        
         $data->name = $request->name;
         $data->email = $request->email;
         $data->username = $request->email;
         $data->address = $request->address;
-        $data->phone = $request->phone;
-        
-        
+        $data->phone = $request->phone;        
         if($request->password != "terlalu"){
             $data->password =  Hash::make($request->password);
         }
-
         $data->save();
-        
+        $this->CreateLogActivity("Update","User");
         $this->setMessageCRUD("Ubah","success");
         
-        return Redirect::to('user_list');
+        return Redirect::to('admin/user_list');
     }
 
     public function delete($id){
         $data = User::where('id', $id)->first();
-        
-        $data->delete();
-
+        $data->is_active = 0;
+        $data->update();
+        $this->CreateLogActivity("Delete","User");
         $this->setMessageCRUD("Hapus","success");
-
-        return Redirect::to('user_list');
+        return Redirect::to('admin/user_list');
     }
+    public function logout(){
+        Auth::logout();
+        return Redirect::to('');
+    }
+    
     public function setMessageCRUD($message,$status){
         session()->flash('message_alert', "Data Berhasil Di ".$message);
         session()->flash('status_alert', $status);    

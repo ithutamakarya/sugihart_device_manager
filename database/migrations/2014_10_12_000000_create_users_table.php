@@ -21,9 +21,9 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->integer('status')->comment('0:admin;1:publisher;2:editor;3:client;');
-            $table->integer('is_active')->default(1);
             $table->rememberToken();
             $table->ipAddress('ip_address');
+            $table->integer('is_active')->default(1)->comment('0:not active;1:active');
             $table->timestamps();
 
         });
