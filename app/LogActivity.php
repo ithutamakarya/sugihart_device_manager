@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ActivityLog extends Model
+class LogActivity extends Model
 {
-    protected $table = 'log_users';
+    protected $table = 'log_activity';
 
     public function user()
     {

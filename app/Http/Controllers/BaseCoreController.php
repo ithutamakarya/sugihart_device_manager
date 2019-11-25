@@ -7,7 +7,7 @@ use Session;
 use Illuminate\Support\Facades\Auth;
 //use Illuminate\Support\Facades\Hash;
 
-use App\ActivityLog;
+use App\LogActivity;
 class BaseCoreController extends Controller
 {
     /**
@@ -21,17 +21,17 @@ class BaseCoreController extends Controller
     }
     public function CreateLogActivity($value,$activity)
     {
-        $ActivityLog = new ActivityLog();
-        $ActivityLog->user_id = Auth::user()->id;
-        $ActivityLog->log_activity = "Melakukan <label class='label label-primary'>".$value."</label> Data";
-        $ActivityLog->activity = $activity;
-        $ActivityLog->ip_address = $_SERVER['REMOTE_ADDR'];
-        $ActivityLog->save();
+        $LogActivity = new LogActivity();
+        $LogActivity->user_device = Auth::user()->name;
+        $LogActivity->activity = "Melakukan ".$value." Data";
+        $LogActivity->ip_address = $_SERVER['REMOTE_ADDR'];
+        $LogActivity->save();
     }
     
     public function setMessageCRUD($message,$status){
         session()->flash('message_alert', "Data Berhasil Di ".$message);
         session()->flash('status_alert', $status);    
     }
+    
     
 }

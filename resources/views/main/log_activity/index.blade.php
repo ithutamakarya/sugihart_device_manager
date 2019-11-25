@@ -34,8 +34,7 @@
                         <thead>
                           <tr>
                             <th>#</th>
-                            <th>User</th>
-                            <th>Log Activity</th>
+                            <th>User / Device</th>
                             <th>Activity</th>
                             <th>IP Address</th>
                             <th>Recorded At</th>
@@ -46,12 +45,11 @@
                         @foreach($log_activity as $row => $p)
                         
                         <tr>
-                          <td >{{ $row + 1 }}</td>            
-                          <td  >{{$p->user->name }}</td>       
-                          <td  ><?= $p->log_activity ?></td>       
-                          <td  >{{$p->activity }}</td>       
-                          <td  >{{$p->ip_address }}</td>     
-                          <td  >{{$p->created_at }}</td>
+                          <td>{{ $row + 1 }}</td>            
+                          <td>{{$p->user_device }}</td>           
+                          <td>{{$p->activity }}</td>       
+                          <td>{{$p->ip_address }}</td>     
+                          <td>{{$p->created_at }}</td>
                         </tr>
                         @endforeach
                           

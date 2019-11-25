@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>AEGISLITE</title>
+  <title>Sugihart Device Manager</title>
   <meta name="description" content="Elmer is a Dashboard & Admin Site Responsive Template by hencework." />
   <meta name="keywords" content="admin, admin dashboard, admin template, cms, crm, Elmer Admin, Elmeradmin, premium admin templates, responsive admin, sass, panel, software, ui, visualization, web app, application" />
   <meta name="author" content="hencework"/>
@@ -182,7 +182,15 @@
   
   <!-- Sparkline JavaScript -->
   <script src="{{ asset('elmer/vendors/jquery.sparkline/dist/jquery.sparkline.min.js') }}"></script>
+
+    
+  <!-- Moment JavaScript -->
+  <script type="text/javascript" src="{{ asset('elmer/vendors/bower_components/moment/min/moment-with-locales.min.js') }}"></script>
   
+      
+  <!-- Bootstrap Datetimepicker JavaScript -->
+  <script type="text/javascript" src="{{ asset('elmer/vendors/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js') }}"></script>
+
   <!-- Owl JavaScript -->
   <script src="{{ asset('elmer/vendors/bower_components/owl.carousel/dist/owl.carousel.min.js') }}"></script>
   
@@ -238,7 +246,6 @@ $(window).load(function(){
 
       swal({
         title: "Apakah Anda Yakin?",
-        text: "Jika anda Klik Iya Data Anda Akan Hilag untuk selamanya",
         type: "warning",
         showCancelButton: true,
         confirmButtonClass: "btn-danger",

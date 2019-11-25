@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
-class CreateLogUsersTable extends Migration
+class AddLogActivityTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateLogUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('log_users', function (Blueprint $table) {
+        Schema::create('log_activity', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('user_id');
-            $table->string('log_activity');
+            $table->string('user_device')->nullable();
             $table->string('activity');
-            $table->ipAddress('ip_address');
+            $table->string('ip_address');
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ class CreateLogUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('log_users');
+        Schema::dropIfExists('log_activity');
     }
 }
