@@ -40,6 +40,11 @@ class MainController extends Controller
         $this->dataParse['log_activity'] = LogActivity::orderBy('id','desc')->get();
         return view('main.log_activity.index', $this->dataParse);
     }
+    
+    public function logout(){
+        Auth::logout();
+        return Redirect::to('');
+    }
 
 
 
