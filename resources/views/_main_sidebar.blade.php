@@ -12,6 +12,13 @@
             </div>
             <div class="clearfix"></div></a>
         </li>
+        <li>
+          <a href="{{ url('/main/vendor') }}" data-toggle="collapse" data-target="#app_dr">
+            <div class="pull-left"><i class="fa fa-users mr-20"></i>
+              <span class="right-nav-text">Vendor </span>
+            </div>
+            <div class="clearfix"></div></a>
+        </li>
         
         <li class="navigation-header">
           <span>Device</span> 

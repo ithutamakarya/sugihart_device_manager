@@ -63,7 +63,7 @@
                               <p id="{{ 'id'.$row }}" class="invisible_data">{{ $p->id }}</p>
                             </div>
                           <!-- /device/view/{{$p->id}} -->
-                            <a href="javascript:void(0);" class="btn btn-success delete_data" data-url="{{ url('main/delete_device/'.$p->id) }}">Delete</a>
+                            <a href="javascript:void(0);" class="btn btn-success delete_data" data-url="{{ url('main/delete_device/'.$p->id.'/'.$vendor_id) }}">Delete</a>
                             <a href="javascript:void(0);" data-id="{{ $row }}" class="btn btn-warning edit_data">Edit</a>
                           </td>
                         </tr>

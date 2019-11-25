@@ -90,5 +90,37 @@ class MainActionController extends BaseCoreController
         $this->setMessageCRUD("Hapus","success");
         return Redirect::to('main/device/'.$vendor_id);
     }
+   public function vendor_create(Request $request){
+        $data = new vendor();
+        
+        $data->name = $request->name;
+        $data->token = $request->token;
+        $data->save();
+        $this->CreateLogActivity("Simpan","vendor");
+        $this->setMessageCRUD("Simpan","success");
+        return Redirect::to('main/vendor');
+    }
+
+    public function vendor_update(Request $request){
+        $data = Vendor::where('id', $request->id)->first();
+        
+        $data->name = $request->name;
+        $data->token = $request->token;
+        $data->save();
+        
+        $this->CreateLogActivity("Update","vendor");
+        $this->setMessageCRUD("Ubah","success");
+        
+        return Redirect::to('main/vendor');
+    }
+
+    public function vendor_delete($id){
+        $data = Vendor::where('id', $id)->first();
+        $data->is_active = 0;
+        $data->update();
+        $this->CreateLogActivity("Delete","vendor");
+        $this->setMessageCRUD("Hapus","success");
+        return Redirect::to('main/vendor');
+    }
     
 }

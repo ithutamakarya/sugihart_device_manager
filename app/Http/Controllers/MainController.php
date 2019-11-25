@@ -35,6 +35,12 @@ class MainController extends Controller
         $this->dataParse['users'] = User::where('is_active',1)->get();
         return view('main.user.index', $this->dataParse);
     }
+
+    public function vendor()
+    {
+        $this->dataParse['vendor'] = Vendor::where('is_active',1)->get();
+        return view('main.vendor.index', $this->dataParse);
+    }
     public function log_activity()
     {
         $this->dataParse['log_activity'] = LogActivity::orderBy('id','desc')->get();
