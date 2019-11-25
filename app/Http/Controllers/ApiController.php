@@ -29,9 +29,6 @@ class ApiController extends Controller
     {
         $access_token = request()->header('Authorization');
         $ip_access = $_SERVER['REMOTE_ADDR'];
-
-        print_r("ip : ".$access_token);
-        print_r("ip : ".$ip_access);
         $data = DB::table('device')->where('type','kios-k')->where('token',$access_token)->where('ip_access',$ip_access)->first();
         if($data){
             return Response::json($data,200);      
