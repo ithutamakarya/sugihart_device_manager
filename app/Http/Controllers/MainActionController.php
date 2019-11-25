@@ -53,10 +53,12 @@ class MainActionController extends BaseCoreController
     public function device_create(Request $request){
         $data = new Device();
         
+        $vendor_id = $request->vendor_id;
+
         $data->name = $request->name;
         $data->url_device = $request->url_device;
         $data->type = $request->type;
-        $vendor_id = $request->vendor_id;
+        $data->vendor_id = $request->vendor_id;
         $data->ip_access = $request->ip_access;
         $data->token = $request->token;
         $data->save();
@@ -68,10 +70,12 @@ class MainActionController extends BaseCoreController
     public function device_update(Request $request){
         $data = Device::where('id', $request->id)->first();
         
+        $vendor_id = $request->vendor_id;
+        
         $data->name = $request->name;
         $data->url_device = $request->url_device;
         $data->type = $request->type;
-        $vendor_id = $request->vendor_id;
+        $data->vendor_id = $request->vendor_id;
         $data->token = $request->token;
         $data->ip_access = $request->ip_access;
         $data->save();
