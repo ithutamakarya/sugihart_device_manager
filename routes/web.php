@@ -41,7 +41,7 @@ Route::post('/main/update_device', 'MainActionController@device_update');
 Route::get('/main/delete_device/{id}/{vendor_id}', 'MainActionController@device_delete');
 
 
-Route::get('/api/get_data_cctv', 'ApiController@getDataCCTV');
+Route::get('/api/get_data_cctv/{token}', 'ApiController@getDataCCTV');
 Route::get('/api/get_kios', 'ApiController@getKios');
 Route::get('/api/get_device/{token}', 'ApiController@getDevice');
 
