@@ -159,7 +159,6 @@
       $("input[name='token']").val(token);
       $("#type option[value='" +  type  + "']").prop('selected', true);
 
-      $("input[name='token']").val(maketoken(30));
       $('#modal-success').modal('show'); 
     });
     $("#add_data").on('click',function(){
