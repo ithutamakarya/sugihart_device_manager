@@ -48,7 +48,10 @@ class ApiController extends Controller
         }
     }
     public function render_kios(){
-        
+        $data =[
+                'token' => 'r3YZhiYEOWCDial3PmE42QhBuRkYFF'
+        ];
+        return view('render_kios.index',$data);
     }
     
 

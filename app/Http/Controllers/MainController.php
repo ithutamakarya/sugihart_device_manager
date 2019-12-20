@@ -26,7 +26,7 @@ class MainController extends Controller
     {
         $this->dataParse['vendor_id'] = $vendor_id;
         $this->dataParse['vendor_name'] = Vendor::where('id',$vendor_id)->first()->name;
-        $this->dataParse['device'] = Device::where('vendor_id',$vendor_id)->where('is_active',1)->get();
+        $this->dataParse['device'] = Device::where('vendor_id',$vendor_id)->where('is_active',1)->orderBy('type','asc')->get();
         return view('main.device.index', $this->dataParse);
     }
 

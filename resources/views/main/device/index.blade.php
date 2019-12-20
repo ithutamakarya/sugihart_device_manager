@@ -63,6 +63,9 @@
                               <p id="{{ 'id'.$row }}" class="invisible_data">{{ $p->id }}</p>
                             </div>
                           <!-- /device/view/{{$p->id}} -->
+                            @if($p->type == "cctv")
+                            <a href="javascript:void(0);" data-id="{{ $row }}" class="btn btn-primary create_sub">Create Sub</a>
+                            @endif
                             <a href="javascript:void(0);" class="btn btn-success delete_data" data-url="{{ url('main/delete_device/'.$p->id.'/'.$vendor_id) }}">Delete</a>
                             <a href="javascript:void(0);" data-id="{{ $row }}" class="btn btn-warning edit_data">Edit</a>
                           </td>
@@ -141,6 +144,19 @@
 
 <script type="text/javascript">
   $(function(){
+
+    $(".create_sub").click(function(){
+      var id = $(this).attr("data-id");
+      var type = $("#type" + id).text();
+      var token = $("#token" + id).text();
+
+      $("#form-action").attr("action","{{ url('main/create_device') }}");
+
+      $("input[name='token']").val(token);
+      $("#type option[value='" +  type  + "']").prop('selected', true);
+
+      $('#modal-success').modal('show'); 
+    });
     $(".edit_data").click(function(){
       var id = $(this).attr("data-id");
       var id_data = $("#id" + id).text();

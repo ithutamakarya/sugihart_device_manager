@@ -46,3 +46,6 @@ Route::get('/api/get_kios', 'ApiController@getKios');
 Route::get('/api/get_device/{token}', 'ApiController@getDevice');
 
 
+Route::get('/api/get_kios', 'ApiController@render_kios');
+
+
