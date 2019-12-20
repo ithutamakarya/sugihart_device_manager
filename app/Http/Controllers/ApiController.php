@@ -16,7 +16,7 @@ class ApiController extends Controller
 
         $vendor = DB::table('vendor')->where('token',$token)->first();
         if($vendor){
-            $data = DB::table('device')->where('type','cctv')->where('is_active',1)->where('vendor_id',$vendor->id)->get();
+            $data = DB::table('device')->where('type','cctv')->where('is_active',1)->where('vendor_id',$vendor->id)->orderBy('token','asc')->orderBy('name','asc')->get();
             foreach ($data as $key => $value) {
                 $data[$key]->url_device = str_replace('/',"_",$value->url_device); 
             }
@@ -53,9 +53,6 @@ class ApiController extends Controller
         ];
         return view('render_kios.index',$data);
     }
-    
-
-
     
 
 }
