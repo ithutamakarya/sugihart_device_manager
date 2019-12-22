@@ -48,9 +48,19 @@ class ApiController extends Controller
         }
     }
     public function render_kios(){
+
+        $access_token = request()->header('APIKEY');
         $data =[
-                'token' => 'r3YZhiYEOWCDial3PmE42QhBuRkYFF'
+                'token' => $access_token
         ];
+
+        $ip_access = $_SERVER['REMOTE_ADDR'];
+        $data = DB::table('device')->where('type','kios-k')
+                                    ->where('is_active',1)
+                                    ->where('token',$access_token)
+                                    ->where('ip_access',$ip_access)->first();
+        print_r($ip_access);
+        exit();
         return view('render_kios.index',$data);
     }
     
