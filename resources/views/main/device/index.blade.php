@@ -57,7 +57,7 @@
                               </thead>
                               <tbody>
 
-                              @foreach($device_cctv as $p->id => $p)
+                              @foreach($device_cctv as $row => $p)
                               
                               <tr>
                                 <td >{{ $row + 1 }}</td>            
@@ -102,7 +102,7 @@
                               </thead>
                               <tbody>
 
-                              @foreach($device_kios as $p->id => $p)
+                              @foreach($device_kios as $row => $p)
                               
                               <tr>
                                 <td >{{ $row + 1 }}</td>            
