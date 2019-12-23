@@ -68,21 +68,19 @@ class ApiController extends Controller
           return $ipaddress;
      }
     public function render_kios(){
-
-        $access_token = request()->header('APIKEY');
-        $data =[
-                'token' => $access_token
-        ];
+        $token = "r3YZhiYEOWCDial3PmE42QhBuRkYFF";
+        
 
         $ip_access = $this->get_client_ip();
         $data = DB::table('device')->where('type','kios-k')
                                     ->where('is_active',1)
-                                    ->where('token',$access_token)
+                                    ->where('token',$token)
                                     ->where('ip_access',$ip_access)->first();
         if(!$data){
             return "404";
         }
-        return view('render_kios.index',$data);
+        $view = view('render_kios.index',compact('token'));
+        echo $view->render();
     }
     
 
