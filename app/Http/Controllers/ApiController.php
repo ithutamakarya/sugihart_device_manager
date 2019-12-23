@@ -79,8 +79,9 @@ class ApiController extends Controller
                                     ->where('is_active',1)
                                     ->where('token',$access_token)
                                     ->where('ip_access',$ip_access)->first();
-        print_r($ip_access);
-        exit();
+        if(!$data){
+            return "404";
+        }
         return view('render_kios.index',$data);
     }
     
