@@ -4,7 +4,7 @@
 <div class="container-fluid">
         
         <!-- Title -->
-        <div class="row heading-bg">
+        <div class="p->id heading-bg">
           <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
             <h5 class="txt-dark">Data Device {{ $vendor_name }}</h5>
           </div>
@@ -16,8 +16,8 @@
         </div>
         <!-- /Title -->
         
-        <!-- Row -->
-        <div class="row">
+        <!-- p->id -->
+        <div class="p->id">
           <div class="col-sm-12">
             <div class="panel panel-default card-view">
               <div class="panel-heading">
@@ -33,55 +33,115 @@
               </div>
               <div class="panel-wrapper collapse in">
                 <div class="panel-body">
-                  <div class="table-wrap">
-                    <div class="table-responsive">
-                      <table id="datable_1" class="table table-hover display  pb-30" >
-                        <thead>
-                          <tr>
-                            <th>#</th>
-                            <th>Name</th>
-                            <th>URL</th>
-                            <th>Type</th>
-                            <th>IP Access</th>
-                            <th>Token</th>
-                            <th>Action</th>
-                          </tr>
-                        </thead>
-                        <tbody>
+                  <div class="pills-struct mt-40">
+                    <ul role="tablist" class="nav nav-pills" id="myTabs_6">
+                      <li class="" role="presentation" class="active"><a aria-expanded="false" data-toggle="tab" role="tab" id="home_tab_6" href="#cctv_tab">CCTV</a></li>
+                      <li role="presentation" ><a data-toggle="tab" id="profile_tab_6" role="tab" href="#kios_tab" aria-expanded="true">KIOS K</a></li>
+                      
+                    </ul>
+                    <div class="tab-content" id="myTabContent_6">
+                      <div id="cctv_tab" class="tab-pane fade" role="tabpanel">
+                        <div class="table-wrap">
+                          <div class="table-responsive">
+                            <table id="datable_1" class="table table-hover display  pb-30" >
+                              <thead>
+                                <tr>
+                                  <th>#</th>
+                                  <th>Name</th>
+                                  <th>URL</th>
+                                  <th>Type</th>
+                                  <th>IP Access</th>
+                                  <th>Token</th>
+                                  <th>Action</th>
+                                </tr>
+                              </thead>
+                              <tbody>
 
-                        @foreach($device as $row => $p)
-                        
-                        <tr>
-                          <td >{{ $row + 1 }}</td>            
-                          <td id="{{ 'name'.$row }}" >{{ $p->name }}</td>
-                          <td id="{{ 'url_device'.$row }}" >{{ $p->url_device }}</td>
-                          <td id="{{ 'type'.$row }}" >{{ $p->type }}</td>
-                          <td id="{{ 'ip_access'.$row }}" >{{ $p->ip_access }}</td>
-                          <td id="{{ 'token'.$row }}" >{{ $p->token }}</td>
-                          <td >
-                            <div style="display: none;">
-                              <p id="{{ 'id'.$row }}" class="invisible_data">{{ $p->id }}</p>
-                            </div>
-                          <!-- /device/view/{{$p->id}} -->
-                            @if($p->type == "cctv")
-                            <a href="javascript:void(0);" data-id="{{ $row }}" class="btn btn-primary create_sub">Create Sub</a>
-                            @endif
-                            <a href="javascript:void(0);" class="btn btn-success delete_data" data-url="{{ url('main/delete_device/'.$p->id.'/'.$vendor_id) }}">Delete</a>
-                            <a href="javascript:void(0);" data-id="{{ $row }}" class="btn btn-warning edit_data">Edit</a>
-                          </td>
-                        </tr>
-                        @endforeach
-                          
-                        </tbody>
-                      </table>
+                              @foreach($device_cctv as $p->id => $p)
+                              
+                              <tr>
+                                <td >{{ $row + 1 }}</td>            
+                                <td id="{{ 'name'.$p->id }}" >{{ $p->name }}</td>
+                                <td id="{{ 'url_device'.$p->id }}" >{{ $p->url_device }}</td>
+                                <td id="{{ 'type'.$p->id }}" >{{ $p->type }}</td>
+                                <td id="{{ 'ip_access'.$p->id }}" >{{ $p->ip_access }}</td>
+                                <td id="{{ 'token'.$p->id }}" >{{ $p->token }}</td>
+                                <td >
+                                  <div style="display: none;">
+                                    <p id="{{ 'id'.$p->id }}" class="invisible_data">{{ $p->id }}</p>
+                                  </div>
+                                <!-- /device/view/{{$p->id}} -->
+                                  @if($p->type == "cctv")
+                                  <a href="javascript:void(0);" data-id="{{ $p->id }}" class="btn btn-primary create_sub">Create Sub</a>
+                                  @endif
+                                  <a href="javascript:void(0);" class="btn btn-success delete_data" data-url="{{ url('main/delete_device/'.$p->id.'/'.$vendor_id) }}">Delete</a>
+                                  <a href="javascript:void(0);" data-id="{{ $p->id }}" class="btn btn-warning edit_data">Edit</a>
+                                </td>
+                              </tr>
+                              @endforeach
+                                
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="kios_tab" class="tab-pane fade active in" role="tabpanel">
+                        <div class="table-wrap">
+                          <div class="table-responsive">
+                            <table id="datable_1" class="table table-hover display  pb-30" >
+                              <thead>
+                                <tr>
+                                  <th>#</th>
+                                  <th>Name</th>
+                                  <th>URL</th>
+                                  <th>Type</th>
+                                  <th>IP Access</th>
+                                  <th>Token</th>
+                                  <th>Action</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+
+                              @foreach($device_kios as $p->id => $p)
+                              
+                              <tr>
+                                <td >{{ $row + 1 }}</td>            
+                                <td id="{{ 'name'.$p->id }}" >{{ $p->name }}</td>
+                                <td id="{{ 'url_device'.$p->id }}" >{{ $p->url_device }}</td>
+                                <td id="{{ 'type'.$p->id }}" >{{ $p->type }}</td>
+                                <td id="{{ 'ip_access'.$p->id }}" >{{ $p->ip_access }}</td>
+                                <td id="{{ 'token'.$p->id }}" >{{ $p->token }}</td>
+                                <td >
+                                  <div style="display: none;">
+                                    <p id="{{ 'id'.$p->id }}" class="invisible_data">{{ $p->id }}</p>
+                                  </div>
+                                <!-- /device/view/{{$p->id}} -->
+                                  @if($p->type == "cctv")
+                                  <a href="javascript:void(0);" data-id="{{ $p->id }}" class="btn btn-primary create_sub">Create Sub</a>
+                                  @endif
+                                  <a href="javascript:void(0);" class="btn btn-success delete_data" data-url="{{ url('main/delete_device/'.$p->id.'/'.$vendor_id) }}">Delete</a>
+                                  <a href="javascript:void(0);" data-id="{{ $p->id }}" class="btn btn-warning edit_data">Edit</a>
+                                </td>
+                              </tr>
+                              @endforeach
+                                
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      
                     </div>
                   </div>
+
+                 
+
                 </div>
               </div>
             </div>  
           </div>
         </div>
-        <!-- /Row -->
+        <!-- /p->id -->
         
  
       </div>
