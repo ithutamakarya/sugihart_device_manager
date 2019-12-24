@@ -41,11 +41,11 @@ Route::post('/main/update_device', 'MainActionController@device_update');
 Route::get('/main/delete_device/{id}/{vendor_id}', 'MainActionController@device_delete');
 
 
-Route::get('/api/get_data_cctv/{token}', 'ApiController@getDataCCTV');
-Route::get('/api/get_kios', 'ApiController@getKios');
+Route::get('/api/get_data_cctv/{token}', 'ApiController@getDeviceCCTV');
+Route::get('/api/get_kios/{token}', 'ApiController@getDeviceKios');
 Route::get('/api/get_device/{token}', 'ApiController@getDevice');
 
 
-Route::get('/api/get_kios/{token}', 'ApiController@render_kios');
+Route::get('/api/get_render_kios/{token}', 'ApiController@render_kios');
 
 
