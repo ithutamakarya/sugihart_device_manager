@@ -30,9 +30,6 @@ class ApiController extends Controller
         $vendor = DB::table('vendor')->where('token',$token)->first();
         if($vendor){
             $data = DB::table('device')->where('type','kios-k')->where('is_active',1)->where('vendor_id',$vendor->id)->orderBy('token','asc')->orderBy('name','asc')->get();
-            foreach ($data as $key => $value) {
-                $data[$key]->url_device = str_replace('/',"_",$value->url_device); 
-            }
             return Response::json($data,200);   
         }else{
             return Response::json(["response" => "failed"],200);                  
