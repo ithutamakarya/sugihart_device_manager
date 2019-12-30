@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="stylesheet" href="/hutamakarya-kios/css/bootstrap.min.css">
-    <script src="/hutamakarya-kios/js/jquery-3.3.1.min.js"></script>
-    <script src="/hutamakarya-kios/js/bootstrap.min.js"></script>
-    <script src="/hutamakarya-kios/js/face-api.js"></script>
+<head>    
+    <link rel="stylesheet" href="/hutamakarya-kios-live/css/bootstrap.min.css">
+    <script src="/hutamakarya-kios-live/js/jquery-3.3.1.min.js"></script>
+    <script src="/hutamakarya-kios-live/js/bootstrap.min.js"></script>
+    <script src="/hutamakarya-kios-live/js/face-api.js"></script>
+
 
   <style>
+body{
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
         #stylecam{
             background-color: black;
-            width: 1100px;
+            width: 1080px;
             min-height: 1800px;
         }
         #inputVideo {
@@ -119,12 +124,12 @@
         }
     </style>
     <style type="text/css">
-        #carousel-custom {
+        #carousel-custom,#carousel-custom2 {
             margin-top: 10px;
             width: 100%;
         }
         
-        #carousel-custom .carousel-indicators {
+        #carousel-custom,#carousel-custom2 .carousel-indicators {
             margin: 0px 0 0;
             overflow: auto;
             position: static;
@@ -133,7 +138,7 @@
             width: 100%;
         }
         
-        #carousel-custom .carousel-indicators li {
+        #carousel-custom,#carousel-custom2 .carousel-indicators li {
             background-color: transparent;
             -webkit-border-radius: 0;
             border-radius: 0;
@@ -143,20 +148,20 @@
             width: auto;
         }
         
-        #carousel-custom .carousel-indicators li img {
+        #carousel-custom,#carousel-custom2 .carousel-indicators li img {
             display: block;
             opacity: 0.5;
         }
         
-        #carousel-custom .carousel-indicators li.active img {
+        #carousel-custom,#carousel-custom2 .carousel-indicators li.active img {
             opacity: 1;
         }
         
-        #carousel-custom .carousel-indicators li:hover img {
+        #carousel-custom,#carousel-custom2 .carousel-indicators li:hover img {
             opacity: 0.75;
         }
         
-        #carousel-custom .carousel-outer {
+        #carousel-custom,#carousel-custom2 .carousel-outer {
             position: relative;
         }
         
@@ -196,28 +201,42 @@
             -o-transition: all 0.2s ease-in-out 0s;
             transition: all 0.2s ease-in-out 0s;
         }
-        
-        #adv_style2 {
+        #adv_style2{
+            background-color: black;
+            width: 100%;
+            height: 1920px;
+            display: none;
+        }
+        #adv_style2 .item{
+            height: 1920px;
+        }
+        #adv_style1 .item video {
+            width: 100%;
+            height: 1920px;
+        }
+
+        #adv_style1 {
             position: absolute;
             z-index: 20;
             padding: 0px;
             display: none;
             margin-top: 230px;
         }
-        #adv_style2 .item{
+        #adv_style1 .item{
             height: 860px;
         }
-        #adv_style2 .item img {
+
+        #adv_style1,#adv_style2 .item img {
             width: 100%;
         }
         
-        #adv_style2 .item video {
+        #adv_style1 .item video {
             width: 100%;
             height: 860px;
         }
         
-        #wrap_thumbnail_carousel img,
-        #wrap_thumbnail_carousel video {
+        #wrap_thumbnail_carousel,#wrap_thumbnail_carousel2 img,
+        #wrap_thumbnail_carousel,#wrap_thumbnail_carousel2 video {
             width: 220px;
             height: 87px;
         }
@@ -226,10 +245,200 @@
 </head>
 <body>
 
- <div class="modal fade bd-example-modal-lg" data-backdrop="static" data-keyboard="false" tabindex="-1" id="modal_loading"> <div class="modal-dialog modal-sm"> <div class="modal-content" style="width: 600px;background-color: #f4f4f4;margin-left: -500px;margin-top: 400px;"> <h5 style="text-align: center;" id="text_loading">Get Data From Server.. </h5> </div></div></div><div id="full_advertice"> </div><div id="stylecam"> <div style="position: relative" class="margin"> <video onloadedmetadata="onPlay(this)" width="1100" height="825" id="inputVideo" autoplay muted playsinline></video> <canvas id="overlay" width="1100" height="825"/> </div><div id="wrap-aegisheader"> </div><div id="main-wrap"> <div id="adv_style2" class="container-fluid" style="background-color: black;"> <div class="row"> <div class="col-lg-12"> <div id="carousel-custom" class="carousel slide" data-ride="carousel"><!-- Wrapper for slides --> <div class="carousel-inner" id="wrap_item_carousel" role="listbox"> </div><!-- <a class="left carousel-control" href="#carousel-custom" role="button" data-slide="prev"> <i class="fa fa fa-angle-left"></i> <span class="sr-only">Previous</span> </a> <a class="right carousel-control" href="#carousel-custom" role="button" data-slide="next"> <i class="fa fa fa-angle-right"></i> <span class="sr-only">Next</span> </a> --> <ol class="carousel-indicators visible-sm-block hidden-xs-block visible-md-block visible-lg-block" id="wrap_thumbnail_carousel"> </ol> </div></div></div></div><table style="width: 100%;position: absolute;z-index: 10"> <tr id="face_column1"> <td> <div class="card" style="margin-top: 60px;"> <center><img src="placeholder-profile.jpg" alt="Avatar" id="img_profile0"></center> <div class="containers"> <div class="label1" id="label_name0">-</div><div class="label2" id="label_nik0">-</div><div class="label3" id="label_gender0">-</div></div></div></td><td> <div class="card" style="margin-top: 60px;"> <center><img src="placeholder-profile.jpg" alt="Avatar" id="img_profile1"></center> <div class="containers"> <div class="label1" id="label_name1">-</div><div class="label2" id="label_nik1">-</div><div class="label3" id="label_gender1">-</div></div></div></td><td> <div class="card" style="margin-top: 60px;"> <center><img src="placeholder-profile.jpg" alt="Avatar" id="img_profile2"></center> <div class="containers"> <div class="label1" id="label_name2">-</div><div class="label2" id="label_nik2">-</div><div class="label3" id="label_gender2">-</div></div></div></td></tr><tr id="face_column2"> <td> <div class="card"> <center><img src="placeholder-profile.jpg" alt="Avatar" id="img_profile3"></center> <div class="containers"> <div class="label1" id="label_name3">-</div><div class="label2" id="label_nik3">-</div><div class="label3" id="label_gender3">-</div></div></div></td><td> <div class="card"> <center><img src="placeholder-profile.jpg" alt="Avatar" id="img_profile4"></center> <div class="containers"> <div class="label1" id="label_name4">-</div><div class="label2" id="label_nik4">-</div><div class="label3" id="label_gender4">-</div></div></div></td><td> <div class="card"> <center><img src="placeholder-profile.jpg" alt="Avatar" id="img_profile5"></center> <div class="containers"> <div class="label1" id="label_name5">-</div><div class="label2" id="label_nik5">-</div><div class="label3" id="label_gender5">-</div></div></div></td></tr><tr id="face_column3"> <td> <div class="card"> <center><img src="placeholder-profile.jpg" alt="Avatar" id="img_profile6"></center> <div class="containers"> <div class="label1" id="label_name6">-</div><div class="label2" id="label_nik6">-</div><div class="label3" id="label_gender6">-</div></div></div></td><td> <div class="card"> <center><img src="placeholder-profile.jpg" alt="Avatar" id="img_profile7"></center> <div class="containers"> <div class="label1" id="label_name7">-</div><div class="label2" id="label_nik7">-</div><div class="label3" id="label_gender7">-</div></div></div></td><td> <div class="card"> <center><img src="placeholder-profile.jpg" alt="Avatar" id="img_profile8"></center> <div class="containers"> <div class="label1" id="label_name8">-</div><div class="label2" id="label_nik8">-</div><div class="label3" id="label_gender8">-</div></div></div></td></tr></table> </div><div id="running_text_adv"> <marquee style="color: white;font-size: 50px;" id="running_text">Selamat datang di hutamakarya</marquee> </div></div>
+<!-- Preloader -->
+  <div class="modal fade bd-example-modal-lg" data-backdrop="static" data-keyboard="false" tabindex="-1" id="modal_loading">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content" style="width: 600px;background-color: #f4f4f4;margin-left: -170px;margin-top: 400px;">
+          <!-- <img src="{{asset('/images/loading.gif') }}" style="width: 100%;"> -->
+          <h5 style="text-align: center;" id="text_loading">Get Data From Server.. </h5>
+        </div>
+    </div>
+  </div>
+  
+    <div id="adv_style2" class="container-fluid" >
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="carousel-custom2" class="carousel slide" >
+                    <!-- Wrapper for slides 
+
+          -->
+                    <div class="carousel-inner" id="wrap_item_carousel2" role="listbox">
+
+                    </div>
+                    <!-- Controls -->
+                    <!-- <a class="left carousel-control" href="#carousel-custom,#carousel-custom2" role="button" data-slide="prev">
+                        <i class="fa fa fa-angle-left"></i>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-custom,#carousel-custom2" role="button" data-slide="next">
+                        <i class="fa fa fa-angle-right"></i>
+                        <span class="sr-only">Next</span>
+                    </a> -->
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators visible-sm-block hidden-xs-block visible-md-block visible-lg-block" id="wrap_thumbnail_carousel2">
+
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="stylecam" >
+        
+        <div style="position: relative" class="margin">
+          <video onloadedmetadata="onPlay(this)" width="1100" height="825" id="inputVideo" autoplay muted playsinline></video>
+          <canvas id="overlay"  width="1100" height="825" />
+        </div>
+        <div id="wrap-aegisheader">
+        </div>
+
+        <div id="main-wrap">
+            <div id="adv_style2" class="container-fluid" style="background-color: black;">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div id="carousel-custom" class="carousel slide" >
+                            <!-- Wrapper for slides 
+
+                  -->
+                            <div class="carousel-inner" id="wrap_item_carousel" role="listbox">
+
+                            </div>
+                            <!-- Controls -->
+                            <!-- <a class="left carousel-control" href="#carousel-custom,#carousel-custom2" role="button" data-slide="prev">
+                                <i class="fa fa fa-angle-left"></i>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-custom,#carousel-custom2" role="button" data-slide="next">
+                                <i class="fa fa fa-angle-right"></i>
+                                <span class="sr-only">Next</span>
+                            </a> -->
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators visible-sm-block hidden-xs-block visible-md-block visible-lg-block" id="wrap_thumbnail_carousel">
+
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <table style="width: 100%;position: absolute;z-index: 10">
+                <tr id="face_column1">
+                    <td>
+                        <div class="card" style="margin-top: 60px;">
+                            <center><img src="https://lakewangaryschool.sa.edu.au/wp-content/uploads/2017/11/placeholder-profile-sq.jpg" alt="Avatar" id="img_profile0"></center>
+                            <div class="containers">
+
+                                <div class="label1" id="label_name0">-</div>
+                                <div class="label2" id="label_nik0">-</div>
+                                <div class="label3" id="label_gender0">-</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="card" style="margin-top: 60px;">
+                            <center><img src="https://lakewangaryschool.sa.edu.au/wp-content/uploads/2017/11/placeholder-profile-sq.jpg" alt="Avatar" id="img_profile1"></center>
+                            <div class="containers">
+
+                                <div class="label1" id="label_name1">-</div>
+                                <div class="label2" id="label_nik1">-</div>
+                                <div class="label3" id="label_gender1">-</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="card" style="margin-top: 60px;">
+                            <center><img src="https://lakewangaryschool.sa.edu.au/wp-content/uploads/2017/11/placeholder-profile-sq.jpg" alt="Avatar" id="img_profile2"></center>
+                            <div class="containers">
+
+                                <div class="label1" id="label_name2">-</div>
+                                <div class="label2" id="label_nik2">-</div>
+                                <div class="label3" id="label_gender2">-</div>
+                            </div>
+                        </div>
+                    </td>
+
+                </tr>
+                <tr id="face_column2">
+                    <td>
+                        <div class="card">
+                            <center><img src="https://lakewangaryschool.sa.edu.au/wp-content/uploads/2017/11/placeholder-profile-sq.jpg" alt="Avatar" id="img_profile3"></center>
+                            <div class="containers">
+
+                                <div class="label1" id="label_name3">-</div>
+                                <div class="label2" id="label_nik3">-</div>
+                                <div class="label3" id="label_gender3">-</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="card">
+                            <center><img src="https://lakewangaryschool.sa.edu.au/wp-content/uploads/2017/11/placeholder-profile-sq.jpg" alt="Avatar" id="img_profile4"></center>
+                            <div class="containers">
+
+                                <div class="label1" id="label_name4">-</div>
+                                <div class="label2" id="label_nik4">-</div>
+                                <div class="label3" id="label_gender4">-</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="card">
+                            <center><img src="https://lakewangaryschool.sa.edu.au/wp-content/uploads/2017/11/placeholder-profile-sq.jpg" alt="Avatar" id="img_profile5"></center>
+                            <div class="containers">
+
+                                <div class="label1" id="label_name5">-</div>
+                                <div class="label2" id="label_nik5">-</div>
+                                <div class="label3" id="label_gender5">-</div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr id="face_column3">
+                    <td>
+                        <div class="card">
+                            <center><img src="https://lakewangaryschool.sa.edu.au/wp-content/uploads/2017/11/placeholder-profile-sq.jpg" alt="Avatar" id="img_profile6"></center>
+                            <div class="containers">
+
+                                <div class="label1" id="label_name6">-</div>
+                                <div class="label2" id="label_nik6">-</div>
+                                <div class="label3" id="label_gender6">-</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="card">
+                            <center><img src="https://lakewangaryschool.sa.edu.au/wp-content/uploads/2017/11/placeholder-profile-sq.jpg" alt="Avatar" id="img_profile7"></center>
+                            <div class="containers">
+
+                                <div class="label1" id="label_name7">-</div>
+                                <div class="label2" id="label_nik7">-</div>
+                                <div class="label3" id="label_gender7">-</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="card">
+                            <center><img src="https://lakewangaryschool.sa.edu.au/wp-content/uploads/2017/11/placeholder-profile-sq.jpg" alt="Avatar" id="img_profile8"></center>
+                            <div class="containers">
+
+                                <div class="label1" id="label_name8">-</div>
+                                <div class="label2" id="label_nik8">-</div>
+                                <div class="label3" id="label_gender8">-</div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <div id="running_text_adv">
+            <marquee style="color: white;font-size: 50px;" id="running_text">Gunakanlah produk produk indonesia</marquee>
+
+        </div>
+    </div>
+
+
+
 
   </body>
-
 
   <script>
    
