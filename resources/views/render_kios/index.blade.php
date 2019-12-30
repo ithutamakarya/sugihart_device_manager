@@ -442,7 +442,7 @@ body{
 
   <script>
    
-    const token_devie = "{{ $token }}";
+    const token_device = "{{ $token }}";
 
     @include('render_kios.js.variabel_js')
     @include('render_kios.js.function_js')
