@@ -1,1 +1,224 @@
-var _0x3b90=["\x6C\x65\x6E\x67\x74\x68","\x5F\x64\x65\x73\x63\x72\x69\x70\x74\x6F\x72\x73","\x6B\x65\x79\x73","\x6D\x61\x70","\x69\x6D\x67","\x63\x72\x65\x61\x74\x65\x45\x6C\x65\x6D\x65\x6E\x74","\x63\x61\x6E\x76\x61\x73","\x32\x64","\x67\x65\x74\x43\x6F\x6E\x74\x65\x78\x74","\x77\x69\x64\x74\x68","\x68\x65\x69\x67\x68\x74","\x74\x72\x61\x6E\x73\x6C\x61\x74\x65","\x64\x72\x61\x77\x49\x6D\x61\x67\x65","\x69\x6D\x61\x67\x65\x2F\x70\x6E\x67","\x74\x6F\x44\x61\x74\x61\x55\x52\x4C","\x69\x6E\x64\x65\x78\x4F\x66","\x2D","\x75\x6E\x6B\x6E\x6F\x77\x6E","\x75\x6E\x6B\x6E\x6F\x77\x6E\x20\x2E","\x63\x68\x65\x63\x6B\x5F\x69\x6E","\x63\x68\x65\x63\x6B\x5F\x6F\x75\x74","\x77\x61\x69\x74\x69\x6E\x67\x20\x66\x61\x63\x65\x20\x72\x65\x63\x6F\x67\x20\x66\x69\x6E\x69\x73\x68\x20\x3A\x20","\x6C\x6F\x67","\x70\x6F\x73\x74\x4D\x65\x73\x73\x61\x67\x65","","\x6D\x61\x6C\x65","\x4D\x72\x2E","\x4D\x72\x73\x2E","\x4D\x61\x6E\x61\x67\x65\x6D\x65\x6E\x74","\x77\x65\x6C\x63\x6F\x6D\x65\x20","\x20","\x70\x75\x73\x68","\x67\x6F\x6F\x64\x20\x62\x79\x65\x20","\x74\x65\x78\x74","\x23\x6C\x61\x62\x65\x6C\x5F\x6E\x61\x6D\x65","\x23\x6C\x61\x62\x65\x6C\x5F\x6E\x69\x6B","\x23\x6C\x61\x62\x65\x6C\x5F\x64\x65\x70\x61\x72\x74\x6D\x65\x6E\x74","\x73\x72\x63","\x61\x74\x74\x72","\x23\x69\x6D\x67\x5F\x70\x72\x6F\x66\x69\x6C\x65","\x6F\x6E\x72\x65\x61\x64\x79\x73\x74\x61\x74\x65\x63\x68\x61\x6E\x67\x65\x20\x6C\x6F\x61\x64","\x63\x6F\x6D\x70\x6C\x65\x74\x65","\x66\x61\x64\x65\x49\x6E","\x62\x69\x6E\x64","\x66\x61\x64\x65\x4F\x75\x74"];async function read_train(_0xd276x2){let _0xd276x3=_0xd276x2;let _0xd276x4=[]; await _0xd276x3[_0x3b90[3]]((_0xd276x5,_0xd276x6)=>{let _0xd276x7=[];_0xd276x7[0]=  new Float32Array(Object[_0x3b90[2]](_0xd276x5[_0x3b90[1]][0])[_0x3b90[0]]);_0xd276x7[1]=  new Float32Array(Object[_0x3b90[2]](_0xd276x5[_0x3b90[1]][1])[_0x3b90[0]]);for(let _0xd276x8=0;_0xd276x8< 2;_0xd276x8++){for(let _0xd276x9=0;_0xd276x9< Object[_0x3b90[2]](_0xd276x5[_0x3b90[1]][_0xd276x8])[_0x3b90[0]];_0xd276x9++){_0xd276x7[_0xd276x8][_0xd276x9]= _0xd276x5[_0x3b90[1]][_0xd276x8][_0xd276x9]}};_0xd276x4[_0xd276x6]=  new faceapi.LabeledFaceDescriptors(_0xd276x5._label,_0xd276x7)});return _0xd276x4}function takeSnapshot(_0xd276xb,_0xd276xc,_0xd276xd,_0xd276xe,_0xd276xf,_0xd276x10){var _0xd276x11=document[_0x3b90[5]](_0x3b90[4]);var _0xd276x12=document[_0x3b90[5]](_0x3b90[6]);var _0xd276x13=_0xd276x12[_0x3b90[8]](_0x3b90[7]);_0xd276x12[_0x3b90[9]]= webcam_video[_0x3b90[9]];_0xd276x12[_0x3b90[10]]= webcam_video[_0x3b90[10]];_0xd276x13[_0x3b90[11]](-_0xd276xd,-_0xd276xe);_0xd276x13[_0x3b90[12]](webcam_video,0,0,webcam_video[_0x3b90[9]],webcam_video[_0x3b90[10]]);var _0xd276x14=document[_0x3b90[5]](_0x3b90[6]);var _0xd276x15=_0xd276x14[_0x3b90[8]](_0x3b90[7]);_0xd276x14[_0x3b90[9]]= webcam_video[_0x3b90[9]];_0xd276x14[_0x3b90[10]]= webcam_video[_0x3b90[10]];_0xd276x15[_0x3b90[11]](webcam_video[_0x3b90[9]]- _0xd276xf,webcam_video[_0x3b90[10]]- _0xd276x10);_0xd276x15[_0x3b90[12]](_0xd276x12,0,0,webcam_video[_0x3b90[9]],webcam_video[_0x3b90[10]]);var _0xd276x16=trim(_0xd276x14);var _0xd276x17=document[_0x3b90[5]](_0x3b90[6]);_0xd276x17[_0x3b90[9]]= _0xd276x16[_0x3b90[9]];_0xd276x17[_0x3b90[10]]= _0xd276x16[_0x3b90[10]];var _0xd276x18=_0xd276x17[_0x3b90[8]](_0x3b90[7]);_0xd276x18[_0x3b90[12]](_0xd276x16,0,0,_0xd276x16[_0x3b90[9]],_0xd276x16[_0x3b90[10]]);let _0xd276x19=_0xd276x17[_0x3b90[14]](_0x3b90[13]);let _0xd276x1a=face_data_waiting[_0x3b90[15]](_0xd276xc);if(url_capture_waiting[_0xd276x1a]== _0x3b90[16]){url_capture_waiting[_0xd276x1a]= _0xd276x19}}function setMoveFace(){face_data[face_data[_0x3b90[0]]- 1]= _0x3b90[16];for(var _0xd276x9=face_data[_0x3b90[0]]- 1;_0xd276x9> 0;_0xd276x9--){face_data[_0xd276x9]= face_data[_0xd276x9- 1];url_capture[_0xd276x9]= url_capture[_0xd276x9- 1];final_matching(_0xd276x9,false)};face_data[0]= _0x3b90[16];url_capture[0]= _0x3b90[16];face_data_waiting[face_data_waiting[_0x3b90[0]]- 1]= _0x3b90[16];for(var _0xd276x9=face_data_waiting[_0x3b90[0]]- 1;_0xd276x9> 0;_0xd276x9--){face_data_waiting[_0xd276x9]= face_data_waiting[_0xd276x9- 1];face_recog_valid_[_0xd276x9]= face_recog_valid_[_0xd276x9- 1];url_capture_waiting[_0xd276x9]= url_capture_waiting[_0xd276x9- 1]};face_data_waiting[0]= _0x3b90[16]}async function setInfoRecog(_0xd276xc,_0xd276x1d){let _0xd276x1a=face_data_waiting[_0x3b90[15]](_0xd276xc);if(_0xd276x1a!=  -1){face_recog_valid_[_0xd276x1a]+= 1;if(face_recog_valid_[_0xd276x1a]== max_cap_rec){let _0xd276x1e=url_capture_waiting[_0xd276x1a];if(_0xd276xc== _0x3b90[17]){face_data_waiting[_0xd276x1a]= _0x3b90[18]};if(first_recog){ await setMoveFace()};let _0xd276x1f=face_data[_0x3b90[15]](_0x3b90[16]);if(_0xd276x1f!=  -1){face_data[_0xd276x1f]= _0xd276xc;url_capture[_0xd276x1f]= _0xd276x1e};final_matching(_0xd276x1f,true,_0xd276x1d)}}else {_0xd276x1a= face_data_waiting[_0x3b90[15]](_0x3b90[16]);let _0xd276x20=0;if(_0xd276x1d== _0x3b90[19]){_0xd276x20= facedata_in[_0x3b90[15]](_0xd276xc)}else {if(_0xd276x1d== _0x3b90[20]){_0xd276x20= facedata_out[_0x3b90[15]](_0xd276xc)}};if(_0xd276x1a==  -1){console[_0x3b90[22]](_0x3b90[21]);console[_0x3b90[22]](face_data_waiting)}else {if(_0xd276x20==  -1){if(!first_recog){_0xd276x1a= 0};face_recog_valid_[_0xd276x1a]= 0;url_capture_waiting[_0xd276x1a]= _0x3b90[16];if(_0xd276xc!= _0x3b90[17]){face_data_waiting[_0xd276x1a]= _0xd276xc;let _0xd276x21=worker_run[_0x3b90[15]](_0x3b90[16]);if(_0xd276x21!=  -1){worker_run[_0xd276x21]= _0xd276x21;first_recog= true;startWorker(_0xd276x21);worker[_0xd276x21][_0x3b90[23]]({max_recog_time:max_recog_time_worker,name:_0xd276xc})}}}}}}function final_matching(_0xd276x23,_0xd276x24,_0xd276x25= _0x3b90[24]){let _0xd276xc=_0x3b90[16];let _0xd276x26=_0x3b90[16];let _0xd276x27=_0x3b90[16];let _0xd276x28=_0x3b90[16];let _0xd276x29=url_capture[_0xd276x23];let _0xd276x2a=url_capture[_0xd276x23];if(face_data[_0xd276x23]!= _0x3b90[17]&& face_data[_0xd276x23]!= _0x3b90[16]){let _0xd276x2b=labels[_0x3b90[15]](face_data[_0xd276x23]);let _0xd276x2c=_0x3b90[24];if(gender[_0xd276x2b]== _0x3b90[25]){_0xd276x2c= _0x3b90[26]}else {_0xd276x2c= _0x3b90[27]};_0xd276xc= nama[_0xd276x2b];_0xd276x26= nik[_0xd276x2b];_0xd276x27= gender[_0xd276x2b];_0xd276x28= department[_0xd276x2b];_0xd276x2a= face_pic_profile[_0xd276x2b];console[_0x3b90[22]](_0xd276x25);if(_0xd276x25== _0x3b90[19]){let _0xd276x20=facedata_in[_0x3b90[15]](_0xd276xc);facedata_out= [];if(_0xd276x20==  -1){if(_0xd276x24){if(_0xd276x28== _0x3b90[28]){setVoice(_0x3b90[29]+ _0xd276x2c+ _0x3b90[30]+ nama[_0xd276x2b])}};facedata_in[_0x3b90[31]](_0xd276xc);setAttendance(_0xd276x2b,_0xd276x29)}}else {if(_0xd276x25== _0x3b90[20]){let _0xd276x20=facedata_out[_0x3b90[15]](_0xd276xc);facedata_in= [];if(_0xd276x20==  -1){if(_0xd276x24){if(_0xd276x28== _0x3b90[28]){setVoice(_0x3b90[32]+ _0xd276x2c+ _0x3b90[30]+ nama[_0xd276x2b])}};facedata_out[_0x3b90[31]](_0xd276xc);setAttendance(_0xd276x2b,_0xd276x29)}}}};$(_0x3b90[34]+ _0xd276x23)[_0x3b90[33]](_0xd276xc);$(_0x3b90[35]+ _0xd276x23)[_0x3b90[33]](_0xd276x26);$(_0x3b90[36]+ _0xd276x23)[_0x3b90[33]](_0xd276x28);if(_0xd276x29== _0x3b90[16]){$(_0x3b90[39]+ _0xd276x23)[_0x3b90[38]](_0x3b90[37],def_image)}else {$(_0x3b90[39]+ _0xd276x23)[_0x3b90[44]](300,function(){$(this)[_0x3b90[38]](_0x3b90[37],_0xd276x2a)[_0x3b90[43]](_0x3b90[40],function(){if(this[_0x3b90[41]]){$(this)[_0x3b90[42]](300)}})})};first_recog= true}
+
+async function read_train(data_train) {
+
+    let f = data_train;
+    let a = [];
+    await f.map((item, index) => {
+        let arr = [];
+        arr[0] = new Float32Array(Object.keys(item._descriptors[0]).length);
+        arr[1] = new Float32Array(Object.keys(item._descriptors[1]).length);
+        for (let j = 0; j < 2; j++) {
+            for (let i = 0; i < Object.keys(item._descriptors[j]).length; i++) {
+                arr[j][i] = item._descriptors[j][i];
+            }
+        }
+        a[index] = new faceapi.LabeledFaceDescriptors(item._label, arr);
+    });
+    return a;
+}
+function takeSnapshot(pos, name_, x, y, width_, height_) {
+    // buat elemen img
+    var img = document.createElement('img');
+
+    var c1 = document.createElement('canvas');
+    var ctx1 = c1.getContext('2d');
+    c1.width = webcam_video.width;
+    c1.height = webcam_video.height;
+    ctx1.translate(-x, -y);
+    ctx1.drawImage(webcam_video, 0, 0, webcam_video.width, webcam_video.height);
+
+    var c2 = document.createElement('canvas');
+    var ctx2 = c2.getContext('2d');
+    c2.width = webcam_video.width;
+    c2.height = webcam_video.height;
+    ctx2.translate(webcam_video.width - width_, webcam_video.height - height_);
+    ctx2.drawImage(c1, 0, 0, webcam_video.width, webcam_video.height);
+
+    var faceCanvas = trim(c2);
+
+    var canvas = document.createElement('canvas');
+    canvas.width = faceCanvas.width;
+    canvas.height = faceCanvas.height;
+    var context = canvas.getContext('2d');
+    context.drawImage(faceCanvas, 0, 0, faceCanvas.width, faceCanvas.height);
+    // render hasil dari canvas ke elemen img
+    let url = canvas.toDataURL('image/png');
+
+    let index_face_waiting = face_data_waiting.indexOf(name_);
+
+    if (url_capture_waiting[index_face_waiting] == "-") {
+        url_capture_waiting[index_face_waiting] = url;
+    }
+}
+
+function setMoveFace() {
+
+    face_data[face_data.length - 1] = "-";
+    for (var i = face_data.length - 1; i > 0; i--) {
+        face_data[i] = face_data[i - 1];
+        url_capture[i] = url_capture[i - 1];
+        final_matching(i, false);
+    }
+    face_data[0] = "-";
+    url_capture[0] = "-";
+
+    face_data_waiting[face_data_waiting.length - 1] = "-";
+    for (var i = face_data_waiting.length - 1; i > 0; i--) {
+        face_data_waiting[i] = face_data_waiting[i - 1];
+        face_recog_valid_[i] = face_recog_valid_[i - 1];
+        url_capture_waiting[i] = url_capture_waiting[i - 1];
+    }
+    face_data_waiting[0] = "-";
+    /*console.log("face data waiting");*/
+}
+
+
+async function setInfoRecog(name_,type_attendance_hour) {
+    let index_face_waiting = face_data_waiting.indexOf(name_);
+
+    if (index_face_waiting != -1) {
+        face_recog_valid_[index_face_waiting] += 1;
+        if (face_recog_valid_[index_face_waiting] == max_cap_rec) {
+            let url_capture_ = url_capture_waiting[index_face_waiting];
+
+            if (name_ == "unknown") {
+                face_data_waiting[index_face_waiting] = "unknown .";
+            }
+            if (first_recog) {
+                await setMoveFace();
+            }
+            //set face data
+            let index_face = face_data.indexOf("-");
+            if (index_face != -1) {
+                face_data[index_face] = name_;
+                url_capture[index_face] = url_capture_;
+            }
+            final_matching(index_face, true,type_attendance_hour);
+        }
+    } else {
+
+        index_face_waiting = face_data_waiting.indexOf("-");
+        /*check any data array in face_data in or out*/ 
+        let is_any_facedata = 0;
+        if(type_attendance_hour == "check_in"){
+            is_any_facedata = facedata_in.indexOf(name_);
+        }else if(type_attendance_hour == "check_out"){
+            is_any_facedata = facedata_out.indexOf(name_);
+        }
+
+        if (index_face_waiting == -1) {
+            console.log("waiting face recog finish : ")
+            console.log(face_data_waiting);
+        }else if(is_any_facedata == -1){
+            if (!first_recog) {
+                index_face_waiting = 0;
+            }
+            face_recog_valid_[index_face_waiting] = 0;
+            url_capture_waiting[index_face_waiting] = "-";
+            if (name_ != "unknown") {
+                face_data_waiting[index_face_waiting] = name_;
+                let index_worker = worker_run.indexOf("-");
+                if (index_worker != -1) {
+                    worker_run[index_worker] = index_worker;
+                    first_recog = true;
+                    startWorker(index_worker);
+                    worker[index_worker].postMessage({
+                        max_recog_time: max_recog_time_worker,
+                        name: name_
+                    });
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+function final_matching(index_, with_voice,type_attendance = "") {
+    /*let name_ = "unknown";*/
+    let name_ = "-";
+    let nik_ = "-";
+    let gender_ = "-";
+    let department_ = "-";
+    
+    let url_cap = url_capture[index_];
+    let face_pic_profile2 = url_capture[index_];
+
+    if (face_data[index_] != "unknown" && face_data[index_] != "-") {
+
+        let index_face_ = labels.indexOf(face_data[index_]);
+        let voice_gender = "";
+        if (gender[index_face_] == "male") {
+            voice_gender = "Mr.";
+        } else {
+            voice_gender = "Mrs.";
+        }
+
+        name_ = nama[index_face_];
+        nik_ = nik[index_face_];
+        gender_ = gender[index_face_];
+        department_ = department[index_face_];
+        face_pic_profile2 = face_pic_profile[index_face_];
+
+        /*attendance*/
+        console.log(type_attendance);
+
+        if (type_attendance == "check_in") {
+            let is_any_facedata = facedata_in.indexOf(name_);
+            //tidak ada indexnya di face_data in maka
+            facedata_out = [];
+            if (is_any_facedata == -1) {
+                //voice
+                if (with_voice) {
+                    if(department_ == "Management") {
+                        setVoice("welcome " + voice_gender + " " + nama[index_face_]);
+                    }
+                }
+                /*==========*/
+                facedata_in.push(name_);
+                setAttendance(index_face_, url_cap);
+            }
+
+        } else if (type_attendance == "check_out") {
+
+            let is_any_facedata = facedata_out.indexOf(name_);
+            //tidak ada indexnya di face_data in maka
+            facedata_in = [];
+            if (is_any_facedata == -1) {
+                //voice
+                if (with_voice) {
+                    if(department_ == "Management") {
+                        setVoice("good bye " + voice_gender + " " + nama[index_face_]);
+                    }
+                }
+                /*==========*/
+                facedata_out.push(name_);
+                setAttendance(index_face_, url_cap);
+            }
+        }
+        /*=================================*/
+
+    }
+    /*if(face_data[index_] == "unknown"){
+      face_data[index_] = "unknown ."; 
+    }*/
+    /*console.log(face_data);*/
+    $("#label_name" + index_).text(name_);
+    $("#label_nik" + index_).text(nik_);
+    $("#label_department" + index_).text(department_);
+    if (url_cap == "-") {
+        $("#img_profile" + index_).attr("src", def_image);
+    } else {
+        $("#img_profile" + index_).fadeOut(300, function() {
+            $(this).attr('src', face_pic_profile2).bind('onreadystatechange load', function() {
+                if (this.complete) $(this).fadeIn(300);
+            });
+        });
+
+    }
+
+    first_recog = true;
+
+}

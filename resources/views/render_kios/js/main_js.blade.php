@@ -1,1 +1,122 @@
-var _0xcbb1=["\x70\x61\x75\x73\x65","\x63\x61\x72\x6F\x75\x73\x65\x6C","\x23\x63\x61\x72\x6F\x75\x73\x65\x6C\x2D\x63\x75\x73\x74\x6F\x6D","\x73\x68\x6F\x77","\x6D\x6F\x64\x61\x6C","\x23\x6D\x6F\x64\x61\x6C\x5F\x6C\x6F\x61\x64\x69\x6E\x67","\x74\x68\x65\x6E","\x6C\x6F\x61\x64\x46\x72\x6F\x6D\x55\x72\x69","\x66\x61\x63\x65\x4C\x61\x6E\x64\x6D\x61\x72\x6B\x36\x38\x4E\x65\x74","\x6E\x65\x74\x73","\x66\x61\x63\x65\x52\x65\x63\x6F\x67\x6E\x69\x74\x69\x6F\x6E\x4E\x65\x74","\x66\x61\x63\x65\x45\x78\x70\x72\x65\x73\x73\x69\x6F\x6E\x4E\x65\x74","\x73\x73\x64\x4D\x6F\x62\x69\x6C\x65\x6E\x65\x74\x76\x31","\x61\x6C\x6C","\x72\x65\x61\x64\x79","\x6E\x6F\x77","\x67\x65\x74","\x23\x6F\x76\x65\x72\x6C\x61\x79","\x77\x69\x64\x74\x68","\x68\x65\x69\x67\x68\x74","\x77\x69\x74\x68\x46\x61\x63\x65\x44\x65\x73\x63\x72\x69\x70\x74\x6F\x72\x73","\x77\x69\x74\x68\x46\x61\x63\x65\x4C\x61\x6E\x64\x6D\x61\x72\x6B\x73","\x64\x65\x74\x65\x63\x74\x41\x6C\x6C\x46\x61\x63\x65\x73","\x72\x65\x73\x69\x7A\x65\x52\x65\x73\x75\x6C\x74\x73","\x64\x65\x73\x63\x72\x69\x70\x74\x6F\x72","\x66\x69\x6E\x64\x42\x65\x73\x74\x4D\x61\x74\x63\x68","\x6D\x61\x70","","\x32\x64","\x67\x65\x74\x43\x6F\x6E\x74\x65\x78\x74","\x63\x6C\x65\x61\x72\x52\x65\x63\x74","\x62\x6F\x78","\x64\x65\x74\x65\x63\x74\x69\x6F\x6E","\x5F\x77\x69\x64\x74\x68","\x5F\x68\x65\x69\x67\x68\x74","\x5F\x78","\x5F\x79","\x20","\x73\x70\x6C\x69\x74","\x66\x6F\x72\x45\x61\x63\x68","\x70\x61\x75\x73\x65\x64","\x65\x6E\x64\x65\x64","\x68\x69\x64\x65","\x70\x6F\x73\x74\x4D\x65\x73\x73\x61\x67\x65","\x67\x65\x74\x55\x73\x65\x72\x4D\x65\x64\x69\x61","\x6D\x65\x64\x69\x61\x44\x65\x76\x69\x63\x65\x73","\x23\x69\x6E\x70\x75\x74\x56\x69\x64\x65\x6F","\x73\x72\x63\x4F\x62\x6A\x65\x63\x74"];setTimeout(function(){$(_0xcbb1[2])[_0xcbb1[1]](_0xcbb1[0])},1);$(document)[_0xcbb1[14]](function(){$(_0xcbb1[5])[_0xcbb1[4]](_0xcbb1[3]);Promise[_0xcbb1[13]]([faceapi[_0xcbb1[9]][_0xcbb1[8]][_0xcbb1[7]](path_weights),faceapi[_0xcbb1[9]][_0xcbb1[10]][_0xcbb1[7]](path_weights),faceapi[_0xcbb1[9]][_0xcbb1[11]][_0xcbb1[7]](path_weights),faceapi[_0xcbb1[9]][_0xcbb1[12]][_0xcbb1[7]](path_weights)])[_0xcbb1[6]](loadDataEmployee)});async function detect_recognition(_0xcc1cx2){const _0xcc1cx3=Date[_0xcbb1[15]]();const _0xcc1cx4=$(_0xcbb1[17])[_0xcbb1[16]](0);const _0xcc1cx5={width:webcam_video[_0xcbb1[18]],height:webcam_video[_0xcbb1[19]]};const _0xcc1cx6= await faceapi[_0xcbb1[22]](webcam_video,options)[_0xcbb1[21]]()[_0xcbb1[20]]();const _0xcc1cx7=faceapi[_0xcbb1[23]](_0xcc1cx6,_0xcc1cx5);let _0xcc1cx8= new faceapi.FaceMatcher(labeledFaceDescriptors,0.44);let _0xcc1cx9=_0xcc1cx7[_0xcbb1[26]]((_0xcc1cxa)=>_0xcc1cx8[_0xcbb1[25]](_0xcc1cxa[_0xcbb1[24]]));let _0xcc1cxb=_0xcbb1[27];let _0xcc1cxc=[];let _0xcc1cxd=[];let _0xcc1cxe=[];let _0xcc1cxf=[];var _0xcc1cx10=_0xcc1cx4[_0xcbb1[29]](_0xcbb1[28]);_0xcc1cx10[_0xcbb1[30]](0,0,webcam_video[_0xcbb1[18]],webcam_video[_0xcbb1[19]]);_0xcc1cx9[_0xcbb1[39]]((_0xcc1cx11,_0xcc1cx12)=>{const _0xcc1cx13=_0xcc1cx7[_0xcc1cx12][_0xcbb1[32]][_0xcbb1[31]];let _0xcc1cx14=_0xcc1cx11.toString();if(_0xcc1cx14!= _0xcbb1[27]){_0xcc1cxb= _0xcc1cx14;_0xcc1cxc[_0xcc1cx12]= _0xcc1cx13[_0xcbb1[33]];_0xcc1cxd[_0xcc1cx12]= _0xcc1cx13[_0xcbb1[34]];_0xcc1cxe[_0xcc1cx12]= _0xcc1cx13[_0xcbb1[35]];_0xcc1cxf[_0xcc1cx12]= _0xcc1cx13[_0xcbb1[36]];let _0xcc1cx15=_0xcc1cx14[_0xcbb1[38]](_0xcbb1[37]);let _0xcc1cx16=_0xcc1cx15[0];let _0xcc1cx17=_0xcc1cx15[1];Promise[_0xcbb1[13]]([setInfoRecog(_0xcc1cx16,_0xcc1cx2),takeSnapshot(_0xcc1cx12,_0xcc1cx16,_0xcc1cxe[_0xcc1cx12],_0xcc1cxf[_0xcc1cx12],_0xcc1cxc[_0xcc1cx12],_0xcc1cxd[_0xcc1cx12])])}})}function onPlay(){if(webcam_video[_0xcbb1[40]]|| webcam_video[_0xcbb1[41]]){return setTimeout(()=>onPlay())};if(on_cam_play){is_attendance_hour= check_is_attendance_hour();if(is_attendance_hour){detect_recognition(is_attendance_hour)}};setTimeout(()=>onPlay())}async function run(){$(_0xcbb1[5])[_0xcbb1[4]](_0xcbb1[42]);start_worker_office_hour();worker_office_hour[_0xcbb1[43]]({base_url:base_url2,timer:timer_office});start_worker_check_display();worker_check_display[_0xcbb1[43]]({token_device:token_device,base_url:base_url2,timer:timer_display});const _0xcc1cx1a= await navigator[_0xcbb1[45]][_0xcbb1[44]]({video:{}});const _0xcc1cx1b=$(_0xcbb1[46])[_0xcbb1[16]](0);_0xcc1cx1b[_0xcbb1[47]]= _0xcc1cx1a}
+
+ setTimeout(function() {
+        $('#carousel-custom').carousel('pause');
+    }, 1);
+
+    $(document).ready(function() {
+        
+        /*console.log("width : " + $(window).width());
+        console.log("height : " + $(window).height());*/
+        $('#modal_loading').modal('show');
+        Promise.all([
+            faceapi.nets.faceLandmark68Net.loadFromUri(path_weights),
+            faceapi.nets.faceRecognitionNet.loadFromUri(path_weights),
+            faceapi.nets.faceExpressionNet.loadFromUri(path_weights),
+            faceapi.nets.ssdMobilenetv1.loadFromUri(path_weights),
+
+        ]).then(loadDataEmployee);
+    })
+
+    
+    async function detect_recognition(type_attendance_hour){
+          const ts = Date.now()
+
+          const canvas = $("#overlay").get(0);
+          const displaySize = {
+              width: webcam_video.width,
+              height: webcam_video.height
+          }
+
+          const detections = await faceapi.detectAllFaces(webcam_video, options).withFaceLandmarks().withFaceDescriptors()
+          //faceapi.matchDimensions(canvas, displaySize)
+          const resizedDetections = faceapi.resizeResults(detections, displaySize)
+          let faceMatcher = new faceapi.FaceMatcher(labeledFaceDescriptors, 0.44);
+          
+          let results = resizedDetections.map(d => faceMatcher.findBestMatch(d.descriptor))
+          let res_ = "";
+
+          let width_cap = [];
+          let height_cap = [];
+          let x_cap = [];
+          let y_cap = [];
+          /*console.log(faceapi.tf.getBackend());*/
+
+          var ctx = canvas.getContext('2d');
+          ctx.clearRect(0,0,webcam_video.width,webcam_video.height);
+          results.forEach((result, i) => {
+
+              const box = resizedDetections[i].detection.box;
+              /*const drawBox = new faceapi.draw.DrawBox(box, {
+                  label: result.toString()
+              });
+              drawBox.draw(canvas);*/
+              let result_string = result.toString();
+              if (result_string != "") {
+                  res_ = result_string;
+
+                  width_cap[i] = box._width;
+                  height_cap[i] = box._height;
+                  x_cap[i] = box._x;
+                  y_cap[i] = box._y;
+                  let res_face = result_string.split(" ");
+                  let name_ = res_face[0];
+                  let threesold_ = res_face[1];
+                    Promise.all([
+                        setInfoRecog(name_,type_attendance_hour),
+                        takeSnapshot(i, name_, x_cap[i], y_cap[i], width_cap[i], height_cap[i]),
+                        
+                    ]) 
+                    /*checkUpdateDataTrain(count_data_training)*/
+              }
+
+
+          });
+    }
+    function onPlay() {
+
+      if(webcam_video.paused || webcam_video.ended){
+
+        return setTimeout(() => onPlay()) 
+      }
+      if(on_cam_play){
+        is_attendance_hour = check_is_attendance_hour();
+        /*console.log(is_attendance_hour);*/
+        /*check_ontime_employee(is_attendance_hour);*/
+        if(is_attendance_hour){
+          detect_recognition(is_attendance_hour);
+        }
+      }
+      setTimeout(() => onPlay())
+      
+    }
+
+    async function run() {
+      // load face detection model
+      /*await changeFaceDetector(SSD_MOBILENETV1)*/
+      // try to access users webcam and stream the images
+      // to the webcam_video element
+
+      $('#modal_loading').modal('hide');
+      start_worker_office_hour();
+      worker_office_hour.postMessage({
+          base_url: base_url2,
+          timer:timer_office,
+      });
+
+      /*start_worker_running_text();
+      worker_running_text.postMessage({
+          token_device: token_device,
+          base_url: base_url2,
+          timer:timer_display,
+      });*/
+
+      start_worker_check_display();
+      worker_check_display.postMessage({
+          token_device: token_device,
+          base_url: base_url2,
+          timer:timer_display,
+      });
+      const stream = await navigator.mediaDevices.getUserMedia({ video: {} })
+      const webcam_video = $('#inputVideo').get(0)
+      webcam_video.srcObject = stream
+    }

@@ -1,1 +1,155 @@
-var _0x600e=["\x36\x33\x30","\x38\x34\x30","\x32\x38\x38","\x39\x36\x30","\x68\x65\x69\x67\x68\x74","\x61\x74\x74\x72","\x23\x6F\x76\x65\x72\x6C\x61\x79","\x23\x69\x6E\x70\x75\x74\x56\x69\x64\x65\x6F","\x77\x69\x64\x74\x68","\x6D\x61\x72\x67\x69\x6E\x2D\x6C\x65\x66\x74","\x31\x34\x30\x70\x78","\x63\x73\x73","\x6D\x61\x72\x67\x69\x6E\x2D\x74\x6F\x70","\x23\x77\x72\x61\x70\x2D\x61\x65\x67\x69\x73\x68\x65\x61\x64\x65\x72","\x64\x69\x73\x70\x6C\x61\x79","\x6E\x6F\x6E\x65","\x23\x66\x61\x63\x65\x5F\x63\x6F\x6C\x75\x6D\x6E\x32","\x23\x66\x61\x63\x65\x5F\x63\x6F\x6C\x75\x6D\x6E\x33","\x6F\x70\x61\x63\x69\x74\x79","\x23\x72\x75\x6E\x6E\x69\x6E\x67\x5F\x74\x65\x78\x74\x5F\x61\x64\x76","\x62\x6C\x6F\x63\x6B","\x23\x61\x64\x76\x5F\x73\x74\x79\x6C\x65\x31","\x70\x78","\x23\x6D\x61\x69\x6E\x2D\x77\x72\x61\x70","","\x61\x63\x74\x69\x76\x65","\x6C\x65\x6E\x67\x74\x68","\x73\x6F\x75\x72\x63\x65","\x61\x64\x76\x65\x72\x74\x69\x73\x65\x6D\x65\x6E\x74","\x74\x68\x75\x6D\x62\x6E\x61\x69\x6C","\x2F","\x74\x79\x70\x65","\x70\x75\x73\x68","\x56\x69\x64\x65\x6F","\x3C\x76\x69\x64\x65\x6F\x20\x63\x6C\x61\x73\x73\x3D\x22\x76\x69\x64\x65\x6F\x5F\x61\x64\x76\x22\x20\x61\x75\x74\x6F\x70\x6C\x61\x79\x20\x6D\x75\x74\x65\x64\x20\x69\x64\x3D\x22\x76\x69\x64\x65\x6F\x5F","\x22\x3E\x3C\x73\x6F\x75\x72\x63\x65\x20\x73\x72\x63\x3D\x22","\x22\x20\x74\x79\x70\x65\x3D\x22\x76\x69\x64\x65\x6F\x2F\x6D\x70\x34\x22\x3E\x3C\x2F\x76\x69\x64\x65\x6F\x3E","\x3C\x69\x6D\x67\x20\x73\x72\x63\x3D\x22","\x22\x20\x61\x6C\x74\x3D\x22\x2E\x2E\x2E\x22\x20\x63\x6C\x61\x73\x73\x3D\x22\x69\x6D\x67\x2D\x72\x65\x73\x70\x6F\x6E\x73\x69\x76\x65\x22\x3E","\x49\x6D\x61\x67\x65","\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x69\x74\x65\x6D\x20","\x22\x20\x64\x61\x74\x61\x2D\x69\x64\x3D\x22","\x22\x3E","\x3C\x2F\x64\x69\x76\x3E","\x3C\x6C\x69\x20\x64\x61\x74\x61\x2D\x74\x61\x72\x67\x65\x74\x3D\x22\x23\x63\x61\x72\x6F\x75\x73\x65\x6C\x2D\x63\x75\x73\x74\x6F\x6D\x22\x20\x64\x61\x74\x61\x2D\x73\x6C\x69\x64\x65\x2D\x74\x6F\x3D\x22","\x22\x20\x63\x6C\x61\x73\x73\x3D\x22\x74\x68\x75\x6D\x62\x6E\x61\x69\x6C\x5F\x64\x61\x74\x61\x20","\x3C\x2F\x6C\x69\x3E","\x68\x74\x6D\x6C","\x23\x77\x72\x61\x70\x5F\x69\x74\x65\x6D\x5F\x63\x61\x72\x6F\x75\x73\x65\x6C","\x23\x77\x72\x61\x70\x5F\x74\x68\x75\x6D\x62\x6E\x61\x69\x6C\x5F\x63\x61\x72\x6F\x75\x73\x65\x6C","\x63\x79\x63\x6C\x65","\x63\x61\x72\x6F\x75\x73\x65\x6C","\x23\x63\x61\x72\x6F\x75\x73\x65\x6C\x2D\x63\x75\x73\x74\x6F\x6D","\x70\x61\x75\x73\x65","\x23\x61\x64\x76\x5F\x73\x74\x79\x6C\x65\x32","\x23\x73\x74\x79\x6C\x65\x63\x61\x6D","\x3C\x76\x69\x64\x65\x6F\x20\x63\x6C\x61\x73\x73\x3D\x22\x76\x69\x64\x65\x6F\x5F\x61\x64\x76\x22\x20\x69\x64\x3D\x22\x76\x69\x64\x65\x6F\x5F","\x23\x76\x69\x64\x65\x6F\x5F","\x6F\x6E\x6C\x6F\x61\x64\x65\x64\x6D\x65\x74\x61\x64\x61\x74\x61","\x64\x75\x72\x61\x74\x69\x6F\x6E","\x66\x6F\x72\x45\x61\x63\x68","\x61\x70\x70\x65\x6E\x64\x54\x6F","\x23\x63\x61\x72\x6F\x75\x73\x65\x6C\x5F\x73\x74\x79\x6C\x65"];function setStyle1(_0xb3b0x2){var _0xb3b0x3=_0x600e[0];var _0xb3b0x4=_0x600e[1];var _0xb3b0x5=_0x600e[2];var _0xb3b0x6=_0x600e[3];var _0xb3b0x7=parseInt(_0xb3b0x3);var _0xb3b0x8=parseInt(_0xb3b0x3)- 40;$(_0x600e[6])[_0x600e[5]](_0x600e[4],_0xb3b0x3);$(_0x600e[7])[_0x600e[5]](_0x600e[4],_0xb3b0x3);$(_0x600e[6])[_0x600e[5]](_0x600e[8],_0xb3b0x4);$(_0x600e[7])[_0x600e[5]](_0x600e[8],_0xb3b0x4);$(_0x600e[7])[_0x600e[11]](_0x600e[9],_0x600e[10]);$(_0x600e[6])[_0x600e[11]](_0x600e[9],_0x600e[10]);$(_0x600e[13])[_0x600e[11]](_0x600e[12],_0xb3b0x8);$(_0x600e[16])[_0x600e[11]](_0x600e[14],_0x600e[15]);$(_0x600e[17])[_0x600e[11]](_0x600e[14],_0x600e[15]);$(_0x600e[19])[_0x600e[11]](_0x600e[18],0);$(_0x600e[21])[_0x600e[11]](_0x600e[14],_0x600e[20]);$(_0x600e[23])[_0x600e[11]](_0x600e[12],_0xb3b0x7+ _0x600e[22]);$(_0x600e[21])[_0x600e[11]](_0x600e[4],_0xb3b0x6+ _0x600e[22]);var _0xb3b0x9=_0x600e[24];var _0xb3b0xa=_0x600e[24];var _0xb3b0xb=_0x600e[25];length_carousel= _0xb3b0x2[_0x600e[26]];media_type= [];for(var _0xb3b0xc=0;_0xb3b0xc< _0xb3b0x2[_0x600e[26]];_0xb3b0xc++){var _0xb3b0xd=_0xb3b0x2[_0xb3b0xc][_0x600e[28]][_0x600e[27]];var _0xb3b0xe=_0xb3b0x2[_0xb3b0xc][_0x600e[28]][_0x600e[29]];var _0xb3b0xf=base_src_uploads+ _0x600e[30]+ _0xb3b0xd;var _0xb3b0x10=_0x600e[24];var _0xb3b0x11=_0xb3b0x2[_0xb3b0xc][_0x600e[28]][_0x600e[31]];media_type[_0x600e[32]](_0xb3b0x2[_0xb3b0xc][_0x600e[28]][_0x600e[31]]);if(_0xb3b0x11== _0x600e[33]){_0xb3b0x10= _0x600e[34]+ _0xb3b0xc+ _0x600e[35]+ _0xb3b0xf+ _0x600e[36];_0xb3b0xf= base_src_uploads+ _0x600e[30]+ _0xb3b0xe;element2_= _0x600e[37]+ _0xb3b0xf+ _0x600e[38]}else {if(_0xb3b0x11== _0x600e[39]){_0xb3b0x10= _0x600e[37]+ _0xb3b0xf+ _0x600e[38];element2_= _0x600e[37]+ _0xb3b0xf+ _0x600e[38]}};_0xb3b0x9+= _0x600e[40]+ _0xb3b0xb+ _0x600e[41]+ _0xb3b0xc+ _0x600e[42]+ _0xb3b0x10+ _0x600e[43];_0xb3b0xa+= _0x600e[44]+ _0xb3b0xc+ _0x600e[45]+ _0xb3b0xb+ _0x600e[42]+ element2_+ _0x600e[46];_0xb3b0xb= _0x600e[24]};$(_0x600e[48])[_0x600e[47]](_0xb3b0x9);$(_0x600e[49])[_0x600e[47]](_0xb3b0xa);$(_0x600e[52])[_0x600e[51]](_0x600e[50])}var overlay_default_height=$(_0x600e[6])[_0x600e[5]](_0x600e[4]);var inputvideo_default_height=$(_0x600e[7])[_0x600e[5]](_0x600e[4]);var overlay_default_width=$(_0x600e[6])[_0x600e[5]](_0x600e[8]);var inputvideo_default_width=$(_0x600e[7])[_0x600e[5]](_0x600e[8]);var overlay_default_left=$(_0x600e[6])[_0x600e[11]](_0x600e[9]);var inputvideo_default_left=$(_0x600e[7])[_0x600e[11]](_0x600e[9]);var wrap_default_top=$(_0x600e[13])[_0x600e[11]](_0x600e[12]);var face_column2_default_display=$(_0x600e[16])[_0x600e[11]](_0x600e[14]);var face_column3_default_display=$(_0x600e[17])[_0x600e[11]](_0x600e[14]);var running_text_adv_default_display=$(_0x600e[19])[_0x600e[11]](_0x600e[14]);var adv_style1_default_display=$(_0x600e[21])[_0x600e[11]](_0x600e[14]);var main_default_top=$(_0x600e[23])[_0x600e[11]](_0x600e[12]);var adv_style1_default_height=$(_0x600e[21])[_0x600e[11]](_0x600e[4]);function setStyleDefault(){$(_0x600e[52])[_0x600e[51]](_0x600e[53]);$(_0x600e[54])[_0x600e[11]](_0x600e[14],_0x600e[15]);$(_0x600e[55])[_0x600e[11]](_0x600e[14],_0x600e[20]);$(_0x600e[6])[_0x600e[5]](_0x600e[4],overlay_default_height);$(_0x600e[7])[_0x600e[5]](_0x600e[4],inputvideo_default_height);$(_0x600e[6])[_0x600e[5]](_0x600e[8],overlay_default_width);$(_0x600e[7])[_0x600e[5]](_0x600e[8],inputvideo_default_width);$(_0x600e[7])[_0x600e[11]](_0x600e[9],inputvideo_default_left);$(_0x600e[6])[_0x600e[11]](_0x600e[9],overlay_default_left);$(_0x600e[13])[_0x600e[11]](_0x600e[12],wrap_default_top);$(_0x600e[16])[_0x600e[11]](_0x600e[14],face_column2_default_display);$(_0x600e[17])[_0x600e[11]](_0x600e[14],face_column3_default_display);$(_0x600e[19])[_0x600e[11]](_0x600e[18],1);$(_0x600e[21])[_0x600e[11]](_0x600e[14],adv_style1_default_display);$(_0x600e[23])[_0x600e[11]](_0x600e[12],main_default_top);$(_0x600e[21])[_0x600e[11]](_0x600e[4],adv_style1_default_height);var _0xb3b0x9=_0x600e[24];var _0xb3b0xa=_0x600e[24];var _0xb3b0xb=_0x600e[25]}function setStyle2(_0xb3b0x2){$(_0x600e[55])[_0x600e[11]](_0x600e[14],_0x600e[15]);$(_0x600e[54])[_0x600e[11]](_0x600e[14],_0x600e[20]);var _0xb3b0x9=_0x600e[24];var _0xb3b0xa=_0x600e[24];var _0xb3b0xb=_0x600e[25];var _0xb3b0x21=[];var _0xb3b0x22=0;length_carousel= _0xb3b0x2[_0x600e[26]];media_type= [];for(var _0xb3b0xc=0;_0xb3b0xc< _0xb3b0x2[_0x600e[26]];_0xb3b0xc++){var _0xb3b0xd=_0xb3b0x2[_0xb3b0xc][_0x600e[28]][_0x600e[27]];var _0xb3b0xe=_0xb3b0x2[_0xb3b0xc][_0x600e[28]][_0x600e[29]];var _0xb3b0xf=base_src_uploads+ _0x600e[30]+ _0xb3b0xd;var _0xb3b0x10=_0x600e[24];var _0xb3b0x11=_0xb3b0x2[_0xb3b0xc][_0x600e[28]][_0x600e[31]];video_duration[_0xb3b0xc]= 0;media_type[_0x600e[32]](_0xb3b0x2[_0xb3b0xc][_0x600e[28]][_0x600e[31]]);if(_0xb3b0x11== _0x600e[33]){_0xb3b0x10= _0x600e[56]+ _0xb3b0xc+ _0x600e[35]+ _0xb3b0xf+ _0x600e[36];_0xb3b0xf= base_src_uploads+ _0x600e[30]+ _0xb3b0xe;element2_= _0x600e[37]+ _0xb3b0xf+ _0x600e[38];_0xb3b0x21[_0xb3b0x22]= _0xb3b0xc;_0xb3b0x22++}else {if(_0xb3b0x11== _0x600e[39]){_0xb3b0x10= _0x600e[37]+ _0xb3b0xf+ _0x600e[38];element2_= _0x600e[37]+ _0xb3b0xf+ _0x600e[38]}};_0xb3b0x9+= _0x600e[40]+ _0xb3b0xb+ _0x600e[41]+ _0xb3b0xc+ _0x600e[42]+ _0xb3b0x10+ _0x600e[43];_0xb3b0xa+= _0x600e[44]+ _0xb3b0xc+ _0x600e[45]+ _0xb3b0xb+ _0x600e[42]+ element2_+ _0x600e[46];_0xb3b0xb= _0x600e[24]};$(_0x600e[48])[_0x600e[47]](_0xb3b0x9);$(_0x600e[49])[_0x600e[47]](_0xb3b0xa);_0xb3b0x21[_0x600e[60]](function(_0xb3b0x23){var _0xb3b0x24=$(_0x600e[57]+ _0xb3b0x23)[0];_0xb3b0x24[_0x600e[58]]= function(){video_duration[_0xb3b0x23]= _0xb3b0x24[_0x600e[59]]}});$(_0x600e[52])[_0x600e[51]](_0x600e[50]);$(_0x600e[62])[_0x600e[61]](_0x600e[54])}
+function setStyle1(data) {
+    var style2_height_cam = "630";
+    var style2_width_cam = "840";
+    var style2_height_grid2 = "288";
+    var style2_height_grid3 = "960";
+
+    var margin_top_main_wrap = parseInt(style2_height_cam);
+    var margin_top_wrap_aegis = parseInt(style2_height_cam) - 40;
+
+    $("#overlay").attr("height", style2_height_cam);
+    $("#inputVideo").attr("height", style2_height_cam);
+    $("#overlay").attr("width", style2_width_cam);
+    $("#inputVideo").attr("width", style2_width_cam);
+    $("#inputVideo").css("margin-left", "140px");
+    $("#overlay").css("margin-left", "140px");
+
+    $("#wrap-aegisheader").css("margin-top", margin_top_wrap_aegis);
+    $("#face_column2").css("display", "none");
+    $("#face_column3").css("display", "none");
+    $("#running_text_adv").css("opacity", 0);
+    $("#adv_style1").css("display", "block");
+    $("#main-wrap").css("margin-top", margin_top_main_wrap + "px");
+    $("#adv_style1").css("height", style2_height_grid3 + "px");
+    var html_item_carousel = "";
+    var html_thumbnail_carousel = "";
+    var active_item = "active";
+    length_carousel = data.length;
+    media_type = [];
+
+    for (var i = 0; i < data.length; i++) {
+        var source = data[i].advertisement.source;
+        var thumbnail = data[i].advertisement.thumbnail;
+        var src_item = base_src_uploads + "/" + source;
+        var element_ = "";
+        var media_type_ = data[i].advertisement.type;
+
+        media_type.push(data[i].advertisement.type);
+        if (media_type_ == "Video") {
+            element_ = '<video class="video_adv" autoplay muted id="video_' + i + '"><source src="' + src_item + '" type="video/mp4"></video>';
+            src_item = base_src_uploads + "/" + thumbnail;
+            element2_ = '<img src="' + src_item + '" alt="..." class="img-responsive">';
+        } else if (media_type_ == "Image") {
+            element_ = '<img src="' + src_item + '" alt="..." class="img-responsive">';
+            element2_ = '<img src="' + src_item + '" alt="..." class="img-responsive">';
+        }
+
+        html_item_carousel += '<div class="item ' + active_item + '" data-id="' + i + '">' + element_ + '</div>';
+        html_thumbnail_carousel += '<li data-target="#carousel-custom" data-slide-to="' + i + '" class="thumbnail_data ' + active_item + '">' + element2_ + '</li>';
+        active_item = '';
+    }
+
+    $("#wrap_item_carousel").html(html_item_carousel);
+    $("#wrap_thumbnail_carousel").html(html_thumbnail_carousel);
+
+    $('#carousel-custom').carousel('cycle');
+}
+var overlay_default_height = $("#overlay").attr("height");
+var inputvideo_default_height = $("#inputVideo").attr("height");
+var overlay_default_width = $("#overlay").attr("width");
+var inputvideo_default_width = $("#inputVideo").attr("width");
+var overlay_default_left = $("#overlay").css("margin-left");
+var inputvideo_default_left = $("#inputVideo").css("margin-left");
+
+
+var wrap_default_top = $("#wrap-aegisheader").css("margin-top");
+var face_column2_default_display = $("#face_column2").css("display");
+var face_column3_default_display = $("#face_column3").css("display");
+var running_text_adv_default_display = $("#running_text_adv").css("display");
+var adv_style1_default_display = $("#adv_style1").css("display");
+var main_default_top = $("#main-wrap").css("margin-top");
+var adv_style1_default_height = $("#adv_style1").css("height");
+
+function setStyleDefault() {
+
+    $('#carousel-custom').carousel('pause');
+    $("#adv_style2").css("display", "none");
+    $("#stylecam").css("display", "block");
+
+
+    $("#overlay").attr("height", overlay_default_height);
+    $("#inputVideo").attr("height", inputvideo_default_height);
+
+    $("#overlay").attr("width", overlay_default_width);
+    $("#inputVideo").attr("width", inputvideo_default_width);
+
+    $("#inputVideo").css("margin-left", inputvideo_default_left);
+    $("#overlay").css("margin-left", overlay_default_left);
+
+    $("#wrap-aegisheader").css("margin-top", wrap_default_top);
+    $("#face_column2").css("display", face_column2_default_display);
+    $("#face_column3").css("display", face_column3_default_display);
+
+    $("#running_text_adv").css("opacity", 1);
+
+    $("#adv_style1").css("display", adv_style1_default_display);
+    $("#main-wrap").css("margin-top", main_default_top);
+    $("#adv_style1").css("height", adv_style1_default_height);
+    var html_item_carousel = "";
+    var html_thumbnail_carousel = "";
+    var active_item = "active";
+
+
+}
+function setStyle2(data) {
+
+
+    $("#stylecam").css("display", "none");
+    $("#adv_style2").css("display", "block");
+
+    var html_item_carousel = "";
+    var html_thumbnail_carousel = "";
+    var active_item = "active";
+    var video_item = [];
+    var video_index = 0;
+    length_carousel = data.length;
+    media_type = [];
+
+    for (var i = 0; i < data.length; i++) {
+        var source = data[i].advertisement.source;
+        var thumbnail = data[i].advertisement.thumbnail;
+        var src_item = base_src_uploads + "/" + source;
+        var element_ = "";
+        var media_type_ = data[i].advertisement.type;
+
+        video_duration[i] = 0;
+        media_type.push(data[i].advertisement.type);
+        
+        if (media_type_ == "Video") {
+            element_ = '<video class="video_adv" id="video_' + i + '"><source src="' + src_item + '" type="video/mp4"></video>';
+            src_item = base_src_uploads + "/" + thumbnail;
+            element2_ = '<img src="' + src_item + '" alt="..." class="img-responsive">';
+            video_item[video_index] = i;
+            video_index++;
+        } else if (media_type_ == "Image") {
+            element_ = '<img src="' + src_item + '" alt="..." class="img-responsive">';
+            element2_ = '<img src="' + src_item + '" alt="..." class="img-responsive">';
+        }
+
+        html_item_carousel += '<div class="item ' + active_item + '" data-id="' + i + '">' + element_ + '</div>';
+        html_thumbnail_carousel += '<li data-target="#carousel-custom" data-slide-to="' + i + '" class="thumbnail_data ' + active_item + '">' + element2_ + '</li>';
+        active_item = '';
+    }
+
+    $("#wrap_item_carousel").html(html_item_carousel);
+    $("#wrap_thumbnail_carousel").html(html_thumbnail_carousel);
+    video_item.forEach(function(item){
+        var myvideo = $("#video_" + item)[0];
+        myvideo.onloadedmetadata = function() {
+          video_duration[item] = myvideo.duration;
+        };
+    });
+
+    $('#carousel-custom').carousel('cycle');
+    $("#carousel_style").appendTo("#adv_style2");
+}

@@ -1,1 +1,197 @@
-var _0x2621=["\x67\x65\x74\x5F\x64\x61\x74\x61\x5F\x74\x72\x61\x69\x6E\x5F\x6D\x79\x73\x71\x6C","\x47\x45\x54","\x6A\x73\x6F\x6E","\x64\x61\x74\x61\x5F\x74\x72\x61\x69\x6E\x69\x6E\x67","\x63\x6F\x75\x6E\x74\x5F\x64\x61\x74\x61\x5F\x74\x72\x61\x69\x6E\x69\x6E\x67","\x54\x72\x61\x69\x6E\x69\x6E\x67\x20\x44\x61\x74\x61\x2E\x2E\x2E","\x74\x65\x78\x74","\x23\x74\x65\x78\x74\x5F\x6C\x6F\x61\x64\x69\x6E\x67","\x74\x68\x65\x6E","\x77\x65\x62\x67\x6C","\x73\x65\x74\x42\x61\x63\x6B\x65\x6E\x64","\x74\x66","\x61\x6C\x6C","\x61\x6A\x61\x78","\x63\x68\x65\x63\x6B\x5F\x75\x70\x64\x61\x74\x65\x5F\x74\x72\x61\x69\x6E\x5F\x6D\x79\x73\x71\x6C\x2F","\x72\x65\x73\x70\x6F\x6E\x73\x65","\x61\x6E\x79\x5F\x63\x68\x61\x6E\x67\x65","\x70\x75\x73\x68","\x61\x70\x69\x2F\x67\x65\x74\x5F\x61\x6C\x6C\x5F\x65\x6D\x70\x6C\x6F\x79\x65\x65\x32","\x6C\x65\x6E\x67\x74\x68","\x69\x64","\x6E\x61\x6D\x65","\x20","\x5F","\x72\x65\x70\x6C\x61\x63\x65","\x6E\x69\x6B","","\x74\x6F\x6B\x65\x6E","\x64\x65\x70\x61\x72\x74\x6D\x65\x6E\x74\x5F\x69\x64","\x69\x73\x41\x72\x72\x61\x79","\x67\x65\x6E\x64\x65\x72","\x66\x61\x63\x65\x31\x5F\x66\x69\x6C\x65\x6E\x61\x6D\x65","\x2E","\x73\x70\x6C\x69\x74","\x64\x61\x74\x61\x3A\x69\x6D\x61\x67\x65\x2F","\x3B\x62\x61\x73\x65\x36\x34\x2C","\x66\x61\x63\x65\x31\x5F\x61\x74\x74\x61\x63\x68","\x67\x65\x74\x5F\x72\x75\x6E\x6E\x69\x6E\x67\x5F\x74\x65\x78\x74\x2F","\x73\x75\x63\x63\x65\x73\x73","\x72\x75\x6E\x6E\x69\x6E\x67\x5F\x74\x65\x78\x74","\x23\x72\x75\x6E\x6E\x69\x6E\x67\x5F\x74\x65\x78\x74","\x6C\x6F\x67","\x6B\x69\x6F\x73\x2D\x6B","\x61\x70\x69\x2F\x61\x74\x74\x65\x6E\x64\x61\x6E\x63\x65\x2F\x73\x65\x74","\x50\x4F\x53\x54","\x20\x3D\x20","\x70\x61\x72\x73\x65","\x73\x74\x79\x6C\x65\x5F\x61\x64\x76","\x61\x6E\x79\x5F\x64\x61\x74\x61","\x64\x61\x74\x61","\x73\x74\x79\x6C\x65\x31","\x70\x6C\x61\x79","\x73\x74\x79\x6C\x65\x32","\x70\x61\x75\x73\x65","\x63\x68\x65\x63\x6B\x5F\x69\x6E","\x63\x6F\x75\x6E\x74","\x64\x65\x70\x61\x72\x74\x6D\x65\x6E\x74","\x66\x61\x63\x65\x5F\x66\x69\x6C\x65\x6E\x61\x6D\x65","\x66\x61\x63\x65\x5F\x61\x74\x74\x61\x63\x68","\x23\x6C\x61\x62\x65\x6C\x5F\x6E\x61\x6D\x65\x5F\x6F\x6E\x74\x69\x6D\x65\x5F","\x23\x6C\x61\x62\x65\x6C\x5F\x6E\x69\x6B\x5F\x6F\x6E\x74\x69\x6D\x65\x5F","\x23\x6C\x61\x62\x65\x6C\x5F\x64\x65\x70\x61\x72\x74\x6D\x65\x6E\x74\x5F\x6F\x6E\x74\x69\x6D\x65\x5F","\x73\x72\x63","\x61\x74\x74\x72","\x23\x69\x6D\x67\x5F\x70\x72\x6F\x66\x69\x6C\x65\x5F\x6F\x6E\x74\x69\x6D\x65\x5F"];function loadDataTrain(){$[_0x2621[13]]({url:base_url+ _0x2621[0],method:_0x2621[1],dataType:_0x2621[2],success:async function(_0xfcd1x2){let _0xfcd1x3=_0xfcd1x2[_0x2621[3]];count_data_training= _0xfcd1x2[_0x2621[4]];$(_0x2621[7])[_0x2621[6]](_0x2621[5]);Promise[_0x2621[12]]([labeledFaceDescriptors=  await read_train(_0xfcd1x3),faceapi[_0x2621[11]][_0x2621[10]](_0x2621[9])])[_0x2621[8]](run)},error:function(_0xfcd1x4,_0xfcd1x5,_0xfcd1x6){}})}function checkUpdateDataTrain(){$[_0x2621[13]]({url:base_url+ _0x2621[14]+ count_data_training,method:_0x2621[1],dataType:_0x2621[2],success:async function(_0xfcd1x2){let _0xfcd1x8=_0xfcd1x2[_0x2621[15]];if(_0xfcd1x8== _0x2621[16]){let _0xfcd1x3=_0xfcd1x2[_0x2621[3]];count_data_training= _0xfcd1x2[_0x2621[4]];$(_0x2621[7])[_0x2621[6]](_0x2621[5]);var _0xfcd1x9= await read_train(_0xfcd1x3);Promise[_0x2621[12]]([labeledFaceDescriptors[_0x2621[17]](_0xfcd1x9)])}},error:function(_0xfcd1x4,_0xfcd1x5,_0xfcd1x6){}})}function loadDataEmployee(){$[_0x2621[13]]({url:base_url+ _0x2621[18],method:_0x2621[1],dataType:_0x2621[2],success:async function(_0xfcd1x2){let _0xfcd1x3=_0xfcd1x2;for(let _0xfcd1xb=0;_0xfcd1xb< _0xfcd1x3[_0x2621[19]];_0xfcd1xb++){id[_0xfcd1xb]= _0xfcd1x3[_0xfcd1xb][_0x2621[20]];var _0xfcd1xc=_0xfcd1x3[_0xfcd1xb][_0x2621[21]];labels[_0xfcd1xb]= _0xfcd1xc[_0x2621[24]](_0x2621[22],_0x2621[23]);nama[_0xfcd1xb]= _0xfcd1x3[_0xfcd1xb][_0x2621[21]];nik[_0xfcd1xb]= _0xfcd1x3[_0xfcd1xb][_0x2621[25]];department[_0xfcd1xb]= _0x2621[26];token_employee[_0xfcd1xb]= _0xfcd1x3[_0xfcd1xb][_0x2621[27]];if(Array[_0x2621[29]](_0xfcd1x3[_0xfcd1xb][_0x2621[28]])){department[_0xfcd1xb]= _0xfcd1x3[_0xfcd1xb][_0x2621[28]][1]};gender[_0xfcd1xb]= _0xfcd1x3[_0xfcd1xb][_0x2621[30]];var _0xfcd1xd=_0xfcd1x3[_0xfcd1xb][_0x2621[31]];var _0xfcd1xe=_0xfcd1xd[_0x2621[33]](_0x2621[32]);face_pic_profile[_0xfcd1xb]= _0x2621[34]+ _0xfcd1xe[1]+ _0x2621[35]+ _0xfcd1x3[_0xfcd1xb][_0x2621[36]]};$(_0x2621[7])[_0x2621[6]](_0x2621[5]);loadDataTrain()},error:function(_0xfcd1x4,_0xfcd1x5,_0xfcd1x6){}})}function set_runningtext(){$[_0x2621[13]]({url:base_url+ _0x2621[37]+ token_device,method:_0x2621[1],dataType:_0x2621[2],success:function(_0xfcd1x2){var _0xfcd1x8=_0xfcd1x2[_0x2621[15]];if(_0xfcd1x8== _0x2621[38]){if(running_text!= _0xfcd1x2[_0x2621[39]]){running_text= _0xfcd1x2[_0x2621[39]];$(_0x2621[40])[_0x2621[6]](running_text)}}},error:function(_0xfcd1x4,_0xfcd1x5,_0xfcd1x6){console[_0x2621[41]](_0xfcd1x6)}})}function setAttendance(_0xfcd1x11,_0xfcd1x12){var _0xfcd1x3={id:id[_0xfcd1x11],authorization:token_employee[_0xfcd1x11],capture_image:_0xfcd1x12,attendance_type:_0x2621[42]};$[_0x2621[13]]({url:base_url+ _0x2621[43],method:_0x2621[44],data:_0xfcd1x3,dataType:_0x2621[2],success:function(_0xfcd1x2){console[_0x2621[41]](nama[_0xfcd1x11]+ _0x2621[45]+ response);console[_0x2621[41]](_0xfcd1x2)},error:function(_0xfcd1x4,_0xfcd1x5,_0xfcd1x6){console[_0x2621[41]](_0xfcd1x6)}})}function check_display_kios(_0xfcd1x2){if(_0xfcd1x2&& isJson(_0xfcd1x2)){_0xfcd1x2= JSON[_0x2621[46]](_0xfcd1x2);var _0xfcd1x8=_0xfcd1x2[_0x2621[15]];var _0xfcd1x14=_0xfcd1x2[_0x2621[47]];if(_0xfcd1x8== _0x2621[48]){var _0xfcd1x3=_0xfcd1x2[_0x2621[49]];if(style_now!= _0xfcd1x14){if(_0xfcd1x14== _0x2621[50]){if(!on_cam_play){on_cam_play= true;webcam_video[_0x2621[51]]()};setStyle1(_0xfcd1x3)}else {if(_0xfcd1x14== _0x2621[52]){webcam_video[_0x2621[53]]();on_cam_play= false;setStyle2(_0xfcd1x3)}};style_now= _0xfcd1x14}}else {if(style_now!= _0xfcd1x14){if(!on_cam_play){on_cam_play= true;webcam_video[_0x2621[51]]()};setStyleDefault();style_now= _0xfcd1x14}}}}async function get_ontime_employee(_0xfcd1x2){if(n_employee_ontime>= 5){ await stopWorkerCheckOntime();n_employee_ontime= 0}else {if(_0xfcd1x2&& isJson(_0xfcd1x2)&& is_attendance_hour== _0x2621[54]){_0xfcd1x2= JSON[_0x2621[46]](_0xfcd1x2);var _0xfcd1x3=_0xfcd1x2[_0x2621[49]];n_employee_ontime= _0xfcd1x2[_0x2621[55]];if(n_employee_ontime> 0){for(var _0xfcd1xb=0;_0xfcd1xb< _0xfcd1x3[_0x2621[19]];_0xfcd1xb++){var _0xfcd1x16=_0xfcd1x3[_0xfcd1xb][_0x2621[21]];var _0xfcd1x17=_0xfcd1x3[_0xfcd1xb][_0x2621[25]];var _0xfcd1x18=_0xfcd1x3[_0xfcd1xb][_0x2621[56]];var _0xfcd1x19=_0xfcd1x3[_0xfcd1xb][_0x2621[57]];var _0xfcd1x1a=_0xfcd1x3[_0xfcd1xb][_0x2621[58]];var _0xfcd1xe=_0xfcd1x19[_0x2621[33]](_0x2621[32]);var _0xfcd1x1b=_0x2621[34]+ _0xfcd1xe[1]+ _0x2621[35]+ _0xfcd1x1a;var _0xfcd1x1c=_0xfcd1xb+ 1;$(_0x2621[59]+ _0xfcd1x1c)[_0x2621[6]](_0xfcd1x16);$(_0x2621[60]+ _0xfcd1x1c)[_0x2621[6]](_0xfcd1x17);$(_0x2621[61]+ _0xfcd1x1c)[_0x2621[6]](_0xfcd1x18);$(_0x2621[64]+ _0xfcd1x1c)[_0x2621[63]](_0x2621[62],_0xfcd1x1b)}}}}}
+
+function loadDataTrain() {
+      $.ajax({
+          url: base_url + 'get_data_train_mysql',
+          method: 'GET',
+          dataType: "json",
+          success: async function(result) {
+              let data = result['data_training'];
+              count_data_training = result['count_data_training'];
+              
+              $("#text_loading").text("Training Data...");
+              Promise.all([
+                  labeledFaceDescriptors = await read_train(data),
+                  faceapi.tf.setBackend('webgl')
+              ]).then(run)
+
+          },
+          error: function(request, status, error) {
+
+          }
+      });
+
+}
+
+function checkUpdateDataTrain() {
+      $.ajax({
+          url: base_url + 'check_update_train_mysql/' + count_data_training,
+          method: 'GET',
+          dataType: "json",
+          success: async function(result) {
+              let response = result['response'];
+              if(response == "any_change"){
+                let data = result['data_training'];
+                count_data_training = result['count_data_training'];
+                $("#text_loading").text("Training Data...");
+                var labeledFaceDescriptors2 = await read_train(data);
+                Promise.all([
+                    labeledFaceDescriptors.push(labeledFaceDescriptors2),
+                ]);
+
+              }
+              
+
+          },
+          error: function(request, status, error) {
+
+          }
+      });
+
+}
+
+
+function loadDataEmployee() {
+      $.ajax({
+          url: base_url + 'api/get_all_employee2',
+          method: 'GET',
+          dataType: "json",
+          success: async function(result) {
+              let data = result;
+              for (let i = 0; i < data.length; i++) {
+                  id[i] = data[i].id;
+                  var slug = data[i].name;
+                  labels[i] = slug.replace(" ", "_");
+                  nama[i] = data[i].name;
+                  nik[i] = data[i].nik;
+                  department[i] = "";
+                  token_employee[i] = data[i].token;
+                  if (Array.isArray(data[i].department_id)) {
+                      department[i] = data[i].department_id[1];
+                  }
+                  gender[i] = data[i].gender;
+                  var face_filename1 = data[i].face1_filename;
+                  var filename1_exp = face_filename1.split(".");
+                  face_pic_profile[i] = "data:image/" + filename1_exp[1] + ";base64," + data[i].face1_attach;
+                  
+              }
+              $("#text_loading").text("Training Data...");
+              loadDataTrain()
+              
+
+          },
+          error: function(request, status, error) {
+
+          }
+      });
+
+  }
+function set_runningtext() {
+    $.ajax({
+        url: base_url + 'get_running_text/' + token_device,
+        method: 'GET',
+        dataType: "json",
+        success: function(result) {
+            var response = result['response'];
+            if (response == "success") {
+                if(running_text != result['running_text']){
+                  running_text = result['running_text'];
+                  $("#running_text").text(running_text); 
+                }
+            }
+        },
+        error: function(request, status, error) {
+            console.log(error);
+        }
+    });
+}
+
+function setAttendance(indexx_, url_cap_) {
+    var data = {
+        id: id[indexx_],
+        authorization:token_employee[indexx_],
+        capture_image: url_cap_,
+        attendance_type: "kios-k",
+    }
+    $.ajax({
+        url: base_url + 'api/attendance/set',
+        method: 'POST',
+        data: data,
+        dataType: "json",
+        success: function(result) {
+            /*console.log("insert");
+            console.log(result);
+            var response = result['response'];
+            */
+            console.log(nama[indexx_] + " = " + response);
+            console.log(result);
+        },
+        error: function(request, status, error) {
+            console.log(error);
+        }
+    });
+}
+
+function check_display_kios(result) {
+    if(result && isJson(result)){
+      result = JSON.parse(result);
+      var response = result.response;
+      var style_ = result.style_adv;
+
+       if (response == "any_data") {
+          var data = result.data;
+          if (style_now != style_) {
+              if (style_ == "style1") {
+                  if(!on_cam_play){
+                    on_cam_play = true;
+                    webcam_video.play();
+                  }
+                  setStyle1(data);
+              }else if (style_ == "style2") {
+                  webcam_video.pause();
+                  on_cam_play = false;
+                  setStyle2(data);
+              }
+              style_now = style_;
+          }
+      }else{
+        if (style_now != style_) {
+          if(!on_cam_play){
+            on_cam_play = true;
+            webcam_video.play();
+          }
+          setStyleDefault();
+          style_now = style_;
+        }
+      }  
+    }
+}
+async function get_ontime_employee(result) {
+    if(n_employee_ontime >= 5){
+      await stopWorkerCheckOntime();
+      n_employee_ontime = 0;
+    }
+    else if(result && isJson(result) && is_attendance_hour == "check_in"){
+      result = JSON.parse(result);
+      var data = result.data;
+      n_employee_ontime = result.count;
+      if(n_employee_ontime > 0){
+        for(var i=0;i < data.length;i++){
+          var name2 = data[i].name;
+          var nik2 = data[i].nik;
+          var department2 = data[i].department;
+          var face_filename2 = data[i].face_filename;
+          var face_attach2 = data[i].face_attach;
+
+          var filename1_exp = face_filename2.split(".");
+          var img_base64 = "data:image/" + filename1_exp[1] + ";base64," + face_attach2;
+          
+          var indexing = i + 1;
+          
+          $("#label_name_ontime_" + indexing).text(name2);
+          $("#label_nik_ontime_" + indexing).text(nik2);
+          $("#label_department_ontime_" + indexing).text(department2);
+          $("#img_profile_ontime_" + indexing).attr("src",img_base64);
+        }  
+      }
+    }
+}
