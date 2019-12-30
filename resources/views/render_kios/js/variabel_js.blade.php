@@ -1,1 +1,96 @@
-var _0x39ed=["\x69\x6D\x61\x67\x65\x2F\x70\x6C\x61\x63\x65\x68\x6F\x6C\x64\x65\x72\x2D\x70\x72\x6F\x66\x69\x6C\x65\x2D\x73\x71\x2E\x6A\x70\x67","\x68\x74\x74\x70\x3A\x2F\x2F\x31\x39\x32\x2E\x31\x36\x38\x2E\x31\x32\x2E\x32\x33\x2F","\x67\x65\x74","\x23\x69\x6E\x70\x75\x74\x56\x69\x64\x65\x6F","\x77\x69\x64\x74\x68","\x23\x69\x6D\x67\x5F\x70\x72\x6F\x66\x69\x6C\x65\x30","\x68\x65\x69\x67\x68\x74","\x2D","\x73\x70\x65\x65\x63\x68\x53\x79\x6E\x74\x68\x65\x73\x69\x73","","\x30\x30\x3A\x30\x30","\x64\x65\x66\x61\x75\x6C\x74","\x75\x70\x6C\x6F\x61\x64\x73"];let forwardTimes=[];var def_image=_0x39ed[0];const base_url=_0x39ed[1];const base_url2=_0x39ed[1];const webcam_video=$(_0x39ed[3])[_0x39ed[2]](0);let width_image=$(_0x39ed[5])[_0x39ed[4]]();let height_image=$(_0x39ed[5])[_0x39ed[6]]();let facedata_in=[];let facedata_out=[];let maxDescriptorDistance=0.48;let max_cap_rec=2;let max_recog_time_worker=3000;let face_data_waiting=[_0x39ed[7],_0x39ed[7],_0x39ed[7],_0x39ed[7],_0x39ed[7],_0x39ed[7],_0x39ed[7],_0x39ed[7],_0x39ed[7]];let face_data=[_0x39ed[7],_0x39ed[7],_0x39ed[7],_0x39ed[7],_0x39ed[7],_0x39ed[7],_0x39ed[7],_0x39ed[7],_0x39ed[7]];let face_recog_valid_=[0,0,0,0,0,0,0,0,0];let url_capture_waiting=[_0x39ed[7],_0x39ed[7],_0x39ed[7],_0x39ed[7],_0x39ed[7],_0x39ed[7],_0x39ed[7],_0x39ed[7],_0x39ed[7]];let url_capture=[_0x39ed[7],_0x39ed[7],_0x39ed[7],_0x39ed[7],_0x39ed[7],_0x39ed[7],_0x39ed[7],_0x39ed[7],_0x39ed[7]];let first_recog=false;var worker_run=[_0x39ed[7],_0x39ed[7],_0x39ed[7],_0x39ed[7],_0x39ed[7],_0x39ed[7],_0x39ed[7],_0x39ed[7],_0x39ed[7]];var worker=[];var worker_check_display;var worker_check_ontime;var worker_office_hour;var worker_running_text;var available_voices;var synth=window[_0x39ed[8]];var is_attendance_hour=_0x39ed[9];const options= new faceapi.SsdMobilenetv1Options();let labeledFaceDescriptors;let labels=[];let nama=[];let gender=[];let department=[];let nik=[];let token_employee=[];let id=[];let face_pic_profile=[];let start_work=_0x39ed[10];let start_work_until=_0x39ed[10];let end_work=_0x39ed[10];let end_work_until=_0x39ed[10];var style_now=_0x39ed[11];const base_src_uploads=base_url2+ _0x39ed[12];var length_carousel=0;var media_type=[];var pos_carousel_now=1;var onclick_thumbnail=false;var on_video_run=false;var worker_video;let count_data_training=0;var on_cam_play=true;var video_duration=[];var n_employee_ontime=0;var is_already_check_ontime=false;var timer_office=3000;var timer_display=1000;var running_text=_0x39ed[9];
+let forwardTimes = [];
+var def_image = "image/placeholder-profile-sq.jpg";
+
+const base_url = "http://192.168.12.23/";
+const base_url2 = "http://192.168.12.23/";
+/*
+const base_url = "http://192.168.0.76/hutamakarya/hutamakarya-core/public/";
+const base_url2 = "http://192.168.0.76/hutamakarya/hutamakarya-core/public/";*/
+
+const webcam_video = $('#inputVideo').get(0)
+
+let width_image = $("#img_profile0").width();
+let height_image = $("#img_profile0").height();
+/*attendance variabel*/
+let facedata_in = [];
+let facedata_out = [];
+/*===============*/
+/*parameter*/
+let maxDescriptorDistance = 0.48;
+let max_cap_rec = 2;
+let max_recog_time_worker = 3000;
+/*=============*/
+/*WORKER*/
+let face_data_waiting = ["-", "-", "-", "-", "-", "-","-", "-", "-"];
+let face_data = ["-", "-", "-", "-", "-", "-","-", "-", "-"];
+let face_recog_valid_ = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+let url_capture_waiting = ["-", "-", "-", "-", "-", "-", "-", "-", "-"];
+let url_capture = ["-", "-", "-", "-", "-", "-", "-", "-", "-"];
+
+let first_recog = false;
+
+var worker_run = ["-", "-", "-", "-", "-", "-", "-", "-", "-"];
+var worker = [];
+var worker_check_display;
+var worker_check_ontime;
+var worker_office_hour;
+var worker_running_text;
+
+var available_voices;
+var synth = window.speechSynthesis;
+
+var is_attendance_hour = "";
+
+/*===========================*/
+/*const options = new faceapi.SsdMobilenetv1Options()*/
+/*const options = new faceapi.MtcnnOptions()*/
+
+// example
+/*const options = new faceapi.TinyFaceDetectorOptions({ inputSize: 320 })
+ */
+const options = new faceapi.SsdMobilenetv1Options();
+let labeledFaceDescriptors;
+
+let labels = [];
+let nama = [];
+let gender = [];
+let department = [];
+let nik = [];
+let token_employee = [];
+let id = [];
+let face_pic_profile = [];
+
+let start_work = "00:00";
+let start_work_until = "00:00";
+let end_work = "00:00";
+let end_work_until = "00:00";
+
+
+var style_now = "default";
+/*function reinit_facecam_recognition(){
+  video.start();
+  $("#stylecam").css("display","block");
+}*/
+
+const base_src_uploads = base_url2 + "uploads";
+var length_carousel = 0;
+var media_type = [];
+
+
+
+var pos_carousel_now = 1;
+var onclick_thumbnail = false;
+var on_video_run = false;
+
+var worker_video;
+let count_data_training = 0;
+
+
+var on_cam_play = true;
+var video_duration = [];
+var n_employee_ontime = 0;
+
+var is_already_check_ontime = false;
+var timer_office = 3000;
+var timer_display = 1000;
+var running_text = "";
