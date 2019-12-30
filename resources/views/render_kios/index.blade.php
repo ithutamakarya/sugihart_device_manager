@@ -430,7 +430,7 @@ body{
 
         </div>
         <div id="running_text_adv">
-            <marquee style="color: white;font-size: 50px;" id="running_text">Gunakanlah produk produk indonesia</marquee>
+            <marquee style="color: white;font-size: 50px;" id="running_text">selamat datang di hutamakarya</marquee>
 
         </div>
     </div>
