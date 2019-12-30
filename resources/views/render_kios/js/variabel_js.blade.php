@@ -95,4 +95,4 @@ var timer_office = 3000;
 var timer_display = 1000;
 var running_text = "";
 
-var path_weights = "";
+var path_weights = "/hutamakarya-kios-live/weights/";
