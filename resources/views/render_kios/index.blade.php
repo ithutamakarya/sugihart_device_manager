@@ -7,15 +7,11 @@
     <script src="/hutamakarya-kios-live/js/face-api.js"></script>
 
 
-  <style>
-body{
-    overflow-x:hidden;
-    overflow-y:hidden;
-}
+<style>
         #stylecam{
             background-color: black;
-            width: 1080px;
-            min-height: 1800px;
+            width: 1100px;
+            height: 1920px;
         }
         #inputVideo {
             position: absolute;
@@ -29,7 +25,7 @@ body{
         
         #main-wrap {
             width: 1100px;
-            height: 937px;
+            height: 1100px;
             background-color: #ec1e24;
             position: absolute;
             z-index: 3;
@@ -65,7 +61,7 @@ body{
         
         .card img {
             /*border-radius: 50%;*/
-            border-radius: 10px;
+            border-radius: 99px;
             margin-top: -100px;
             vertical-align: middle;
             width: 150px;
@@ -74,6 +70,30 @@ body{
             max-width: 150px;
             background-color: #fefefe;
         }
+        .card_absent {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            width: 100%;
+            height: 100px;
+            background-color: #e44d52;
+            border-radius: 5px;
+            margin-top: 40px;
+            margin-bottom: 100px;
+        }
+        
+        .card_absent img {
+            /*border-radius: 50%;*/
+            border-radius: 99px;
+            margin-top: -100px;
+            vertical-align: middle;
+            width: 150px;
+            height: 150px;
+            max-height: 150px;
+            max-width: 150px;
+            background-color: #fefefe;
+
+        }
+        
         
         .card:hover {
             box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -115,21 +135,24 @@ body{
         
         #running_text_adv {
             width: 1100px;
-            height: 168px;
+            height: 100px;
             background-color: black;
             position: absolute;
             z-index: 4;
             /*margin-top: 1794px;*/
-            margin-top: 1734px;
+            margin-top: 1820px;
         }
     </style>
     <style type="text/css">
-        #carousel-custom,#carousel-custom2 {
+        .col-lg-12{
+            padding: 0px;
+        }
+        #carousel-custom {
             margin-top: 10px;
             width: 100%;
         }
         
-        #carousel-custom,#carousel-custom2 .carousel-indicators {
+        #carousel-custom .carousel-indicators {
             margin: 0px 0 0;
             overflow: auto;
             position: static;
@@ -138,7 +161,7 @@ body{
             width: 100%;
         }
         
-        #carousel-custom,#carousel-custom2 .carousel-indicators li {
+        #carousel-custom .carousel-indicators li {
             background-color: transparent;
             -webkit-border-radius: 0;
             border-radius: 0;
@@ -148,20 +171,20 @@ body{
             width: auto;
         }
         
-        #carousel-custom,#carousel-custom2 .carousel-indicators li img {
+        #carousel-custom .carousel-indicators li img {
             display: block;
             opacity: 0.5;
         }
         
-        #carousel-custom,#carousel-custom2 .carousel-indicators li.active img {
+        #carousel-custom .carousel-indicators li.active img {
             opacity: 1;
         }
         
-        #carousel-custom,#carousel-custom2 .carousel-indicators li:hover img {
+        #carousel-custom .carousel-indicators li:hover img {
             opacity: 0.75;
         }
         
-        #carousel-custom,#carousel-custom2 .carousel-outer {
+        #carousel-custom .carousel-outer {
             position: relative;
         }
         
@@ -201,20 +224,6 @@ body{
             -o-transition: all 0.2s ease-in-out 0s;
             transition: all 0.2s ease-in-out 0s;
         }
-        #adv_style2{
-            background-color: black;
-            width: 100%;
-            height: 1920px;
-            display: none;
-        }
-        #adv_style2 .item{
-            height: 1920px;
-        }
-        #adv_style1 .item video {
-            width: 100%;
-            height: 1920px;
-        }
-
         #adv_style1 {
             position: absolute;
             z-index: 20;
@@ -225,8 +234,7 @@ body{
         #adv_style1 .item{
             height: 860px;
         }
-
-        #adv_style1,#adv_style2 .item img {
+        #adv_style1 .item img {
             width: 100%;
         }
         
@@ -235,10 +243,32 @@ body{
             height: 860px;
         }
         
-        #wrap_thumbnail_carousel,#wrap_thumbnail_carousel2 img,
-        #wrap_thumbnail_carousel,#wrap_thumbnail_carousel2 video {
+        #wrap_thumbnail_carousel img,
+        #wrap_thumbnail_carousel video {
             width: 220px;
             height: 87px;
+        }
+
+        #adv_style2{
+            padding: 0px;
+            display: none;
+        }
+        #adv_style2 .item{
+            height: 1820px;
+            position: relative;
+        }
+        #adv_style2 .item img {
+            position: absolute;   
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        #adv_style2 .item video {
+            width: 100%;
+            height: 1820px;
+        }
+        .td_column3{
+            padding-top: 80px;
         }
     </style>
 
@@ -248,109 +278,74 @@ body{
 <!-- Preloader -->
   <div class="modal fade bd-example-modal-lg" data-backdrop="static" data-keyboard="false" tabindex="-1" id="modal_loading">
     <div class="modal-dialog modal-sm">
-        <div class="modal-content" style="width: 600px;background-color: #f4f4f4;margin-left: -170px;margin-top: 400px;">
+        <div class="modal-content" style="width: 600px;background-color: #f4f4f4;margin-left: -500px;margin-top: 400px;">
           <!-- <img src="{{asset('/images/loading.gif') }}" style="width: 100%;"> -->
           <h5 style="text-align: center;" id="text_loading">Get Data From Server.. </h5>
         </div>
     </div>
   </div>
-  
-    <div id="adv_style2" class="container-fluid" >
-        <div class="row">
-            <div class="col-lg-12">
-                <div id="carousel-custom2" class="carousel slide" >
-                    <!-- Wrapper for slides 
 
-          -->
-                    <div class="carousel-inner" id="wrap_item_carousel2" role="listbox">
-
-                    </div>
-                    <!-- Controls -->
-                    <!-- <a class="left carousel-control" href="#carousel-custom,#carousel-custom2" role="button" data-slide="prev">
-                        <i class="fa fa fa-angle-left"></i>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#carousel-custom,#carousel-custom2" role="button" data-slide="next">
-                        <i class="fa fa fa-angle-right"></i>
-                        <span class="sr-only">Next</span>
-                    </a> -->
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators visible-sm-block hidden-xs-block visible-md-block visible-lg-block" id="wrap_thumbnail_carousel2">
-
-                    </ol>
-                </div>
-            </div>
-        </div>
+    <div id="adv_style2">
     </div>
-    <div id="stylecam" >
+    <div id="stylecam">
         
         <div style="position: relative" class="margin">
           <video onloadedmetadata="onPlay(this)" width="1100" height="825" id="inputVideo" autoplay muted playsinline></video>
           <canvas id="overlay"  width="1100" height="825" />
         </div>
         <div id="wrap-aegisheader">
+            <h1 style="text-align: center;color: white;width: 100%;font-weight: bold;">- ATTENDANCE LIST -</h1>
         </div>
 
         <div id="main-wrap">
-            <div id="adv_style2" class="container-fluid" style="background-color: black;">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div id="carousel-custom" class="carousel slide" >
-                            <!-- Wrapper for slides 
+            <div id="adv_style1">
+                <div id="carousel_style" class="container-fluid" style="background-color: black;">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div id="carousel-custom" class="carousel slide">
+                                <div class="carousel-inner" id="wrap_item_carousel" role="listbox">
+                                </div>
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators visible-sm-block hidden-xs-block visible-md-block visible-lg-block" id="wrap_thumbnail_carousel">
 
-                  -->
-                            <div class="carousel-inner" id="wrap_item_carousel" role="listbox">
-
+                                </ol>
                             </div>
-                            <!-- Controls -->
-                            <!-- <a class="left carousel-control" href="#carousel-custom,#carousel-custom2" role="button" data-slide="prev">
-                                <i class="fa fa fa-angle-left"></i>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="right carousel-control" href="#carousel-custom,#carousel-custom2" role="button" data-slide="next">
-                                <i class="fa fa fa-angle-right"></i>
-                                <span class="sr-only">Next</span>
-                            </a> -->
-                            <!-- Indicators -->
-                            <ol class="carousel-indicators visible-sm-block hidden-xs-block visible-md-block visible-lg-block" id="wrap_thumbnail_carousel">
-
-                            </ol>
                         </div>
                     </div>
                 </div>
             </div>
-            <table style="width: 100%;position: absolute;z-index: 10">
+            <table style="width: 100%;position: absolute;z-index: 10;margin-top: 30px;">
                 <tr id="face_column1">
                     <td>
                         <div class="card" style="margin-top: 60px;">
-                            <center><img src="https://lakewangaryschool.sa.edu.au/wp-content/uploads/2017/11/placeholder-profile-sq.jpg" alt="Avatar" id="img_profile0"></center>
+                            <center><img src="image/placeholder-profile-sq.jpg" alt="Avatar" id="img_profile0"></center>
                             <div class="containers">
 
-                                <div class="label1" id="label_name0">-</div>
-                                <div class="label2" id="label_nik0">-</div>
-                                <div class="label3" id="label_gender0">-</div>
+                                <div class="label1" id="label_name0">.</div>
+                                <div class="label2" id="label_nik0">.</div>
+                                <div class="label3" id="label_department0">.</div>
                             </div>
                         </div>
                     </td>
                     <td>
                         <div class="card" style="margin-top: 60px;">
-                            <center><img src="https://lakewangaryschool.sa.edu.au/wp-content/uploads/2017/11/placeholder-profile-sq.jpg" alt="Avatar" id="img_profile1"></center>
+                            <center><img src="image/placeholder-profile-sq.jpg" alt="Avatar" id="img_profile1"></center>
                             <div class="containers">
 
-                                <div class="label1" id="label_name1">-</div>
-                                <div class="label2" id="label_nik1">-</div>
-                                <div class="label3" id="label_gender1">-</div>
+                                <div class="label1" id="label_name1">.</div>
+                                <div class="label2" id="label_nik1">.</div>
+                                <div class="label3" id="label_department1">.</div>
                             </div>
                         </div>
                     </td>
                     <td>
                         <div class="card" style="margin-top: 60px;">
-                            <center><img src="https://lakewangaryschool.sa.edu.au/wp-content/uploads/2017/11/placeholder-profile-sq.jpg" alt="Avatar" id="img_profile2"></center>
+                            <center><img src="image/placeholder-profile-sq.jpg" alt="Avatar" id="img_profile2"></center>
                             <div class="containers">
 
-                                <div class="label1" id="label_name2">-</div>
-                                <div class="label2" id="label_nik2">-</div>
-                                <div class="label3" id="label_gender2">-</div>
+                                <div class="label1" id="label_name2">.</div>
+                                <div class="label2" id="label_nik2">.</div>
+                                <div class="label3" id="label_department2">.</div>
                             </div>
                         </div>
                     </td>
@@ -358,70 +353,71 @@ body{
                 </tr>
                 <tr id="face_column2">
                     <td>
-                        <div class="card">
-                            <center><img src="https://lakewangaryschool.sa.edu.au/wp-content/uploads/2017/11/placeholder-profile-sq.jpg" alt="Avatar" id="img_profile3"></center>
+                        <div class="card" style="margin-bottom: 10px;">
+                            <center><img src="image/placeholder-profile-sq.jpg" alt="Avatar" id="img_profile3"></center>
                             <div class="containers">
 
-                                <div class="label1" id="label_name3">-</div>
-                                <div class="label2" id="label_nik3">-</div>
-                                <div class="label3" id="label_gender3">-</div>
+                                <div class="label1" id="label_name3">.</div>
+                                <div class="label2" id="label_nik3">.</div>
+                                <div class="label3" id="label_department3">.</div>
                             </div>
                         </div>
                     </td>
                     <td>
-                        <div class="card">
-                            <center><img src="https://lakewangaryschool.sa.edu.au/wp-content/uploads/2017/11/placeholder-profile-sq.jpg" alt="Avatar" id="img_profile4"></center>
+                        <div class="card" style="margin-bottom: 10px;">
+                            <center><img src="image/placeholder-profile-sq.jpg" alt="Avatar" id="img_profile4"></center>
                             <div class="containers">
 
-                                <div class="label1" id="label_name4">-</div>
-                                <div class="label2" id="label_nik4">-</div>
-                                <div class="label3" id="label_gender4">-</div>
+                                <div class="label1" id="label_name4">.</div>
+                                <div class="label2" id="label_nik4">.</div>
+                                <div class="label3" id="label_department4">.</div>
                             </div>
                         </div>
                     </td>
                     <td>
-                        <div class="card">
-                            <center><img src="https://lakewangaryschool.sa.edu.au/wp-content/uploads/2017/11/placeholder-profile-sq.jpg" alt="Avatar" id="img_profile5"></center>
+                        <div class="card" style="margin-bottom: 10px;">
+                            <center><img src="image/placeholder-profile-sq.jpg" alt="Avatar" id="img_profile5"></center>
                             <div class="containers">
 
-                                <div class="label1" id="label_name5">-</div>
-                                <div class="label2" id="label_nik5">-</div>
-                                <div class="label3" id="label_gender5">-</div>
+                                <div class="label1" id="label_name5">.</div>
+                                <div class="label2" id="label_nik5">.</div>
+                                <div class="label3" id="label_department5">.</div>
                             </div>
                         </div>
                     </td>
                 </tr>
+
                 <tr id="face_column3">
-                    <td>
-                        <div class="card">
-                            <center><img src="https://lakewangaryschool.sa.edu.au/wp-content/uploads/2017/11/placeholder-profile-sq.jpg" alt="Avatar" id="img_profile6"></center>
+                    <td class="td_column3">
+                        <div class="card" style="margin-bottom: 10px;">
+                            <center><img src="image/placeholder-profile-sq.jpg" alt="Avatar" id="img_profile6"></center>
                             <div class="containers">
 
-                                <div class="label1" id="label_name6">-</div>
-                                <div class="label2" id="label_nik6">-</div>
-                                <div class="label3" id="label_gender6">-</div>
+                                <div class="label1" id="label_name6">.</div>
+                                <div class="label2" id="label_nik6">.</div>
+                                <div class="label3" id="label_department6">.</div>
                             </div>
                         </div>
                     </td>
-                    <td>
-                        <div class="card">
-                            <center><img src="https://lakewangaryschool.sa.edu.au/wp-content/uploads/2017/11/placeholder-profile-sq.jpg" alt="Avatar" id="img_profile7"></center>
+                    <td class="td_column3">
+                        <div class="card" style="margin-bottom: 10px;">
+                            <center><img src="image/placeholder-profile-sq.jpg" alt="Avatar" id="img_profile7"></center>
                             <div class="containers">
 
-                                <div class="label1" id="label_name7">-</div>
-                                <div class="label2" id="label_nik7">-</div>
-                                <div class="label3" id="label_gender7">-</div>
+                                <div class="label1" id="label_name7">.</div>
+                                <div class="label2" id="label_nik7">.</div>
+                                <div class="label3" id="label_department7">.</div>
                             </div>
                         </div>
                     </td>
-                    <td>
-                        <div class="card">
-                            <center><img src="https://lakewangaryschool.sa.edu.au/wp-content/uploads/2017/11/placeholder-profile-sq.jpg" alt="Avatar" id="img_profile8"></center>
+                    <td class="td_column3">
+                        <div class="card" style="margin-bottom: 10px;">
+                            <center><img src="image/placeholder-profile-sq.jpg" alt="Avatar" id="img_profile8"></center>
                             <div class="containers">
 
-                                <div class="label1" id="label_name8">-</div>
-                                <div class="label2" id="label_nik8">-</div>
-                                <div class="label3" id="label_gender8">-</div>
+                                <div class="label1" id="label_name8">.</div>
+                                <div class="label2" id="label_nik8">.</div>
+                                <div class="label3" id="label_department8">.</div>
                             </div>
                         </div>
                     </td>
@@ -430,13 +426,10 @@ body{
 
         </div>
         <div id="running_text_adv">
-            <marquee style="color: white;font-size: 50px;" id="running_text">selamat datang di hutamakarya</marquee>
+            <marquee style="color: white;font-size: 50px;" id="running_text">SELAMAT DATANG DI HUTAMAKARYA</marquee>
 
         </div>
     </div>
-
-
-
 
   </body>
 

@@ -4,6 +4,9 @@ var def_image = "image/placeholder-profile-sq.jpg";
 const base_url = "http://192.168.12.23/";
 const base_url2 = "http://192.168.12.23/";
 /*
+const base_url = "http://localhost:8000/";
+const base_url2 = "http://localhost:8000/";*/
+/*
 const base_url = "http://192.168.0.76/hutamakarya/hutamakarya-core/public/";
 const base_url2 = "http://192.168.0.76/hutamakarya/hutamakarya-core/public/";*/
 
@@ -31,8 +34,9 @@ let first_recog = false;
 
 var worker_run = ["-", "-", "-", "-", "-", "-", "-", "-", "-"];
 var worker = [];
+
 var worker_check_display;
-var worker_check_ontime;
+var worker_check_data_train;
 var worker_office_hour;
 var worker_running_text;
 
@@ -93,6 +97,11 @@ var n_employee_ontime = 0;
 var is_already_check_ontime = false;
 var timer_office = 3000;
 var timer_display = 1000;
+var timer_train_data = 2000;
+var timer_running_text = 1000;
+
 var running_text = "";
 
-var path_weights = "/hutamakarya-kios-live/weights/";
+var path_weights = "";
+
+path_weights = "/hutamakarya-kios-live/weights/";

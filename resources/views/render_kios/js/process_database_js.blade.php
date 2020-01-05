@@ -22,7 +22,7 @@ function loadDataTrain() {
 
 }
 
-function checkUpdateDataTrain() {
+/*function checkUpdateDataTrain() {
       $.ajax({
           url: base_url + 'check_update_train_mysql/' + count_data_training,
           method: 'GET',
@@ -30,6 +30,7 @@ function checkUpdateDataTrain() {
           success: async function(result) {
               let response = result['response'];
               if(response == "any_change"){
+                location.reload();
                 let data = result['data_training'];
                 count_data_training = result['count_data_training'];
                 $("#text_loading").text("Training Data...");
@@ -47,7 +48,7 @@ function checkUpdateDataTrain() {
           }
       });
 
-}
+}*/
 
 
 function loadDataEmployee() {
@@ -122,7 +123,7 @@ function setAttendance(indexx_, url_cap_) {
             console.log(result);
             var response = result['response'];
             */
-            console.log(nama[indexx_] + " = " + response);
+            /*console.log(nama[indexx_] + " = " + response);*/
             console.log(result);
         },
         error: function(request, status, error) {

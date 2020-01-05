@@ -138,10 +138,10 @@ async function setInfoRecog(name_,type_attendance_hour) {
 
 function final_matching(index_, with_voice,type_attendance = "") {
     /*let name_ = "unknown";*/
-    let name_ = "-";
-    let nik_ = "-";
-    let gender_ = "-";
-    let department_ = "-";
+    let name_ = ".";
+    let nik_ = ".";
+    let gender_ = ".";
+    let department_ = ".";
     
     let url_cap = url_capture[index_];
     let face_pic_profile2 = url_capture[index_];
@@ -211,11 +211,12 @@ function final_matching(index_, with_voice,type_attendance = "") {
     if (url_cap == "-") {
         $("#img_profile" + index_).attr("src", def_image);
     } else {
-        $("#img_profile" + index_).fadeOut(300, function() {
+        $("#img_profile" + index_).attr("src", face_pic_profile2);
+        /*$("#img_profile" + index_).fadeOut(300, function() {
             $(this).attr('src', face_pic_profile2).bind('onreadystatechange load', function() {
                 if (this.complete) $(this).fadeIn(300);
             });
-        });
+        });*/
 
     }
 

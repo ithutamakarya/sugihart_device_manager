@@ -23,6 +23,37 @@ function stopWorkerCheckOntime() {
         worker_check_ontime = undefined;
     }
 }
+function start_worker_check_train_data() {
+    worker_check_data_train = new Worker(getScriptPath(function() {
+        self.addEventListener('message', async function(e) {
+            var base_url = e.data.base_url;
+            var timer = e.data.timer;
+            var count_data_training = e.data.count_data_training;
+            setInterval(async function() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    var result = this.response;
+                    self.postMessage(result);
+                };
+                xhttp.open("GET",base_url  + 'check_update_train_mysql/' + count_data_training, true);
+                xhttp.send();
+            }, timer);
+
+        }, false);
+    }))
+    worker_check_data_train.addEventListener('message', function(e) {
+        let result = e.data;
+        if(isJson(result)){
+            result = JSON.parse(result);
+            var response = result['response'];
+            if(response == "any_change"){
+                location.reload();
+            }
+        }
+    }, false);
+
+}
+
 function start_worker_running_text() {
     worker_running_text = new Worker(getScriptPath(function() {
         self.addEventListener('message', async function(e) {
@@ -48,8 +79,10 @@ function start_worker_running_text() {
             var response = result['response'];
             if (response == "success") {
                 if(running_text != result['running_text']){
-                  var running_text = result['running_text'];
+                  running_text = result['running_text'];
                   $("#running_text").text(running_text); 
+                }else if(running_text == ""){
+                    $("#running_text").text("SELAMAT DATANG DI HUTAMAKARYA"); 
                 }
             }   
         }
