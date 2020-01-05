@@ -318,7 +318,7 @@
                 <tr id="face_column1">
                     <td>
                         <div class="card" style="margin-top: 60px;">
-                            <center><img src="image/placeholder-profile-sq.jpg" alt="Avatar" id="img_profile0"></center>
+                            <center><img src="image/placeholder-profile.jpg" alt="Avatar" id="img_profile0"></center>
                             <div class="containers">
 
                                 <div class="label1" id="label_name0">.</div>
@@ -329,7 +329,7 @@
                     </td>
                     <td>
                         <div class="card" style="margin-top: 60px;">
-                            <center><img src="image/placeholder-profile-sq.jpg" alt="Avatar" id="img_profile1"></center>
+                            <center><img src="image/placeholder-profile.jpg" alt="Avatar" id="img_profile1"></center>
                             <div class="containers">
 
                                 <div class="label1" id="label_name1">.</div>
@@ -340,7 +340,7 @@
                     </td>
                     <td>
                         <div class="card" style="margin-top: 60px;">
-                            <center><img src="image/placeholder-profile-sq.jpg" alt="Avatar" id="img_profile2"></center>
+                            <center><img src="image/placeholder-profile.jpg" alt="Avatar" id="img_profile2"></center>
                             <div class="containers">
 
                                 <div class="label1" id="label_name2">.</div>
@@ -354,7 +354,7 @@
                 <tr id="face_column2">
                     <td>
                         <div class="card" style="margin-bottom: 10px;">
-                            <center><img src="image/placeholder-profile-sq.jpg" alt="Avatar" id="img_profile3"></center>
+                            <center><img src="image/placeholder-profile.jpg" alt="Avatar" id="img_profile3"></center>
                             <div class="containers">
 
                                 <div class="label1" id="label_name3">.</div>
@@ -365,7 +365,7 @@
                     </td>
                     <td>
                         <div class="card" style="margin-bottom: 10px;">
-                            <center><img src="image/placeholder-profile-sq.jpg" alt="Avatar" id="img_profile4"></center>
+                            <center><img src="image/placeholder-profile.jpg" alt="Avatar" id="img_profile4"></center>
                             <div class="containers">
 
                                 <div class="label1" id="label_name4">.</div>
@@ -376,7 +376,7 @@
                     </td>
                     <td>
                         <div class="card" style="margin-bottom: 10px;">
-                            <center><img src="image/placeholder-profile-sq.jpg" alt="Avatar" id="img_profile5"></center>
+                            <center><img src="image/placeholder-profile.jpg" alt="Avatar" id="img_profile5"></center>
                             <div class="containers">
 
                                 <div class="label1" id="label_name5">.</div>
@@ -390,7 +390,7 @@
                 <tr id="face_column3">
                     <td class="td_column3">
                         <div class="card" style="margin-bottom: 10px;">
-                            <center><img src="image/placeholder-profile-sq.jpg" alt="Avatar" id="img_profile6"></center>
+                            <center><img src="image/placeholder-profile.jpg" alt="Avatar" id="img_profile6"></center>
                             <div class="containers">
 
                                 <div class="label1" id="label_name6">.</div>
@@ -401,7 +401,7 @@
                     </td>
                     <td class="td_column3">
                         <div class="card" style="margin-bottom: 10px;">
-                            <center><img src="image/placeholder-profile-sq.jpg" alt="Avatar" id="img_profile7"></center>
+                            <center><img src="image/placeholder-profile.jpg" alt="Avatar" id="img_profile7"></center>
                             <div class="containers">
 
                                 <div class="label1" id="label_name7">.</div>
@@ -412,7 +412,7 @@
                     </td>
                     <td class="td_column3">
                         <div class="card" style="margin-bottom: 10px;">
-                            <center><img src="image/placeholder-profile-sq.jpg" alt="Avatar" id="img_profile8"></center>
+                            <center><img src="image/placeholder-profile.jpg" alt="Avatar" id="img_profile8"></center>
                             <div class="containers">
 
                                 <div class="label1" id="label_name8">.</div>

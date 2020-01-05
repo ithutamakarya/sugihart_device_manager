@@ -1,5 +1,5 @@
 let forwardTimes = [];
-var def_image = "image/placeholder-profile-sq.jpg";
+var def_image = "image/placeholder-profile.jpg";
 
 const base_url = "http://192.168.12.23/";
 const base_url2 = "http://192.168.12.23/";
