@@ -103,12 +103,19 @@
           timer:timer_office,
       });
 
-      /*start_worker_running_text();
+      start_worker_check_train_data();
+      worker_check_data_train.postMessage({
+          count_data_training: count_data_training,
+          base_url: base_url2,
+          timer:timer_train_data,
+      });
+
+      start_worker_running_text();
       worker_running_text.postMessage({
           token_device: token_device,
           base_url: base_url2,
-          timer:timer_display,
-      });*/
+          timer:timer_running_text,
+      });
 
       start_worker_check_display();
       worker_check_display.postMessage({

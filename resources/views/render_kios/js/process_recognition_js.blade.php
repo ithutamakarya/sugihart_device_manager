@@ -133,7 +133,9 @@ async function setInfoRecog(name_,type_attendance_hour) {
 
 }
 
-
+function set_voice_management() {
+    // body...
+}
 
 
 function final_matching(index_, with_voice,type_attendance = "") {
@@ -162,8 +164,20 @@ function final_matching(index_, with_voice,type_attendance = "") {
         department_ = department[index_face_];
         face_pic_profile2 = face_pic_profile[index_face_];
 
+        var data_parse = {
+          name : name_,
+          nik : nik_,
+          department : department_,
+          index_ :index_,
+          face_pic_profile : face_pic_profile2
+        };
+        let data_voice = {
+                        message_voice:"  ",
+                        is_voice:false,
+        };
+
         /*attendance*/
-        console.log(type_attendance);
+        /*console.log(type_attendance);*/
 
         if (type_attendance == "check_in") {
             let is_any_facedata = facedata_in.indexOf(name_);
@@ -173,12 +187,15 @@ function final_matching(index_, with_voice,type_attendance = "") {
                 //voice
                 if (with_voice) {
                     if(department_ == "Management") {
-                        setVoice("welcome " + voice_gender + " " + nama[index_face_]);
+                        data_voice = {
+                            message_voice:"welcome " + voice_gender + " " + nama[index_face_],
+                            is_voice:true,
+                        };
                     }
                 }
                 /*==========*/
                 facedata_in.push(name_);
-                setAttendance(index_face_, url_cap);
+                setAttendance(index_face_, url_cap,data_parse,data_voice);
             }
 
         } else if (type_attendance == "check_out") {
@@ -190,34 +207,30 @@ function final_matching(index_, with_voice,type_attendance = "") {
                 //voice
                 if (with_voice) {
                     if(department_ == "Management") {
-                        setVoice("good bye " + voice_gender + " " + nama[index_face_]);
+                        data_voice = {
+                            message_voice:"good bye " + voice_gender + " " + nama[index_face_],
+                            is_voice:true,
+                        };
                     }
                 }
                 /*==========*/
                 facedata_out.push(name_);
-                setAttendance(index_face_, url_cap);
+                setAttendance(index_face_, url_cap,data_parse,data_voice);
             }
         }
         /*=================================*/
 
     }
-    /*if(face_data[index_] == "unknown"){
-      face_data[index_] = "unknown ."; 
-    }*/
-    /*console.log(face_data);*/
-    $("#label_name" + index_).text(name_);
-    $("#label_nik" + index_).text(nik_);
-    $("#label_department" + index_).text(department_);
-    if (url_cap == "-") {
-        $("#img_profile" + index_).attr("src", def_image);
-    } else {
-        $("#img_profile" + index_).attr("src", face_pic_profile2);
-        /*$("#img_profile" + index_).fadeOut(300, function() {
-            $(this).attr('src', face_pic_profile2).bind('onreadystatechange load', function() {
-                if (this.complete) $(this).fadeIn(300);
-            });
-        });*/
+    if(!with_voice){
 
+        $("#label_name" + index_).text(name_);
+        $("#label_nik" + index_).text(nik_);
+        $("#label_department" + index_).text(department_);
+        if (url_cap == "-") {
+            $("#img_profile" + index_).attr("src", def_image);
+        } else {
+            $("#img_profile" + index_).attr("src", face_pic_profile2);
+        }   
     }
 
     first_recog = true;

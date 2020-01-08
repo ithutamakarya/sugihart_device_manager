@@ -106,7 +106,7 @@ function set_runningtext() {
     });
 }
 
-function setAttendance(indexx_, url_cap_) {
+function setAttendance(indexx_, url_cap_,data_parse,data_voice) {
     var data = {
         id: id[indexx_],
         authorization:token_employee[indexx_],
@@ -121,10 +121,28 @@ function setAttendance(indexx_, url_cap_) {
         success: function(result) {
             /*console.log("insert");
             console.log(result);
-            var response = result['response'];
             */
             /*console.log(nama[indexx_] + " = " + response);*/
-            console.log(result);
+            var response = result['response'];
+            var name_ = data_parse.name;
+            var nik_ = data_parse.nik;
+            var department_ = data_parse.department;
+            var face_pic_profile_ = data_parse.face_pic_profile;
+            if(response == "already_attendance" || response == "out_office_hour"){  
+                nik_ = result['response'] + " - " + result['attendance_hour']; 
+                department_ = "";
+            }
+            if(response == "success"){
+              if(data_voice.is_voice == true){
+                setVoice(data_voice.message_voice);
+              }
+            }
+
+            $("#label_name" + data_parse.index_).text(name_);
+            $("#label_nik" + data_parse.index_).text(nik_);
+            $("#label_department" + data_parse.index_).text(department_);
+            $("#img_profile" + data_parse.index_).attr("src", face_pic_profile_); 
+            /*console.log(result);*/
         },
         error: function(request, status, error) {
             console.log(error);
