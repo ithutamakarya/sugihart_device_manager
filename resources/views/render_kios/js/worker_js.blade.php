@@ -78,11 +78,12 @@ function start_worker_running_text() {
             result = JSON.parse(result);
             var response = result['response'];
             if (response == "success") {
+                console.log(result['running_text']);
                 if(running_text != result['running_text']){
                   running_text = result['running_text'];
-                  $("#running_text").text(running_text); 
+                  $("#running_text_adv #running_text").text(running_text); 
                 }else if(running_text == ""){
-                    $("#running_text").text("SELAMAT DATANG DI HUTAMAKARYA"); 
+                    $("#running_text_adv #running_text").text("SELAMAT DATANG DI HUTAMAKARYA"); 
                 }
             }   
         }

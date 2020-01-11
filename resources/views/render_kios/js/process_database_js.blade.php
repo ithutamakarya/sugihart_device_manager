@@ -71,8 +71,13 @@ function loadDataEmployee() {
                   }
                   gender[i] = data[i].gender;
                   var face_filename1 = data[i].face1_filename;
-                  var filename1_exp = face_filename1.split(".");
-                  face_pic_profile[i] = "data:image/" + filename1_exp[1] + ";base64," + data[i].face1_attach;
+                  if(face_filename1){
+                    var filename1_exp = face_filename1.split(".");
+                    face_pic_profile[i] = "data:image/" + filename1_exp[1] + ";base64," + data[i].face1_attach; 
+                  }else{
+                    face_pic_profile[i] = ""; 
+
+                  }
                   
               }
               $("#text_loading").text("Training Data...");

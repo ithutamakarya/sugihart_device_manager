@@ -1,4 +1,6 @@
 function setStyle1(data) {
+    running_text_adv_html = $("#running_text_adv").html();
+
     var style2_height_cam = "630";
     var style2_width_cam = "840";
     var style2_height_grid2 = "288";
@@ -17,7 +19,7 @@ function setStyle1(data) {
     $("#wrap-aegisheader").css("margin-top", margin_top_wrap_aegis);
     $("#face_column2").css("display", "none");
     $("#face_column3").css("display", "none");
-    $("#running_text_adv").css("opacity", 0);
+    $("#running_text_adv").show();
     $("#adv_style1").css("display", "block");
     $("#main-wrap").css("margin-top", margin_top_main_wrap + "px");
     $("#adv_style1").css("height", style2_height_grid3 + "px");
@@ -65,11 +67,11 @@ var inputvideo_default_left = $("#inputVideo").css("margin-left");
 var wrap_default_top = $("#wrap-aegisheader").css("margin-top");
 var face_column2_default_display = $("#face_column2").css("display");
 var face_column3_default_display = $("#face_column3").css("display");
-var running_text_adv_default_display = $("#running_text_adv").css("display");
 var adv_style1_default_display = $("#adv_style1").css("display");
 var main_default_top = $("#main-wrap").css("margin-top");
 var adv_style1_default_height = $("#adv_style1").css("height");
 
+var running_text_adv_html = $("#running_text_adv").html();
 function setStyleDefault() {
 
     $('#carousel-custom').carousel('pause');
@@ -90,7 +92,9 @@ function setStyleDefault() {
     $("#face_column2").css("display", face_column2_default_display);
     $("#face_column3").css("display", face_column3_default_display);
 
-    $("#running_text_adv").css("opacity", 1);
+    $("#running_text_adv").show();
+    $("#running_text_adv").html(running_text_adv_html);
+    $("#running_text_adv #running_text").text(running_text);
 
     $("#adv_style1").css("display", adv_style1_default_display);
     $("#main-wrap").css("margin-top", main_default_top);
