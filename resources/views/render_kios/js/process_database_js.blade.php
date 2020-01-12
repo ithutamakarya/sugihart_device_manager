@@ -118,6 +118,7 @@ function setAttendance(indexx_, url_cap_,data_parse,data_voice) {
         capture_image: url_cap_,
         attendance_type: "kios-k",
     }
+    console.log(data);
     $.ajax({
         url: base_url + 'api/attendance/set',
         method: 'POST',
