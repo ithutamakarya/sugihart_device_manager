@@ -1,9 +1,9 @@
 let forwardTimes = [];
 var def_image = "public/image/placeholder-profile.jpg";
 
-const base_url = "http://localhost:8000/";
+const base_url = "https://absensi.hutamakarya.com/";
 /*const base_url = "https://absensi.hutamakarya.com/";*/
-const base_url_api = "http://localhost/Sugihart/Hutamakarya/";
+const base_url_api = "http://localhost/hutamakarya-kios-live2/";
 console.log(base_url);
 const base_src_uploads = base_url + "uploads";
 
