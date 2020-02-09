@@ -9,17 +9,16 @@ function setStyle1(data) {
     var margin_top_main_wrap = parseInt(style2_height_cam);
     var margin_top_wrap_aegis = parseInt(style2_height_cam) - 40;
 
-    $("#overlay").attr("height", style2_height_cam);
-    $("#inputVideo").attr("height", style2_height_cam);
-    $("#overlay").attr("width", style2_width_cam);
-    $("#inputVideo").attr("width", style2_width_cam);
-    $("#inputVideo").css("margin-left", "140px");
-    $("#overlay").css("margin-left", "140px");
+    $("#capture").css("width", style2_width_cam);
+    $("#capture").css("height", style2_height_cam);
+
+    $("#adv_style_leaderboard").css("display", "none");
+    $("#capture").css("margin-left", "140px");
 
     $("#wrap-aegisheader").css("margin-top", margin_top_wrap_aegis);
     $("#face_column2").css("display", "none");
     $("#face_column3").css("display", "none");
-    $("#running_text_adv").show();
+    $("#running_text_adv").css("display","none");
     $("#adv_style1").css("display", "block");
     $("#main-wrap").css("margin-top", margin_top_main_wrap + "px");
     $("#adv_style1").css("height", style2_height_grid3 + "px");
@@ -56,12 +55,6 @@ function setStyle1(data) {
 
     $('#carousel-custom').carousel('cycle');
 }
-var overlay_default_height = $("#overlay").attr("height");
-var inputvideo_default_height = $("#inputVideo").attr("height");
-var overlay_default_width = $("#overlay").attr("width");
-var inputvideo_default_width = $("#inputVideo").attr("width");
-var overlay_default_left = $("#overlay").css("margin-left");
-var inputvideo_default_left = $("#inputVideo").css("margin-left");
 
 
 var wrap_default_top = $("#wrap-aegisheader").css("margin-top");
@@ -70,28 +63,26 @@ var face_column3_default_display = $("#face_column3").css("display");
 var adv_style1_default_display = $("#adv_style1").css("display");
 var main_default_top = $("#main-wrap").css("margin-top");
 var adv_style1_default_height = $("#adv_style1").css("height");
-
 var running_text_adv_html = $("#running_text_adv").html();
+
+var capture_width = $("#capture").css("width");
+var capture_height = $("#capture").css("height");
 function setStyleDefault() {
 
+    $("#adv_style_leaderboard").css("display", "none");
     $('#carousel-custom').carousel('pause');
     $("#adv_style2").css("display", "none");
     $("#stylecam").css("display", "block");
 
+    $("#capture").css("width", capture_width);
+    $("#capture").css("height", capture_height);
 
-    $("#overlay").attr("height", overlay_default_height);
-    $("#inputVideo").attr("height", inputvideo_default_height);
-
-    $("#overlay").attr("width", overlay_default_width);
-    $("#inputVideo").attr("width", inputvideo_default_width);
-
-    $("#inputVideo").css("margin-left", inputvideo_default_left);
-    $("#overlay").css("margin-left", overlay_default_left);
 
     $("#wrap-aegisheader").css("margin-top", wrap_default_top);
     $("#face_column2").css("display", face_column2_default_display);
     $("#face_column3").css("display", face_column3_default_display);
 
+    $("#capture").css("margin-left", "0px");
     $("#running_text_adv").show();
     $("#running_text_adv").html(running_text_adv_html);
     $("#running_text_adv #running_text").text(running_text);
@@ -105,9 +96,16 @@ function setStyleDefault() {
 
 
 }
+function setStyleLeaderboard(){
+
+    $("#stylecam").css("display", "none");
+    $("#adv_style2").css("display", "none");
+    $("#adv_style_leaderboard").css("display", "block");
+    
+}
 function setStyle2(data) {
 
-
+    $("#adv_style_leaderboard").css("display", "none");
     $("#stylecam").css("display", "none");
     $("#adv_style2").css("display", "block");
 

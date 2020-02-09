@@ -1,39 +1,11 @@
 let forwardTimes = [];
-var def_image = "image/placeholder-profile.jpg";
+var def_image = "public/image/placeholder-profile.jpg";
 
-const base_url = "http://192.168.12.23/";
-const base_url2 = "http://192.168.12.23/";
-/*
 const base_url = "http://localhost:8000/";
-const base_url2 = "http://localhost:8000/";*/
-/*
-const base_url = "http://192.168.0.76/hutamakarya/hutamakarya-core/public/";
-const base_url2 = "http://192.168.0.76/hutamakarya/hutamakarya-core/public/";*/
-
-const webcam_video = $('#inputVideo').get(0)
-
-let width_image = $("#img_profile0").width();
-let height_image = $("#img_profile0").height();
-/*attendance variabel*/
-let facedata_in = [];
-let facedata_out = [];
-/*===============*/
-/*parameter*/
-let maxDescriptorDistance = 0.48;
-let max_cap_rec = 2;
-let max_recog_time_worker = 3000;
-/*=============*/
-/*WORKER*/
-let face_data_waiting = ["-", "-", "-", "-", "-", "-","-", "-", "-"];
-let face_data = ["-", "-", "-", "-", "-", "-","-", "-", "-"];
-let face_recog_valid_ = [0, 0, 0, 0, 0, 0, 0, 0, 0];
-let url_capture_waiting = ["-", "-", "-", "-", "-", "-", "-", "-", "-"];
-let url_capture = ["-", "-", "-", "-", "-", "-", "-", "-", "-"];
-
-let first_recog = false;
-
-var worker_run = ["-", "-", "-", "-", "-", "-", "-", "-", "-"];
-var worker = [];
+/*const base_url = "https://absensi.hutamakarya.com/";*/
+const base_url_api = "http://localhost/Sugihart/Hutamakarya/";
+console.log(base_url);
+const base_src_uploads = base_url + "uploads";
 
 var worker_check_display;
 var worker_check_data_train;
@@ -45,25 +17,6 @@ var synth = window.speechSynthesis;
 
 var is_attendance_hour = "";
 
-/*===========================*/
-/*const options = new faceapi.SsdMobilenetv1Options()*/
-/*const options = new faceapi.MtcnnOptions()*/
-
-// example
-/*const options = new faceapi.TinyFaceDetectorOptions({ inputSize: 320 })
- */
-const options = new faceapi.SsdMobilenetv1Options();
-let labeledFaceDescriptors;
-
-let labels = [];
-let nama = [];
-let gender = [];
-let department = [];
-let nik = [];
-let token_employee = [];
-let id = [];
-let face_pic_profile = [];
-
 let start_work = "00:00";
 let start_work_until = "00:00";
 let end_work = "00:00";
@@ -71,16 +24,9 @@ let end_work_until = "00:00";
 
 
 var style_now = "default";
-/*function reinit_facecam_recognition(){
-  video.start();
-  $("#stylecam").css("display","block");
-}*/
 
-const base_src_uploads = base_url2 + "uploads";
 var length_carousel = 0;
 var media_type = [];
-
-
 
 var pos_carousel_now = 1;
 var onclick_thumbnail = false;
@@ -101,7 +47,3 @@ var timer_train_data = 2000;
 var timer_running_text = 1000;
 
 var running_text = "";
-
-var path_weights = "";
-
-path_weights = "/hutamakarya-kios-live/weights/";

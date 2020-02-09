@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head>    
-    <link rel="stylesheet" href="/hutamakarya-kios-live/css/bootstrap.min.css">
-    <script src="/hutamakarya-kios-live/js/jquery-3.3.1.min.js"></script>
-    <script src="/hutamakarya-kios-live/js/bootstrap.min.js"></script>
-    <script src="/hutamakarya-kios-live/js/face-api.js"></script>
+<head>
 
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <script src="public/js/jquery-3.3.1.min.js"></script>
+    <script src="public/js/bootstrap.min.js"></script>
 <style>
+    body{
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
         #stylecam{
             background-color: black;
             width: 1100px;
-            height: 1920px;
+            height: 100%;
         }
-        #inputVideo {
+        #capture{
+            width: 100%;
             position: absolute;
             z-index: 1;
-        }
-        
-        #overlay {
-            position: absolute;
-            z-index: 2;
         }
         
         #main-wrap {
             width: 1100px;
             height: 1100px;
             background-color: #ec1e24;
-            position: absolute;
+            position: absolute; 
             z-index: 3;
             margin-top: 800px;
             padding-top: 100px;
@@ -52,10 +52,10 @@
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             transition: 0.3s;
             width: 346.66666666667px;
-            height: 150px;
+            height: 190px;
             background-color: #e44d52;
             border-radius: 5px;
-            margin-top: 40px;
+            margin-top: 20px;
             margin-bottom: 80px;
         }
         
@@ -275,23 +275,15 @@
 </head>
 <body>
 
-<!-- Preloader -->
-  <div class="modal fade bd-example-modal-lg" data-backdrop="static" data-keyboard="false" tabindex="-1" id="modal_loading">
-    <div class="modal-dialog modal-sm">
-        <div class="modal-content" style="width: 600px;background-color: #f4f4f4;margin-left: -500px;margin-top: 400px;">
-          <!-- <img src="{{asset('/images/loading.gif') }}" style="width: 100%;"> -->
-          <h5 style="text-align: center;" id="text_loading">Get Data From Server.. </h5>
-        </div>
-    </div>
-  </div>
 
     <div id="adv_style2">
+    </div>
+    <div id="adv_style_leaderboard">
     </div>
     <div id="stylecam">
         
         <div style="position: relative" class="margin">
-          <video onloadedmetadata="onPlay(this)" width="1100" height="825" id="inputVideo" autoplay muted playsinline></video>
-          <canvas id="overlay"  width="1100" height="825" />
+            <img src="public/image/capture.jpg" id="capture"  />
         </div>
         <div id="wrap-aegisheader">
             <h1 style="text-align: center;color: white;width: 100%;font-weight: bold;">- ATTENDANCE LIST -</h1>
@@ -306,7 +298,7 @@
                                 <div class="carousel-inner" id="wrap_item_carousel" role="listbox">
                                 </div>
                                 <!-- Indicators -->
-                                <ol class="carousel-indicators visible-sm-block hidden-xs-block visible-md-block visible-lg-block" id="wrap_thumbnail_carousel">
+                                <ol class="carousel-indicators visible-sm-block hidden-xs-block visible-md-block visible-lg-block" id="wrap_thumbnail_carousel" style="margin-top: -10px">
 
                                 </ol>
                             </div>
@@ -318,7 +310,7 @@
                 <tr id="face_column1">
                     <td>
                         <div class="card" style="margin-top: 60px;">
-                            <center><img src="image/placeholder-profile.jpg" alt="Avatar" id="img_profile0"></center>
+                            <center><img src="public/image/placeholder-profile.jpg" alt="Avatar" id="img_profile0"></center>
                             <div class="containers">
 
                                 <div class="label1" id="label_name0">.</div>
@@ -329,7 +321,7 @@
                     </td>
                     <td>
                         <div class="card" style="margin-top: 60px;">
-                            <center><img src="image/placeholder-profile.jpg" alt="Avatar" id="img_profile1"></center>
+                            <center><img src="public/image/placeholder-profile.jpg" alt="Avatar" id="img_profile1"></center>
                             <div class="containers">
 
                                 <div class="label1" id="label_name1">.</div>
@@ -340,7 +332,7 @@
                     </td>
                     <td>
                         <div class="card" style="margin-top: 60px;">
-                            <center><img src="image/placeholder-profile.jpg" alt="Avatar" id="img_profile2"></center>
+                            <center><img src="public/image/placeholder-profile.jpg" alt="Avatar" id="img_profile2"></center>
                             <div class="containers">
 
                                 <div class="label1" id="label_name2">.</div>
@@ -354,7 +346,7 @@
                 <tr id="face_column2">
                     <td>
                         <div class="card" style="margin-bottom: 10px;">
-                            <center><img src="image/placeholder-profile.jpg" alt="Avatar" id="img_profile3"></center>
+                            <center><img src="public/image/placeholder-profile.jpg" alt="Avatar" id="img_profile3"></center>
                             <div class="containers">
 
                                 <div class="label1" id="label_name3">.</div>
@@ -365,7 +357,7 @@
                     </td>
                     <td>
                         <div class="card" style="margin-bottom: 10px;">
-                            <center><img src="image/placeholder-profile.jpg" alt="Avatar" id="img_profile4"></center>
+                            <center><img src="public/image/placeholder-profile.jpg" alt="Avatar" id="img_profile4"></center>
                             <div class="containers">
 
                                 <div class="label1" id="label_name4">.</div>
@@ -376,7 +368,7 @@
                     </td>
                     <td>
                         <div class="card" style="margin-bottom: 10px;">
-                            <center><img src="image/placeholder-profile.jpg" alt="Avatar" id="img_profile5"></center>
+                            <center><img src="public/image/placeholder-profile.jpg" alt="Avatar" id="img_profile5"></center>
                             <div class="containers">
 
                                 <div class="label1" id="label_name5">.</div>
@@ -390,7 +382,7 @@
                 <tr id="face_column3">
                     <td class="td_column3">
                         <div class="card" style="margin-bottom: 10px;">
-                            <center><img src="image/placeholder-profile.jpg" alt="Avatar" id="img_profile6"></center>
+                            <center><img src="public/image/placeholder-profile.jpg" alt="Avatar" id="img_profile6"></center>
                             <div class="containers">
 
                                 <div class="label1" id="label_name6">.</div>
@@ -401,7 +393,7 @@
                     </td>
                     <td class="td_column3">
                         <div class="card" style="margin-bottom: 10px;">
-                            <center><img src="image/placeholder-profile.jpg" alt="Avatar" id="img_profile7"></center>
+                            <center><img src="public/image/placeholder-profile.jpg" alt="Avatar" id="img_profile7"></center>
                             <div class="containers">
 
                                 <div class="label1" id="label_name7">.</div>
@@ -412,7 +404,7 @@
                     </td>
                     <td class="td_column3">
                         <div class="card" style="margin-bottom: 10px;">
-                            <center><img src="image/placeholder-profile.jpg" alt="Avatar" id="img_profile8"></center>
+                            <center><img src="public/image/placeholder-profile.jpg" alt="Avatar" id="img_profile8"></center>
                             <div class="containers">
 
                                 <div class="label1" id="label_name8">.</div>
@@ -427,14 +419,14 @@
         </div>
         <div id="running_text_adv">
             <marquee style="color: white;font-size: 50px;" id="running_text">SELAMAT DATANG DI HUTAMAKARYA</marquee>
-
         </div>
     </div>
 
-  </body>
 
-  <script>
-   
+
+
+  </body>
+<script type="text/javascript">  
     const token_device = "{{ $token }}";
 
     @include('render_kios.js.variabel_js')
@@ -442,11 +434,8 @@
     @include('render_kios.js.process_database_js')
     @include('render_kios.js.worker_js')
     @include('render_kios.js.styling_js')
-    @include('render_kios.js.process_recognition_js')
     @include('render_kios.js.carousel_js')
     @include('render_kios.js.main_js')
-
-
-  </script>
+</script>
 </body>
 </html>
