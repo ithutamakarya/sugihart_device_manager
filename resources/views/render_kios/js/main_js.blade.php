@@ -38,25 +38,14 @@
                 var data = result['data'];
                 var src_image = base_url + "face_album/" + data.face_filename;
                 var index = index_;
-                // load the image, and append it to the element id="image-holder"
-                /*$("#img_profile" + index)
-                .on('load', function() { 
+            
+            
+                $("#img_profile" + index).attr('src',src_image).bind('onreadystatechange load', function(){
                     $("#label_name" + index).text(data.name);
                     $("#label_nik" + index).text(data.nik);
                     $("#label_department" + index).text(data.department);
-                 })
-                .on('error', function() { console.log("error loading image"); })
-                .attr("src",src_image);*/
 
-                $("#img_profile" + index).fadeOut(300, function(){
-                    $(this).attr('src',src_image).bind('onreadystatechange load', function(){
-                          if (this.complete) $(this).fadeIn(300);
-
-                      $("#label_name" + index).text(data.name);
-                      $("#label_nik" + index).text(data.nik);
-                      $("#label_department" + index).text(data.department);
-                    });
-               });
+                });
 
                 
                 /*console.log(result);*/
