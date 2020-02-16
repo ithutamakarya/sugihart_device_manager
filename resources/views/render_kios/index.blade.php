@@ -14,8 +14,8 @@
     }
         #stylecam{
             background-color: black;
-            width: 1100px;
-            height: 100%;
+            width: 100%; /*1100px*/
+            height: 1920px; /*100%*/
         }
         #capture{
             width: 100%;
@@ -24,8 +24,8 @@
         }
         
         #main-wrap {
-            width: 1100px;
-            height: 1100px;
+            width: 100%; /*1100px*/
+            height: 100%; /*1100px*/
             background-color: #ec1e24;
             position: absolute; 
             z-index: 3;
@@ -59,16 +59,18 @@
             margin-bottom: 80px;
         }
         
-        .card img {
+        .img-circle {
             /*border-radius: 50%;*/
-            border-radius: 99px;
-            margin-top: -100px;
+            border-radius: 999px;
             vertical-align: middle;
             width: 150px;
             height: 150px;
+            background-color: #fefefe;
+        }
+        .card .img-circle{
+            margin-top: -100px;
             max-height: 150px;
             max-width: 150px;
-            background-color: #fefefe;
         }
         .card_absent {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -134,7 +136,7 @@
         }
         
         #running_text_adv {
-            width: 1100px;
+            width: 100%; /*1100px*/
             height: 100px;
             background-color: black;
             position: absolute;
@@ -142,8 +144,6 @@
             /*margin-top: 1794px;*/
             margin-top: 1820px;
         }
-    </style>
-    <style type="text/css">
         .col-lg-12{
             padding: 0px;
         }
@@ -270,15 +270,177 @@
         .td_column3{
             padding-top: 80px;
         }
+        /*LEADERBOARD*/
+        #adv_style_leaderboard{
+            background-color: #f1f1f1;
+            width: 100%; /*1100px*/
+            height: 1920px;
+            display: none;
+        }
+        #wrap_top{
+            width: 100%;
+            height: 40%;
+            padding-top:70px;
+            padding: 20px;
+            background-color: #ec1e24;
+        }
+        #adv_style_leaderboard p.title{
+            color: white;
+            font-size: 80px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        #adv_style_leaderboard .img-circle.img-top-leaderboard{
+            
+            width: 270px;
+            height: 270px;
+            vertical-align: middle;
+            margin-bottom: 20px;
+        }
+        .card_leaderboard {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          padding: 16px;
+          height: 250px;
+          text-align: center;
+          background-color: white;
+          border-radius: 40px;
+          padding: 40px 20px;
+        }
+        .card_leaderboard h1{
+            color: #ec1e24;
+            font-size: 30px;
+            letter-spacing: 1px;
+            font-weight: bold;
+            text-shadow: 1px 1px #ff0000;
+        }
+        .card_leaderboard p{
+            color: #ec1e24;
+            font-size: 20px;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+        .card_leaderboard h2{
+            color: #ec1e24;
+            font-size: 35px;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+        .wrap_number_top{
+            position: absolute;
+            z-index: 2;
+            width: 100px;
+            height: 100px;
+        }
+        #wrap_leaderboard2{
+            padding: 100px 50px;
+            width: 100%;
+            height: 100%;
+        }
+        .card_leaderboard2{
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          padding: 5px;
+          height: 140px;
+          margin-bottom: 15px;
+          text-align: center;
+          background-color: #ec1e24;
+          border-radius: 40px;
+        }
+        .card_leaderboard2 .number_box{
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 100px;
+          height: 100px;
+          border-radius: 20px;
+          background-color: white;
+          padding-top: 5px;
+        }
+        .card_leaderboard2 .number_box p{
+            font-size: 60px;
+            font-weight: bold;
+            color: #ec1e24;
+            margin-left: -5px;
+        }
+        .img-leaderboard{
+            width: 110px;
+            height: 110px;
+        }
+        .card_leaderboard2 .leaderboard_name{
+            color: white;
+            font-size: 40px;
+            text-align: left;   
+        }
+        .card_leaderboard2 .wrap_time{
+            width: 200px;
+            background-color: white;
+            border-radius: 20px;
+            padding: 10px;
+
+        }
+        .card_leaderboard2 .wrap_time p{
+            color: black;
+            font-weight: bold;
+            text-align: center;
+            font-size: 40px; 
+        }
+
+
     </style>
 
 </head>
 <body>
 
-
-    <div id="adv_style2">
-    </div>
     <div id="adv_style_leaderboard">
+        <div id="wrap_top">
+            <p class="title">Leaderboards</p>
+            <table style="width: 100%;">
+                <tr>
+                    <?php $number = [2,1,3] ?>
+                    <?php for($i=0;$i<=2;$i++){ ?>
+                    <td>
+                        <div class="wrap_number_top">
+                            <p class="title" style="background-color: black;font-weight: bold;"><?= $number[$i] ?></p>
+                        </div>
+                        <center>
+                            <img class="img-circle img-top-leaderboard"  src="public/image/placeholder-profile.jpg" alt="Avatar" id="leaderboard_img<?= $number[$i] ?>">
+                            <div class="card_leaderboard">
+                                <h1 id="leaderboard_name<?= $number[$i] ?>">-</h1>
+                                <p id="leaderboard_division<?= $number[$i] ?>">-</p>
+                                <h2 id="leaderboard_time<?= $number[$i] ?>">-</h2>
+                            </div>
+                        </center>
+                    </td>
+                    <?php } ?>
+                </tr>
+            </table>
+            <div id="wrap_leaderboard2">
+                <?php for($i=4;$i<=10;$i++){ ?>
+                    <div class="card_leaderboard2">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td style="width: 12%">
+                                    <div class="number_box">
+                                        <p ><?= $i ?></p>
+                                    </div>
+                                </td>
+                                <td style="width: 15%">
+                                    <img id="leaderboard_img<?= $i ?>" class="img-circle img-leaderboard" src="public/image/placeholder-profile.jpg" alt="Avatar" >
+                                </td>
+                                <td style="width: 50%;">
+                                    <p class="leaderboard_name" id="leaderboard_name<?= $i ?>">-</p>
+                                </td>
+                                <td style="width: 23%;">
+                                    <div class="wrap_time">
+                                        <p id="leaderboard_time<?= $i ?>">-</p>
+                                        <p id="leaderboard_division<?= $i ?>" style="display: none">-</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                    </div>
+
+                <?php } ?>
+            </div>
+        </div>
     </div>
     <div id="stylecam">
         
@@ -310,7 +472,7 @@
                 <tr id="face_column1">
                     <td>
                         <div class="card" style="margin-top: 60px;">
-                            <center><img src="public/image/placeholder-profile.jpg" alt="Avatar" id="img_profile0"></center>
+                            <center><img class="img-circle" src="public/image/placeholder-profile.jpg" alt="Avatar" id="img_profile0"></center>
                             <div class="containers">
 
                                 <div class="label1" id="label_name0">.</div>
@@ -321,7 +483,7 @@
                     </td>
                     <td>
                         <div class="card" style="margin-top: 60px;">
-                            <center><img src="public/image/placeholder-profile.jpg" alt="Avatar" id="img_profile1"></center>
+                            <center><img class="img-circle" src="public/image/placeholder-profile.jpg" alt="Avatar" id="img_profile1"></center>
                             <div class="containers">
 
                                 <div class="label1" id="label_name1">.</div>
@@ -332,7 +494,7 @@
                     </td>
                     <td>
                         <div class="card" style="margin-top: 60px;">
-                            <center><img src="public/image/placeholder-profile.jpg" alt="Avatar" id="img_profile2"></center>
+                            <center><img class="img-circle" src="public/image/placeholder-profile.jpg" alt="Avatar" id="img_profile2"></center>
                             <div class="containers">
 
                                 <div class="label1" id="label_name2">.</div>
@@ -346,7 +508,7 @@
                 <tr id="face_column2">
                     <td>
                         <div class="card" style="margin-bottom: 10px;">
-                            <center><img src="public/image/placeholder-profile.jpg" alt="Avatar" id="img_profile3"></center>
+                            <center><img class="img-circle" src="public/image/placeholder-profile.jpg" alt="Avatar" id="img_profile3"></center>
                             <div class="containers">
 
                                 <div class="label1" id="label_name3">.</div>
@@ -357,7 +519,7 @@
                     </td>
                     <td>
                         <div class="card" style="margin-bottom: 10px;">
-                            <center><img src="public/image/placeholder-profile.jpg" alt="Avatar" id="img_profile4"></center>
+                            <center><img class="img-circle" src="public/image/placeholder-profile.jpg" alt="Avatar" id="img_profile4"></center>
                             <div class="containers">
 
                                 <div class="label1" id="label_name4">.</div>
@@ -368,7 +530,7 @@
                     </td>
                     <td>
                         <div class="card" style="margin-bottom: 10px;">
-                            <center><img src="public/image/placeholder-profile.jpg" alt="Avatar" id="img_profile5"></center>
+                            <center><img class="img-circle" src="public/image/placeholder-profile.jpg" alt="Avatar" id="img_profile5"></center>
                             <div class="containers">
 
                                 <div class="label1" id="label_name5">.</div>
@@ -382,7 +544,7 @@
                 <tr id="face_column3">
                     <td class="td_column3">
                         <div class="card" style="margin-bottom: 10px;">
-                            <center><img src="public/image/placeholder-profile.jpg" alt="Avatar" id="img_profile6"></center>
+                            <center><img class="img-circle" src="public/image/placeholder-profile.jpg" alt="Avatar" id="img_profile6"></center>
                             <div class="containers">
 
                                 <div class="label1" id="label_name6">.</div>
@@ -393,7 +555,7 @@
                     </td>
                     <td class="td_column3">
                         <div class="card" style="margin-bottom: 10px;">
-                            <center><img src="public/image/placeholder-profile.jpg" alt="Avatar" id="img_profile7"></center>
+                            <center><img class="img-circle" src="public/image/placeholder-profile.jpg" alt="Avatar" id="img_profile7"></center>
                             <div class="containers">
 
                                 <div class="label1" id="label_name7">.</div>
@@ -404,7 +566,7 @@
                     </td>
                     <td class="td_column3">
                         <div class="card" style="margin-bottom: 10px;">
-                            <center><img src="public/image/placeholder-profile.jpg" alt="Avatar" id="img_profile8"></center>
+                            <center><img class="img-circle" src="public/image/placeholder-profile.jpg" alt="Avatar" id="img_profile8"></center>
                             <div class="containers">
 
                                 <div class="label1" id="label_name8">.</div>
@@ -426,16 +588,17 @@
 
 
   </body>
-<script type="text/javascript">  
-    const token_device = "{{ $token }}";
+      
+    <script type="text/javascript">  
+        const token_device = "{{ $token }}";
 
-    @include('render_kios.js.variabel_js')
-    @include('render_kios.js.function_js')
-    @include('render_kios.js.process_database_js')
-    @include('render_kios.js.worker_js')
-    @include('render_kios.js.styling_js')
-    @include('render_kios.js.carousel_js')
-    @include('render_kios.js.main_js')
-</script>
+        @include('render_kios.js.variabel_js')
+        @include('render_kios.js.function_js')
+        @include('render_kios.js.process_database_js')
+        @include('render_kios.js.worker_js')
+        @include('render_kios.js.styling_js')
+        @include('render_kios.js.carousel_js')
+        @include('render_kios.js.main_js')
+    </script>
 </body>
 </html>
