@@ -14,7 +14,7 @@
     }
         #stylecam{
             background-color: black;
-            width: 100%; /*1100px*/
+            width: 100%; /*1080px*/
             height: 1920px; /*100%*/
         }
         #capture{
@@ -24,8 +24,8 @@
         }
         
         #main-wrap {
-            width: 100%; /*1100px*/
-            height: 100%; /*1100px*/
+            width: 100%; /*1080px*/
+            height: 100%; /*1080px*/
             background-color: #ec1e24;
             position: absolute; 
             z-index: 3;
@@ -51,7 +51,7 @@
         .card {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             transition: 0.3s;
-            width: 346.66666666667px;
+            width: 340px;
             height: 190px;
             background-color: #e44d52;
             border-radius: 5px;
@@ -136,7 +136,7 @@
         }
         
         #running_text_adv {
-            width: 100%; /*1100px*/
+            width: 100%; /*1080px*/
             height: 100px;
             background-color: black;
             position: absolute;
@@ -273,7 +273,7 @@
         /*LEADERBOARD*/
         #adv_style_leaderboard{
             background-color: #f1f1f1;
-            width: 100%; /*1100px*/
+            width: 100%; /*1080px*/
             height: 1920px;
             display: none;
         }
