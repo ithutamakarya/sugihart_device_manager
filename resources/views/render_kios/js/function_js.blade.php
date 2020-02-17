@@ -1,1 +1,111 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('f 1r(9){9=D 9!=="14"?N.13(9):9;12{9=N.11(9)}10(e){k u}6(D 9==="Z"&&9!==7){k Y}k u}f X(c){j t=c.J(\'L\'),n=15.W(\'s\').J(\'L\'),C=t.E(0,0,c.q,c.P),l=C.G.V,i,1={m:7,a:7,d:7,g:7},x,y;U(i=0;i<l;i+=4){6(C.G[i+3]!==0){x=(i/4)%c.q;y=~~((i/4)/c.q);6(1.m===7){1.m=y}6(1.a===7){1.a=x}o 6(x<1.a){1.a=x}6(1.d===7){1.d=x}o 6(1.d<x){1.d=x}6(1.g===7){1.g=y}o 6(1.g<y){1.g=y}}}j z=1.g-1.m,v=1.d-1.a,F=t.E(1.a,1.m,v,z);n.s.q=v;n.s.P=z;n.S(F,0,0);k n.s}f 17(M){1h=1t.1u.1v();j h=H 1w();h.16=M;h.1z=0.8;h.1s=0.5;h.1C=\'1B-1A\';1x.1q(h)}f R(){I b=H 1p();I O={19:"2-B",1a:"2-B",1b:"2-B"};j r=b.1c("1d",O);r=r.1e(".").1f(":");k r}f 18(){j p="";j b=R();6(b>=1g&&b<=1i){p="K"}o 6(b>=1j&&b<=1k){p="Q"}k p}f 1l(A){6(w&&A=="Q"){w=u}o 6(!w&&A=="K"){1m();1n.1o({1y:T})}}',62,101,'|bound|||||if|null||item|left|time_now||right||function|bottom|utter||var|return||top|copy|else|status_type_attendance|width|time_now2|canvas|ctx|false|trimWidth|is_already_check_ontime|||trimHeight|is_attendance_hour_|digit|pixels|typeof|getImageData|trimmed|data|new|let|getContext|check_in|2d|text_voice|JSON|options|height|check_out|set_time_now|putImageData|base_url2|for|length|createElement|trim|true|object|catch|parse|try|stringify|string|document|text|setVoice|check_is_attendance_hour|hour|minute|second|toLocaleTimeString|id|split|join|start_work|available_voices|start_work_until|end_work|end_work_until|check_ontime_employee|start_worker_check_ontime|worker_check_ontime|postMessage|Date|speak|isJson|pitch|window|speechSynthesis|getVoices|SpeechSynthesisUtterance|synth|base_url|rate|US|en|lang'.split('|'),0,{}));
+function isJson(item) {
+    item = typeof item !== "string"
+        ? JSON.stringify(item)
+        : item;
+
+    try {
+        item = JSON.parse(item);
+    } catch (e) {
+        return false;
+    }
+
+    if (typeof item === "object" && item !== null) {
+        return true;
+    }
+
+    return false;
+}
+function trim(c) {
+    var ctx = c.getContext('2d'),
+        copy = document.createElement('canvas').getContext('2d'),
+        pixels = ctx.getImageData(0, 0, c.width, c.height),
+        l = pixels.data.length,
+        i,
+        bound = {
+            top: null,
+            left: null,
+            right: null,
+            bottom: null
+        },
+        x, y;
+    for (i = 0; i < l; i += 4) {
+        if (pixels.data[i + 3] !== 0) {
+            x = (i / 4) % c.width;
+            y = ~~((i / 4) / c.width);
+            if (bound.top === null) {
+                bound.top = y;
+            }
+            if (bound.left === null) {
+                bound.left = x;
+            } else if (x < bound.left) {
+                bound.left = x;
+            }
+            if (bound.right === null) {
+                bound.right = x;
+            } else if (bound.right < x) {
+                bound.right = x;
+            }
+            if (bound.bottom === null) {
+                bound.bottom = y;
+            } else if (bound.bottom < y) {
+                bound.bottom = y;
+            }
+        }
+    }
+    var trimHeight = bound.bottom - bound.top,
+        trimWidth = bound.right - bound.left,
+        trimmed = ctx.getImageData(bound.left, bound.top, trimWidth, trimHeight);
+    copy.canvas.width = trimWidth;
+    copy.canvas.height = trimHeight;
+    copy.putImageData(trimmed, 0, 0);
+    // open new window with trimmed image:
+    return copy.canvas;
+}
+
+
+function setVoice(text_voice) {
+    available_voices = window.speechSynthesis.getVoices();
+    var utter = new SpeechSynthesisUtterance();
+    utter.text = text_voice;
+    utter.rate = 0.8;
+    utter.pitch = 0.5;
+    utter.lang = 'en-US';
+    /*utter.voice = available_voices[10];*/
+    synth.speak(utter);
+}
+
+function set_time_now() {
+    let time_now = new Date();
+    let options = {
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit"
+    };
+    var time_now2 = time_now.toLocaleTimeString("id", options);
+    time_now2 = time_now2.split(".").join(":");
+    return time_now2;
+}
+
+
+function check_is_attendance_hour() {
+
+      var status_type_attendance = "";
+      var time_now = set_time_now();
+      if (time_now >= start_work && time_now <= start_work_until) {
+          status_type_attendance = "check_in";
+      } else if (time_now >= end_work && time_now <= end_work_until) {
+          status_type_attendance = "check_out";
+      }
+      return status_type_attendance;
+}
+function check_ontime_employee(is_attendance_hour_){
+    if(is_already_check_ontime && is_attendance_hour_ == "check_out"){
+        is_already_check_ontime = false;
+    }
+    else if(!is_already_check_ontime && is_attendance_hour_ == "check_in"){
+        start_worker_check_ontime();
+        worker_check_ontime.postMessage({
+            base_url: base_url2
+        });
+    }
+}

@@ -1,1 +1,47 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('$("#2-4").n("o.C.2",q 5(a){6(9){r();9=j;$("#2-4").2("c")}6(!d){8 b=$("#2-4 .s").t("#2-4 .u");3=b+1;6(3>=v)3=0}d=j;6("x"==y[3]){z(5(){$("#2-4").2("i")},1);8 7=$("#A"+3)[0];8 l=f[3];h 7.i();7.B=0;h 7.R();Q();9=e;O.N({f:l,3:3})}K{k.g("c");$("#2-4").2("c")}});$(".2-I").H(".G","F",5(a){k.g("m");p("m")});$(".2-J").n("L",".M",5(){8 a=$(P).E("D-o-w");3=a;d=e});',54,54,'||carousel|pos_carousel_now|custom|function|if|myvideo|var|on_video_run|||cycle|onclick_thumbnail|true|video_duration|log|await|pause|false|console|duration_|stopped|on|slide|alert|async|stopWorkerVideo|active|index|item|length_carousel|to|Video|media_type|setTimeout|video_|currentTime|bs|data|attr|stop|video_adv|bind|inner|indicators|else|click|thumbnail_data|postMessage|worker_video|this|start_video_worker|play'.split('|'),0,{}));
+$("#carousel-custom").on("slide.bs.carousel", async function(a) {
+    
+    if (on_video_run) {
+        stopWorkerVideo();
+        on_video_run = false;
+        $("#carousel-custom").carousel("cycle");
+    }
+    if (!onclick_thumbnail) {
+        var b = $("#carousel-custom .active").index("#carousel-custom .item");
+        pos_carousel_now = b + 1;
+        if (pos_carousel_now >= length_carousel) pos_carousel_now = 0;
+    }
+    onclick_thumbnail = false;
+    if ("Video" == media_type[pos_carousel_now]) {
+        setTimeout(function() {
+            $("#carousel-custom").carousel("pause");
+        }, 1);
+        var myvideo = $("#video_" + pos_carousel_now)[0];
+
+        var duration_ = video_duration[pos_carousel_now];
+        
+        await myvideo.pause();
+        myvideo.currentTime = 0;
+        await myvideo.play();
+
+        start_video_worker();
+        on_video_run = true;
+        worker_video.postMessage({
+            video_duration: duration_,
+            pos_carousel_now: pos_carousel_now
+        });
+    } else {
+        console.log("cycle");
+        $("#carousel-custom").carousel("cycle");
+    }
+});
+
+$(".carousel-inner").bind(".video_adv", "stop", function(a) {
+    console.log("stopped");
+    alert("stopped");
+});
+
+$(".carousel-indicators").on("click", ".thumbnail_data", function() {
+    var a = $(this).attr("data-slide-to");
+    pos_carousel_now = a;
+    onclick_thumbnail = true;
+});

@@ -1,1 +1,87 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('1g(2(){$(\'#v-P\').v(\'N\')},1);$(M).L(2(){4 a="0";2 u(){$("#w").r("l","K/J/w.H?E="+D.G())}2 x(){$.h({g:F+\'k/I/3.Q?a=\'+a,o:\'t\',z:"q",p:2(7){a=7[\'a\'];4 3=7[\'3\'];O(4 i=0;i<3.C;i++){4 9=3[i].9;e(i,9)}},6:2(m,s,6){A.B(6)}})}2 e(n,9){$.h({g:5+\'k/e/\'+9,o:\'t\',z:"q",p:2(7){4 3=7[\'3\'];4 j=5+"S/"+3.T;4 8=n;$("#1f"+8).r(\'l\',j).1e(\'1d 1c\',2(){$("#1b"+8).d(3.1a);$("#19"+8).d(3.18);$("#17"+8).d(3.16)})},6:2(m,s,6){A.B(6)}})}4 15=y(2(){u()},14);4 13=y(2(){x()},12);11();10.c({5:5,f:Z,});Y();X.c({b:b,5:5,f:W,});V();U.c({b:b,5:5,f:R,})})',62,79,'||function|data|var|base_url|error|result|index|employee_id|count|token_device|postMessage|text|get_face_album_employee|timer|url|ajax||src_image|api|src|request|index_|method|success|json|attr|status|GET|doRealtimeImage|carousel|capture|set_data_cctv|setInterval|dataType|console|log|length|Math|rand|base_url_api|random|jpg|face_data|image|public|ready|document|pause|for|custom|php|timer_display|face_album|face_filename|worker_check_display|start_worker_check_display|timer_running_text|worker_running_text|start_worker_running_text|timer_office|worker_office_hour|start_worker_office_hour|1000|intervalData|100|intervalImage|department|label_department|nik|label_nik|name|label_name|load|onreadystatechange|bind|img_profile|setTimeout'.split('|'),0,{}));
+
+    setTimeout(function() {
+        $('#carousel-custom').carousel('pause');
+    }, 1);
+  
+    $(document).ready(function() {
+        var count = "0";
+        function doRealtimeImage() {
+          $("#capture").attr("src","public/image/capture.jpg?rand=" + Math.random());
+        }
+
+        function set_data_cctv() {
+            $.ajax({
+              url: base_url_api + 'api/face_data/data.php?count=' + count,
+              method:'GET',
+              dataType:"json", 
+              success: function(result){
+                count = result['count'];
+                var data = result['data'];
+                for (var i = 0; i < data.length; i++) {
+                  var employee_id = data[i].employee_id;
+                  get_face_album_employee(i,employee_id);
+                }
+              },error: function(request, status, error) {
+                console.log(error);
+              }
+            });
+
+        }
+        function get_face_album_employee(index_,employee_id) {
+
+            $.ajax({
+              url: base_url + 'api/get_face_album_employee/' + employee_id,
+              method:'GET',
+              dataType:"json", 
+              success: function(result){
+                var data = result['data'];
+                var src_image = base_url + "face_album/" + data.face_filename;
+                var index = index_;
+                
+                    $("#img_profile" + index).attr('src',src_image).bind('onreadystatechange load', function(){
+                        $("#label_name" + index).text(data.name);
+                        $("#label_nik" + index).text(data.nik);
+                        $("#label_department" + index).text(data.department);
+
+                    });
+
+                
+                /*console.log(result);*/
+              },error: function(request, status, error) {
+                console.log(error);
+              }
+            });
+
+        }
+        
+
+        var intervalImage = setInterval(function() {doRealtimeImage();},100);
+        var intervalData = setInterval(function() {set_data_cctv();},1000);
+        /*WORKER*/
+        start_worker_office_hour();
+        worker_office_hour.postMessage({
+            base_url: base_url,
+            timer:timer_office,
+        });
+
+        /*start_worker_check_train_data();
+        worker_check_data_train.postMessage({
+            count_data_training: count_data_training,
+            base_url: base_url,
+            timer:timer_train_data,
+        });*/
+
+        start_worker_running_text();
+        worker_running_text.postMessage({
+            token_device: token_device,
+            base_url: base_url,
+            timer:timer_running_text,
+        });
+
+        start_worker_check_display();
+        worker_check_display.postMessage({
+            token_device: token_device,
+            base_url: base_url,
+            timer:timer_display,
+        });
+    })
