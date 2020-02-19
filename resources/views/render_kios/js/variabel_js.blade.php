@@ -2,8 +2,8 @@ let forwardTimes = [];
 var def_image = "public/image/placeholder-profile.jpg";
 
 const base_url = "https://absensi.hutamakarya.com/";
-/*const base_url = "https://absensi.hutamakarya.com/";*/
 const base_url_api = "http://localhost/hutamakarya-kios-live2/";
+
 console.log(base_url);
 const base_src_uploads = base_url + "uploads";
 
@@ -47,3 +47,5 @@ var timer_train_data = 2000;
 var timer_running_text = 1000;
 
 var running_text = "";
+var on_change_display = false;
+var myvideo;

@@ -4,6 +4,7 @@ function set_runningtext() {
         url: base_url + 'get_running_text/' + token_device,
         method: 'GET',
         dataType: "json",
+        crossOrigin: true,
         success: function(result) {
             var response = result['response'];
             if (response == "success") {
@@ -25,6 +26,7 @@ function get_ontime_employee() {
         url: base_url + 'api/get_ontime_employee/',
         method: 'GET',
         dataType: "json",
+        crossOrigin: true,
         success: function(result) {
             var response = result['response'];
             if (response == "success") {
@@ -57,9 +59,14 @@ function check_display_kios(result) {
        if (response == "any_data") {
           var data = result.data;
           if (style_now != style_) {
+              on_change_display = true;
+              try{ myvideo.pause() }catch(err){ }
               if (style_ == "style1") {
-                  if(!on_cam_play){
+                  /*if(!on_cam_play){
                     on_cam_play = true;
+                  }*/
+                  if(style_now == "style2"){
+                    $("#adv_style2 #carousel_style").appendTo("#adv_style1"); 
                   }
                   setStyle1(data);
               }else if (style_ == "style2") {
@@ -71,6 +78,8 @@ function check_display_kios(result) {
           }
       }else{
         if (style_now != style_) {
+          on_change_display = true;
+          try{ myvideo.pause() }catch(err){ }
           setStyleDefault();
           style_now = style_;
         }

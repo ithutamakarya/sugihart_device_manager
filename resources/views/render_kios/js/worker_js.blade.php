@@ -173,9 +173,9 @@ function start_video_worker() {
             //console.log("video_duration : " + video_duration);
             var myVideoTimer = setInterval(function() {
                 timer += 1;
+                console.log("timer run : " +  timer);
                 if (timer >= video_duration) {
                     clearInterval(myVideoTimer);
-
                     self.postMessage("test");
                 }
             }, 1000);
@@ -184,11 +184,13 @@ function start_video_worker() {
     }));
     worker_video.addEventListener('message', function(e) {
         stopWorkerVideo();
-        if(on_cam_play){
+        console.log(on_change_display);
+        if(on_change_display){
             $("#carousel-custom").carousel("pause");
         }else{
             $('#carousel-custom').carousel('cycle');   
         }
+
 
     }, false);
 
@@ -200,3 +202,5 @@ function stopWorker(index_) {
         worker[index_] = undefined;
     }
 }
+
+

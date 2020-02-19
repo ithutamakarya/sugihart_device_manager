@@ -14,7 +14,7 @@
     }
         #stylecam{
             background-color: black;
-            width: 100%; /*1080px*/
+            width: 100%; /*1100px*/
             height: 1920px; /*100%*/
         }
         #capture{
@@ -24,8 +24,8 @@
         }
         
         #main-wrap {
-            width: 100%; /*1080px*/
-            height: 100%; /*1080px*/
+            width: 100%; /*1100px*/
+            height: 100%; /*1100px*/
             background-color: #ec1e24;
             position: absolute; 
             z-index: 3;
@@ -136,7 +136,7 @@
         }
         
         #running_text_adv {
-            width: 100%; /*1080px*/
+            width: 100%; /*1100px*/
             height: 100px;
             background-color: black;
             position: absolute;
@@ -273,7 +273,7 @@
         /*LEADERBOARD*/
         #adv_style_leaderboard{
             background-color: #f1f1f1;
-            width: 100%; /*1080px*/
+            width: 100%; /*1100px*/
             height: 1920px;
             display: none;
         }
@@ -387,7 +387,8 @@
 
 </head>
 <body>
-
+    <div id="adv_style2">
+    </div>
     <div id="adv_style_leaderboard">
         <div id="wrap_top">
             <p class="title">Leaderboards</p>
@@ -588,7 +589,7 @@
 
 
   </body>
-      
+  
     <script type="text/javascript">  
         const token_device = "{{ $token }}";
 

@@ -1,5 +1,8 @@
 function setStyle1(data) {
     running_text_adv_html = $("#running_text_adv").html();
+    on_change_display = false;
+    try{ $('#carousel-custom').carousel('pause'); }catch(err){ console.log(err); }
+    
 
     var style2_height_cam = "630";
     var style2_width_cam = "840";
@@ -8,6 +11,8 @@ function setStyle1(data) {
 
     var margin_top_main_wrap = parseInt(style2_height_cam);
     var margin_top_wrap_aegis = parseInt(style2_height_cam) - 40;
+
+    $("#stylecam").css("display", "block");
 
     $("#capture").css("width", style2_width_cam);
     $("#capture").css("height", style2_height_cam);
@@ -69,14 +74,13 @@ var capture_width = $("#capture").css("width");
 var capture_height = $("#capture").css("height");
 function setStyleDefault() {
 
+        try{ $('#carousel-custom').carousel('pause'); }catch(err){ console.log(err); }
         $("#adv_style_leaderboard").css("display", "none");
-        $('#carousel-custom').carousel('pause');
         $("#adv_style2").css("display", "none");
         $("#stylecam").css("display", "block");
 
-        $("#capture").css("width", capture_width);
-        $("#capture").css("height", capture_height);
-
+        $("#capture").css("width", "1080px");
+        $("#capture").css("height", "810px");
 
         $("#wrap-aegisheader").css("margin-top", wrap_default_top);
         $("#face_column2").css("display", face_column2_default_display);
@@ -97,9 +101,13 @@ function setStyleDefault() {
 
 }
 function setStyleLeaderboard(){
+    try{ $('#carousel-custom').carousel('pause'); }catch(err){ console.log(err); }
     get_ontime_employee();
+
 }
 function setStyle2(data) {
+    on_change_display = false;
+    try{ $('#carousel-custom').carousel('pause'); }catch(err){ console.log(err); }
 
     $("#adv_style_leaderboard").css("display", "none");
     $("#stylecam").css("display", "none");

@@ -14,6 +14,7 @@
               url: base_url_api + 'api/face_data/data.php?count=' + count,
               method:'GET',
               dataType:"json", 
+              crossOrigin: true,
               success: function(result){
                 count = result['count'];
                 var data = result['data'];
@@ -33,6 +34,7 @@
               url: base_url + 'api/get_face_album_employee/' + employee_id,
               method:'GET',
               dataType:"json", 
+              crossOrigin: true,
               success: function(result){
                 var data = result['data'];
                 var src_image = base_url + "face_album/" + data.face_filename;
