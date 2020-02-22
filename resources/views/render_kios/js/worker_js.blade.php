@@ -173,7 +173,7 @@ function start_video_worker() {
             //console.log("video_duration : " + video_duration);
             var myVideoTimer = setInterval(function() {
                 timer += 1;
-                console.log("timer run : " +  timer);
+                //console.log("timer run : " +  timer + " , until : "+ video_duration);
                 if (timer >= video_duration) {
                     clearInterval(myVideoTimer);
                     self.postMessage("test");
@@ -184,7 +184,7 @@ function start_video_worker() {
     }));
     worker_video.addEventListener('message', function(e) {
         stopWorkerVideo();
-        console.log(on_change_display);
+        /*console.log(on_change_display);*/
         if(on_change_display){
             $("#carousel-custom").carousel("pause");
         }else{

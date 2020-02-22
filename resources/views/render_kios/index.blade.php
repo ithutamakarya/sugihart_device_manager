@@ -229,10 +229,11 @@
             z-index: 20;
             padding: 0px;
             display: none;
-            margin-top: 230px;
+            margin-top: 330px;
         }
         #adv_style1 .item{
-            height: 860px;
+            height: 760px;
+            width: 1080px;
         }
         #adv_style1 .item img {
             width: 100%;
@@ -240,7 +241,7 @@
         
         #adv_style1 .item video {
             width: 100%;
-            height: 860px;
+            height: 100%;
         }
         
         #wrap_thumbnail_carousel img,
@@ -477,8 +478,8 @@
                             <div class="containers">
 
                                 <div class="label1" id="label_name0">.</div>
-                                <div class="label2" id="label_nik0">.</div>
-                                <div class="label3" id="label_department0">.</div>
+                                <div class="label2" id="label_time0">.</div>
+                                <div class="label3" id="label_divisi0">.</div>
                             </div>
                         </div>
                     </td>
@@ -488,8 +489,8 @@
                             <div class="containers">
 
                                 <div class="label1" id="label_name1">.</div>
-                                <div class="label2" id="label_nik1">.</div>
-                                <div class="label3" id="label_department1">.</div>
+                                <div class="label2" id="label_time1">.</div>
+                                <div class="label3" id="label_divisi1">.</div>
                             </div>
                         </div>
                     </td>
@@ -499,8 +500,8 @@
                             <div class="containers">
 
                                 <div class="label1" id="label_name2">.</div>
-                                <div class="label2" id="label_nik2">.</div>
-                                <div class="label3" id="label_department2">.</div>
+                                <div class="label2" id="label_time2">.</div>
+                                <div class="label3" id="label_divisi2">.</div>
                             </div>
                         </div>
                     </td>
@@ -513,8 +514,8 @@
                             <div class="containers">
 
                                 <div class="label1" id="label_name3">.</div>
-                                <div class="label2" id="label_nik3">.</div>
-                                <div class="label3" id="label_department3">.</div>
+                                <div class="label2" id="label_time3">.</div>
+                                <div class="label3" id="label_divisi3">.</div>
                             </div>
                         </div>
                     </td>
@@ -524,8 +525,8 @@
                             <div class="containers">
 
                                 <div class="label1" id="label_name4">.</div>
-                                <div class="label2" id="label_nik4">.</div>
-                                <div class="label3" id="label_department4">.</div>
+                                <div class="label2" id="label_time4">.</div>
+                                <div class="label3" id="label_divisi4">.</div>
                             </div>
                         </div>
                     </td>
@@ -535,8 +536,8 @@
                             <div class="containers">
 
                                 <div class="label1" id="label_name5">.</div>
-                                <div class="label2" id="label_nik5">.</div>
-                                <div class="label3" id="label_department5">.</div>
+                                <div class="label2" id="label_time5">.</div>
+                                <div class="label3" id="label_divisi5">.</div>
                             </div>
                         </div>
                     </td>
@@ -549,8 +550,8 @@
                             <div class="containers">
 
                                 <div class="label1" id="label_name6">.</div>
-                                <div class="label2" id="label_nik6">.</div>
-                                <div class="label3" id="label_department6">.</div>
+                                <div class="label2" id="label_time6">.</div>
+                                <div class="label3" id="label_divisi6">.</div>
                             </div>
                         </div>
                     </td>
@@ -560,8 +561,8 @@
                             <div class="containers">
 
                                 <div class="label1" id="label_name7">.</div>
-                                <div class="label2" id="label_nik7">.</div>
-                                <div class="label3" id="label_department7">.</div>
+                                <div class="label2" id="label_time7">.</div>
+                                <div class="label3" id="label_divisi7">.</div>
                             </div>
                         </div>
                     </td>
@@ -571,8 +572,8 @@
                             <div class="containers">
 
                                 <div class="label1" id="label_name8">.</div>
-                                <div class="label2" id="label_nik8">.</div>
-                                <div class="label3" id="label_department8">.</div>
+                                <div class="label2" id="label_time8">.</div>
+                                <div class="label3" id="label_divisi8">.</div>
                             </div>
                         </div>
                     </td>

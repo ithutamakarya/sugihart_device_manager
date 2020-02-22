@@ -16,21 +16,12 @@ $("#carousel-custom").on("slide.bs.carousel", async function(a) {
             $("#carousel-custom").carousel("pause");
         }, 1);
         myvideo = $("#video_" + pos_carousel_now)[0];
-
+ 
         var duration_ = video_duration[pos_carousel_now];
-        var is_myvideo_run = false;
         
         await myvideo.pause();
         myvideo.currentTime = 0;
-        while(!is_myvideo_run){
-            try {
-                is_myvideo_run = true;
-                await myvideo.play();
-            }
-            catch(err) {
-                is_myvideo_run = false;
-            }   
-        }
+        await myvideo.play();
         console.log("Video duration : " +  duration_);
         start_video_worker();
         on_video_run = true;

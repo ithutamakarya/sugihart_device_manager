@@ -20,7 +20,10 @@
                 var data = result['data'];
                 for (var i = 0; i < data.length; i++) {
                   var employee_id = data[i].employee_id;
-                  get_face_album_employee(i,employee_id);
+                  var created_at = data[i].created_at;
+                  var time = created_at.slice(10,16);
+
+                  get_face_album_employee(i,time,employee_id);
                 }
               },error: function(request, status, error) {
                 console.log(error);
@@ -28,7 +31,7 @@
             });
 
         }
-        function get_face_album_employee(index_,employee_id) {
+        function get_face_album_employee(index_,time,employee_id) {
 
             $.ajax({
               url: base_url + 'api/get_face_album_employee/' + employee_id,
@@ -37,15 +40,14 @@
               crossOrigin: true,
               success: function(result){
                 var data = result['data'];
-                var src_image = base_url + "face_album/" + data.face_filename;
+                var currentdate = new Date(); 
+                var src_image = "data:image/jpeg;base64," + data.image;
                 var index = index_;
-                
-                    $("#img_profile" + index).attr('src',src_image).bind('onreadystatechange load', function(){
-                        $("#label_name" + index).text(data.name);
-                        $("#label_nik" + index).text(data.nik);
-                        $("#label_department" + index).text(data.department);
-
-                    });
+                $("#img_profile" + index).attr('src',src_image).bind('onreadystatechange load', function(){
+                    $("#label_name" + index).text(data.name);
+                    $("#label_time" + index).text(time);
+                    $("#label_divisi" + index).text(data.divisi_id[1]);
+                });
 
                 
                 /*console.log(result);*/
