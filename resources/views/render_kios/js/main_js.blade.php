@@ -18,6 +18,7 @@
               success: function(result){
                 count = result['count'];
                 var data = result['data'];
+                console.log(data);
                 for (var i = 0; i < data.length; i++) {
                   var employee_id = data[i].employee_id;
                   var created_at = data[i].created_at;

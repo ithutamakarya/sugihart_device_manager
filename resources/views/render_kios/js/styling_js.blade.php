@@ -92,7 +92,7 @@ function setStyle1(data) {
         }
 
         html_item_carousel += '<div class="item ' + active_item + '" data-id="' + i + '">' + element_ + '</div>';
-        html_thumbnail_carousel += '<li data-target="#carousel-custom" data-slide-to="' + i + '" class="thumbnail_data ' + active_item + '">' + element2_ + '</li>';
+        //html_thumbnail_carousel += '<li data-target="#carousel-custom" data-slide-to="' + i + '" class="thumbnail_data ' + active_item + '">' + element2_ + '</li>';
         active_item = '';
     }
 
@@ -194,7 +194,7 @@ function setStyle2(data) {
         }
 
         html_item_carousel += '<div class="item ' + active_item + '" data-id="' + i + '">' + element_ + '</div>';
-        html_thumbnail_carousel += '<li data-target="#carousel-custom" data-slide-to="' + i + '" class="thumbnail_data ' + active_item + '">' + element2_ + '</li>';
+        //html_thumbnail_carousel += '<li data-target="#carousel-custom" data-slide-to="' + i + '" class="thumbnail_data ' + active_item + '">' + element2_ + '</li>';
         active_item = '';
     }
 

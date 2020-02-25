@@ -150,6 +150,7 @@
         #carousel-custom {
             margin-top: 10px;
             width: 100%;
+            height: 100%;
         }
         
         #carousel-custom .carousel-indicators {
@@ -455,7 +456,7 @@
 
         <div id="main-wrap">
             <div id="adv_style1">
-                <div id="carousel_style" class="container-fluid" style="background-color: black;">
+                <div id="carousel_style" class="container-fluid" style="background-color: black;height: 1920px;">
                     <div class="row">
                         <div class="col-lg-12">
                             <div id="carousel-custom" class="carousel slide">
