@@ -1,8 +1,12 @@
 # Native Sugihart Integration Design
 
-Status: approved for execution by the user; implementation and verification in progress.
+Status: implemented and verified on `feature/native-sugihart-integration` (2026-11-07).
 
-Builder check: an independent read-only Laravel design review found "nothing important left" before planning. This review checks design completeness; implementation and verification are still pending.
+Builder check: an independent read-only Laravel design review found "nothing important left" before planning. Implementation then received one independent whole-branch review; its important findings (vendor token rotation and table actions after pagination) were reproduced and fixed with browser regressions.
+
+Verification: 25 application tests / 216 assertions passed independently on SQLite and isolated PostgreSQL; 9 Python converter/archive tests passed. Edge checked CSRF login, CRUD, CCTV subdevices, token preservation, actions after pagination, local assets and kiosk JavaScript. ZIP extraction booted in a fresh Laravel host fixture before/after config, route and view caching. Strict missing-model-attribute handling is covered. The actual vendor host, physical kiosks and external attendance/camera services remain cutover checks.
+
+Deferred minor review finding: the inherited device screen reuses a table ID, so the kiosk table does not receive DataTables sorting/search/pagination. This does not change the kiosk API; UI cleanup is deferred.
 
 ## Intent and user decisions
 

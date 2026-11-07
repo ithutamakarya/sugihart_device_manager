@@ -65,8 +65,8 @@ Interfaces: build tool exposes build_archive(root, output), APPLICATION_FILES an
 
 Files: tests and implementation fixes discovered by independent review; plan/spec status.
 
-- [ ] Run application suite on isolated PostgreSQL and SQLite; run Pint, platform checks and Python tests.
-- [ ] Verify route/config/view caches, local HTTP, assets, inline JS and native archive fixture.
-- [ ] Request one fresh whole-branch review; fix important findings with RED/GREEN tests.
+- [x] Run application suite on isolated PostgreSQL and SQLite; run Pint, platform checks and Python tests.
+- [x] Verify route/config/view caches, local HTTP, assets, inline JS and native archive fixture.
+- [x] Request one fresh whole-branch review; fix important findings with RED/GREEN tests.
 - [ ] Commit tested changes and push only the feature branch under the existing push authorization.
 - [ ] Report artifact, guide, test evidence and actual host/hardware limitations.

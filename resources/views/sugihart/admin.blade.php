@@ -183,12 +183,7 @@
           
           <li class="dropdown auth-drp">
             <a href="#" class="dropdown-toggle pr-0" data-toggle="dropdown">
-              <?php if(auth('sdm')->user()->image){ ?><!-- 
-                        <img src="{{ \App\Http\Controllers\Sugihart\DeviceManagerController::assetUrl('storage/'.auth('sdm')->user()->image) }}" class="img-circle" alt="User Image"> -->
                 <img src="{{ \App\Http\Controllers\Sugihart\DeviceManagerController::assetUrl('elmer/dist/img/user.png') }}" class="user-auth-img img-circle" alt="User Image">
-              <?php  } else { ?>
-                <img src="{{ \App\Http\Controllers\Sugihart\DeviceManagerController::assetUrl('elmer/dist/img/user.png') }}" class="user-auth-img img-circle" alt="User Image">
-              <?php  } ?>
               <span class="user-online-status"></span>
             </a>
             <ul class="dropdown-menu user-auth-dropdown" data-dropdown-in="flipInX" data-dropdown-out="flipOutX">
@@ -952,7 +947,7 @@ $(window).load(function(){
     });
 
     //Delete Function
-    $(".delete_data").on("click",function(){
+    $(document).on("click", ".delete_data", function(){
       var url = $(this).attr("data-url");
 
       swal({
@@ -1050,7 +1045,7 @@ $(window).load(function(){
 
 <script type="text/javascript">
   $(function(){
-    $(".edit_data").click(function(){
+    $(document).on("click", ".edit_data", function(){
       var id = $(this).attr("data-id");
       var id_data = $("#id" + id).text();
       var name_data = $("#name" + id).text();
@@ -1081,7 +1076,7 @@ $(window).load(function(){
 
 <script type="text/javascript">
   $(function(){
-    $(".edit_data").click(function(){
+    $(document).on("click", ".edit_data", function(){
       var id = $(this).attr("data-id");
       var id_data = $("#id" + id).text();
       var name = $("#name" + id).text();
@@ -1093,7 +1088,6 @@ $(window).load(function(){
       $("input[name='name']").val(name);
       $("input[name='token']").val(token);
 
-      $("input[name='token']").val(maketoken(30));
       $('#modal-success').modal('show'); 
     });
     $("#add_data").on('click',function(){
@@ -1122,7 +1116,7 @@ $(window).load(function(){
 <script type="text/javascript">
   $(function(){
 
-    $(".create_sub").click(function(){
+    $(document).on("click", ".create_sub", function(){
       var id = $(this).attr("data-id");
       var type = $("#type" + id).text();
       var token = $("#token" + id).text();
@@ -1134,7 +1128,7 @@ $(window).load(function(){
 
       $('#modal-success').modal('show'); 
     });
-    $(".edit_data").click(function(){
+    $(document).on("click", ".edit_data", function(){
       var id = $(this).attr("data-id");
       var id_data = $("#id" + id).text();
       var name = $("#name" + id).text();

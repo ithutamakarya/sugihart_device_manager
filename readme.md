@@ -36,6 +36,10 @@ python -m unittest discover -s tools -p "test_*.py"
 
 Tes cepat memakai SQLite in-memory. Suite modul juga dapat diuji menggunakan PostgreSQL terpisah dengan variabel `SDM_TEST_PGSQL_*`; lihat panduan PostgreSQL. Pengujian tidak mengubah database produksi.
 
+Regresi browser opsional (Windows/Edge): instal `playwright-core` di direktori terpisah, isi `SDM_PLAYWRIGHT_MODULE` dengan path absolut modul itu dan `SDM_BROWSER_PATH` dengan path `msedge.exe`, lalu jalankan `php artisan config:clear` dan `python tools/test_native_admin_browser.py`. Pastikan port 8766 kosong. Runner membuat SQLite sementara untuk menguji token vendor dan aksi tabel pada halaman kedua tanpa memakai database aplikasi.
+
 Untuk berganti branch, pastikan perubahan tersimpan, jalankan `git switch main` atau `git switch feature/native-sugihart-integration`, kemudian `composer install`, `php artisan config:clear`, `php artisan route:clear`, dan `php artisan view:clear`. Dependency vendor/cache tidak otomatis mengikuti pergantian branch. Jangan menghapus .env atau membuat ulang APP_KEY hanya untuk berganti branch.
+
+Setelah berpindah ke `main`, jalankan juga `php artisan vendor:publish --tag=sdm-assets --force` untuk mengembalikan aset paket.
 
 Panduan paket `PANDUAN_MERGE_ABSENSI_HUTAMAKARYA.md` berlaku untuk versi paket pada `main`; gunakan panduan manual pada branch ini. Source absensi dari vendor dan perangkat kios sebenarnya tetap perlu diuji pada saat integrasi akhir.

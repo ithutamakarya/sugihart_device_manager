@@ -10,6 +10,18 @@ use Tests\TestCase;
 
 class NativePersistenceTest extends TestCase
 {
+    public function test_admin_renders_when_host_prevents_missing_model_attributes(): void
+    {
+        User::create(['name' => 'Admin', 'email' => 'strict@example.test', 'password' => Hash::make('password')]);
+        $this->actingAs(User::firstOrFail(), 'sdm');
+        User::preventAccessingMissingAttributes();
+        try {
+            $this->get($this->path('main/user_list'))->assertOk();
+        } finally {
+            User::preventAccessingMissingAttributes(false);
+        }
+    }
+
     public function test_rendered_login_and_admin_reference_existing_local_assets(): void
     {
         $pages = [$this->get($this->path('login'))->assertOk()->getContent()];

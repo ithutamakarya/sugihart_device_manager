@@ -247,6 +247,8 @@ php artisan view:clear
 
 Ganti `main` dengan `feature/native-sugihart-integration` untuk kembali ke metode native, kemudian jalankan ulang perintah dependency/cache yang sama. Pertahankan `.env` dan `APP_KEY`. Folder `vendor`, cache, dan file ZIP yang diabaikan Git tidak otomatis berganti bersama branch.
 
+Khusus setelah berpindah ke `main`, terbitkan kembali aset paket dengan `php artisan vendor:publish --tag=sdm-assets --force`. Perpindahan dari branch native dapat menghapus aset yang sebelumnya dilacak Git. Perintah publish ini hanya untuk alternatif paket pada `main`; aset branch native sudah menjadi bagian source.
+
 Untuk rollback deployment, kembalikan release source, konfigurasi provider/`.env`, aset, dan aturan web server yang sebelumnya teruji. Jangan menjatuhkan tabel modul untuk membatalkan integrasi; `down()` migrasi sengaja menolak penghapusan data lama. Jika pemulihan database diperlukan, tentukan nasib data baru setelah cutover sebelum memakai backup.
 
 Jangan menjalankan kode Laravel 5.8 lama pada PHP 8.5 sebagai fallback. Siapkan release/runtime rollback yang kompatibel dan tetap mempertahankan URL lama.
