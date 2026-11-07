@@ -8,13 +8,15 @@ Builder check: an independent read-only Laravel design review found "nothing imp
 
 Device manager will become a permanent feature of the rewritten `absensi-hutamakarya` application. The user selected copying source into the host's normal Laravel directories, grouped under Sugihart, instead of continuing to distribute it as a Composer package. Subsequent development follows the absensi project.
 
-The user requests as few files to move as practical and authorizes a new branch, preserving `master` as the working package-based alternative. Existing client URLs and API responses must remain compatible. PostgreSQL, old data/tokens/password hashes, and the existing separate module login/database remain unchanged.
+The user requests as few files to move as practical and authorizes a new branch, preserving `main` as the working package-based alternative. Existing client URLs and API responses must remain compatible. PostgreSQL, old data/tokens/password hashes, and the existing separate module login/database remain unchanged.
 
 ## Branch isolation
 
-- The preexisting Laravel 13 package rewrite was uncommitted. It has now been preserved on `master` as commit `c135e509` (`feat: upgrade device manager to Laravel 13 with reusable PostgreSQL package`).
+The package branch was initially named `master` and was renamed to `main` at the user's request before the first GitHub push.
+
+- The preexisting Laravel 13 package rewrite was uncommitted. It has now been preserved on `main` as commit `c135e509` (`feat: upgrade device manager to Laravel 13 with reusable PostgreSQL package`).
 - Work is in `feature/native-sugihart-integration`, created from that commit in the current checkout. No additional worktree is proposed; the user's requested branch split is sufficient for these sequential alternatives.
-- Further native design, implementation, tests, and documentation belong only to this feature branch. Do not merge the native refactor back into `master` unless requested.
+- Further native design, implementation, tests, and documentation belong only to this feature branch. Do not merge the native refactor back into `main` unless requested.
 - No remote push is authorized. Environment files, database dumps, local PostgreSQL clusters, and generated handoff archives remain outside Git.
 - The package baseline passed 20 application tests/152 assertions, Pint, and 6 converter tests before preserving it. These are baseline results, not evidence that the proposed native implementation already works.
 - Branch-switch instructions must run `composer install` and clear Laravel caches after switching, because `vendor` and cached/generated files are not isolated by Git branches. Keep the existing `.env` and `APP_KEY`.
@@ -43,7 +45,7 @@ The user requests as few files to move as practical and authorizes a new branch,
 | --- | --- | --- |
 | Native Laravel files in Sugihart subdirectories | Familiar to the vendor; source is maintained with absensi; requires explicit integration points | Chosen by user |
 | `app/Modules/Sugihart` module with a loader/provider | More centralized source copying; retains a module-specific layout | Not selected |
-| Existing Composer package | Independent delivery/versioning and auto-discovery; extra package/repository concepts | Remains available on `master` |
+| Existing Composer package | Independent delivery/versioning and auto-discovery; extra package/repository concepts | Remains available on `main` |
 
 Within the chosen approach, minimizing redundant controllers, table-only models, and Blade partials is the proposed implementation choice. Source clarity still matters: retain one separately autoloadable user model and one middleware class.
 
@@ -103,7 +105,7 @@ Nine is the target application-file count, excluding static assets, documentatio
 - Remove the root dependency/repository for `sugihart/device-manager` and register the native provider in the standalone wrapper. Refresh the root lock/autoload/discovery state using normal Composer operations; retain Laravel 13 and PHP `~8.5.12`.
 - Remove package-based source from this branch after all used behavior/assets have native equivalents. Master already preserves it.
 - Keep developer tests/tools/docs separate from the nine copied application files. Update tests to the native implementation, not to legacy classes left around as a shortcut.
-- Make the native merge guide the primary guide on this branch; clearly identify the package guide as belonging to master.
+- Make the native merge guide the primary guide on this branch; clearly identify the package guide as belonging to main.
 
 ## Required verification and acceptance
 
@@ -113,7 +115,7 @@ Nine is the target application-file count, excluding static assets, documentatio
 4. Test repeated module installation against existing imported migration history, without running a synthetic host migration on `sdm`.
 5. Test the handoff manifest/file count, absence of host-global/private files, and ZIP extraction into a fresh host fixture with only provider registration and env settings added.
 6. Smoke-test login and admin interactions, including Create Sub, table editing/deleting, password reset forms, published CSS/JS/fonts, and kiosk HTML/inline JS syntax. Run PostgreSQL-specific tests against an isolated cluster; do not use the user's live/restored local database for destructive tests.
-7. Confirm `master` still points to the preserved package baseline and has not acquired native commits. Document switching branches and refreshing dependencies/caches.
+7. Confirm `main` still points to the preserved package baseline and has not acquired native commits. Document switching branches and refreshing dependencies/caches.
 
 Source absensi from the vendor and the physical kiosks are not available; final host middleware/server/browser/hardware verification remains a vendor cutover requirement.
 
