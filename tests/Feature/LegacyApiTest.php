@@ -3,9 +3,9 @@
 namespace Tests\Feature;
 
 use Illuminate\Support\Facades\DB;
-use Sugihart\DeviceManager\Models\Device;
-use Sugihart\DeviceManager\Models\Vendor;
+use Tests\Device;
 use Tests\TestCase;
+use Tests\Vendor;
 
 class LegacyApiTest extends TestCase
 {

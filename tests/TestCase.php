@@ -39,7 +39,7 @@ abstract class TestCase extends BaseTestCase
         if ($this->postgresSchema !== null) {
             DB::connection('sdm')->statement('CREATE SCHEMA "'.$this->postgresSchema.'"');
         }
-        $migration = require __DIR__.'/../packages/sugihart-device-manager/database/migrations/2026_11_06_000000_create_device_manager_tables.php';
+        $migration = require __DIR__.'/../database/migrations/sugihart/2026_11_06_000000_create_device_manager_tables.php';
         $migration->up();
     }
 

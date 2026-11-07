@@ -2,15 +2,15 @@
 
 namespace Tests\Feature;
 
+use App\Models\Sugihart\User;
+use Illuminate\Auth\Notifications\ResetPassword;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Password;
-use Sugihart\DeviceManager\Models\Device;
-use Sugihart\DeviceManager\Models\LogActivity;
-use Sugihart\DeviceManager\Models\User;
-use Sugihart\DeviceManager\Models\Vendor;
-use Sugihart\DeviceManager\Notifications\ResetPassword;
+use Tests\Device;
+use Tests\LogActivity;
 use Tests\TestCase;
+use Tests\Vendor;
 
 class AdminTest extends TestCase
 {
@@ -107,11 +107,11 @@ class AdminTest extends TestCase
         Notification::fake();
         $user = $this->admin();
         $this->post($this->path('password/email'), ['email' => $user->email])->assertSessionHas('status');
-        Notification::assertSentTo($user, ResetPassword::class, function ($notification) use ($user): bool {
-            $this->assertStringContainsString('/sugihart_device_manager/public/password/reset/', $notification->toMail($user)->actionUrl);
-
-            return true;
-        });
+        Notification::assertCount(1);
+        $sent = Notification::sentNotifications()[User::class][$user->id];
+        $notification = reset($sent)[0]['notification'];
+        $this->assertInstanceOf(ResetPassword::class, $notification);
+        $this->assertStringContainsString('/sugihart_device_manager/public/password/reset/', $notification->toMail($user)->actionUrl);
         $token = Password::broker('sdm')->createToken($user);
         $this->post($this->path('password/reset'), [
             'token' => $token, 'email' => $user->email, 'password' => 'new-password', 'password_confirmation' => 'new-password',

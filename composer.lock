@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "41ca744814c14fdc55cbdbbc01a3276f",
+    "content-hash": "944de6b34c1ce7140d3e6ebf7bc8fd9c",
     "packages": [
         {
             "name": "brick/math",
@@ -3065,40 +3065,6 @@
                 "source": "https://github.com/ramsey/uuid/tree/4.9.4"
             },
             "time": "2026-09-16T11:39:30+00:00"
-        },
-        {
-            "name": "sugihart/device-manager",
-            "version": "1.0.0",
-            "dist": {
-                "type": "path",
-                "url": "packages/sugihart-device-manager",
-                "reference": "ab50f1d250e7a904c03c76a86781eb17147c6147"
-            },
-            "require": {
-                "laravel/framework": "^12.0|^13.0",
-                "php": "~8.5.12"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Sugihart\\DeviceManager\\DeviceManagerServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Sugihart\\DeviceManager\\": "src/"
-                }
-            },
-            "license": [
-                "proprietary"
-            ],
-            "description": "Device manager with legacy kiosk API URLs for Hutamakarya.",
-            "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
         },
         {
             "name": "symfony/clock",

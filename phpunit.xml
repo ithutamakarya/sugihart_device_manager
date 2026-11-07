@@ -5,7 +5,7 @@
     <testsuites>
         <testsuite name="Feature"><directory>tests/Feature</directory></testsuite>
     </testsuites>
-    <source><include><directory>packages/sugihart-device-manager/src</directory></include></source>
+    <source><include><directory>app</directory></include></source>
     <php>
         <env name="APP_ENV" value="testing" force="true"/>
         <env name="APP_KEY" value="base64:MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTI=" force="true"/>

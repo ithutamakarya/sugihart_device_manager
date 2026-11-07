@@ -2,12 +2,12 @@
 
 namespace Tests\Feature;
 
+use App\Models\Sugihart\User;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Schema;
-use Sugihart\DeviceManager\Models\User;
 use Tests\TestCase;
 
 class HostUser extends Authenticatable

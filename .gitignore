@@ -7,7 +7,6 @@
 !.env.example
 /public/storage
 /public/hot
-/public/vendor/sugihart-device-manager
 /storage/*.key
 .phpunit.result.cache
 npm-debug.log
@@ -16,3 +15,6 @@ yarn-error.log
 /device.postgresql.sql
 /device.postgresql.backup
 __pycache__/
+
+/.superpowers
+/integration/*.zip
