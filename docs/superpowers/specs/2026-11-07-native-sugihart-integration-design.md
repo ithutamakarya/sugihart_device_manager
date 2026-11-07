@@ -1,6 +1,6 @@
 # Native Sugihart Integration Design
 
-Status: proposed; approach chosen, detailed design awaiting user approval.
+Status: approved for execution by the user; implementation and verification in progress.
 
 Builder check: an independent read-only Laravel design review found "nothing important left" before planning. This review checks design completeness; implementation and verification are still pending.
 
@@ -17,7 +17,7 @@ The package branch was initially named `master` and was renamed to `main` at the
 - The preexisting Laravel 13 package rewrite was uncommitted. It has now been preserved on `main` as commit `c135e509` (`feat: upgrade device manager to Laravel 13 with reusable PostgreSQL package`).
 - Work is in `feature/native-sugihart-integration`, created from that commit in the current checkout. No additional worktree is proposed; the user's requested branch split is sufficient for these sequential alternatives.
 - Further native design, implementation, tests, and documentation belong only to this feature branch. Do not merge the native refactor back into `main` unless requested.
-- No remote push is authorized. Environment files, database dumps, local PostgreSQL clusters, and generated handoff archives remain outside Git.
+- The user subsequently authorized pushing both branches; native updates may be pushed only to the feature branch. Environment files, database dumps, local PostgreSQL clusters, and generated handoff archives remain outside Git.
 - The package baseline passed 20 application tests/152 assertions, Pint, and 6 converter tests before preserving it. These are baseline results, not evidence that the proposed native implementation already works.
 - Branch-switch instructions must run `composer install` and clear Laravel caches after switching, because `vendor` and cached/generated files are not isolated by Git branches. Keep the existing `.env` and `APP_KEY`.
 
@@ -94,7 +94,7 @@ Nine is the target application-file count, excluding static assets, documentatio
 
 ## Static assets and one-file handoff
 
-- Native authoritative static files move from `packages/.../public` to `public/vendor/sugihart-device-manager` on the feature branch. Change that branch's Git ignore rule so the authoritative assets are versioned there. Master retains its original package source/publishing model.
+- Native authoritative static files move from `packages/.../public` to `public/vendor/sugihart-device-manager` on the feature branch. Change that branch's Git ignore rule so the authoritative assets are versioned there. Main retains its original package source/publishing model.
 - Preserve required Elmer/third-party asset paths. Exclude executable vendor demos and irrelevant private/generated files from the handoff. Pruning unused static assets is optional and only allowed when dependencies remain complete.
 - A build tool outside the nine application files produces `integration/sugihart-native.zip`. It contains the nine application files, the static asset subtree, and a uniquely named native merge guide. The tool is a developer convenience and is not required in the host app.
 - The ZIP must never overwrite host `composer.json`, `composer.lock`, `bootstrap/providers.php`, `.env`, or `public/index.php`. Include a manifest listing what will be extracted.
@@ -103,7 +103,7 @@ Nine is the target application-file count, excluding static assets, documentatio
 ## Standalone repository on the feature branch
 
 - Remove the root dependency/repository for `sugihart/device-manager` and register the native provider in the standalone wrapper. Refresh the root lock/autoload/discovery state using normal Composer operations; retain Laravel 13 and PHP `~8.5.12`.
-- Remove package-based source from this branch after all used behavior/assets have native equivalents. Master already preserves it.
+- Remove package-based source from this branch after all used behavior/assets have native equivalents. Main already preserves it.
 - Keep developer tests/tools/docs separate from the nine copied application files. Update tests to the native implementation, not to legacy classes left around as a shortcut.
 - Make the native merge guide the primary guide on this branch; clearly identify the package guide as belonging to main.
 

@@ -1,5 +1,7 @@
 # Integrasi ke absensi-hutamakarya
 
+> Dokumen ini untuk alternatif **paket Composer pada branch `main`**. Untuk branch native saat ini, gunakan [panduan merge manual](../PANDUAN_MERGE_MANUAL_ABSENSI_HUTAMAKARYA.md).
+
 Untuk urutan lengkap pemasangan, restore DBeaver, pengujian staging, cutover, dan rollback, ikuti **[Panduan Merge Step by Step untuk Vendor](../PANDUAN_MERGE_ABSENSI_HUTAMAKARYA.md)**. Dokumen ini merupakan ringkasan teknis pendamping.
 
 Paket berada di `packages/sugihart-device-manager`. Aplikasi pembungkus di root memakai Laravel 13; paket dapat dipasang pada Laravel 12 atau 13 dengan PHP 8.5.12 atau patch 8.5 yang lebih baru. Periksa versi proyek dari penyedia jasa dengan `composer show laravel/framework` sebelum memasangnya. Integrasi pada source absensi yang baru belum bisa diuji karena source tersebut belum tersedia.

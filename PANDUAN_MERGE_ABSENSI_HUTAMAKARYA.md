@@ -1,5 +1,7 @@
 # Panduan Merge Sugihart Device Manager ke Absensi Hutamakarya
 
+> Dokumen ini untuk alternatif **paket Composer pada branch `main`**. Untuk branch native saat ini, gunakan [panduan merge manual](PANDUAN_MERGE_MANUAL_ABSENSI_HUTAMAKARYA.md).
+
 Dokumen ini ditujukan untuk pemilik aplikasi dan vendor yang menerima source `absensi-hutamakarya` hasil rewrite. Jalankan integrasi di komputer development atau staging terlebih dahulu, kemudian lakukan cutover produksi setelah pemeriksaan selesai.
 
 **Target:** satu aplikasi Laravel yang melayani absensi dan device manager, menggunakan PHP 8.5.12, dengan URL API device manager lama tetap sama. Database device manager tetap PostgreSQL tersendiri; merge source tidak berarti menggabungkan tabel atau akun kedua aplikasi.
