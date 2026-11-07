@@ -1,0 +1,4 @@
+{
+    "preset": "laravel",
+    "exclude": ["packages/sugihart-device-manager/public", "packages/sugihart-device-manager/resources", ".local", "storage"]
+}

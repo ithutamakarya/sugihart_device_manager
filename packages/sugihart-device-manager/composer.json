@@ -1,0 +1,23 @@
+{
+    "name": "sugihart/device-manager",
+    "version": "1.0.0",
+    "type": "library",
+    "license": "proprietary",
+    "description": "Device manager with legacy kiosk API URLs for Hutamakarya.",
+    "require": {
+        "php": "~8.5.12",
+        "laravel/framework": "^12.0|^13.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sugihart\\DeviceManager\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sugihart\\DeviceManager\\DeviceManagerServiceProvider"
+            ]
+        }
+    }
+}
