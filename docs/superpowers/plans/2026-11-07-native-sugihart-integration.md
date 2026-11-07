@@ -68,5 +68,7 @@ Files: tests and implementation fixes discovered by independent review; plan/spe
 - [x] Run application suite on isolated PostgreSQL and SQLite; run Pint, platform checks and Python tests.
 - [x] Verify route/config/view caches, local HTTP, assets, inline JS and native archive fixture.
 - [x] Request one fresh whole-branch review; fix important findings with RED/GREEN tests.
-- [ ] Commit tested changes and push only the feature branch under the existing push authorization.
-- [ ] Report artifact, guide, test evidence and actual host/hardware limitations.
+- [x] Commit tested changes and push only the feature branch under the existing push authorization.
+- [x] Report artifact, guide, test evidence and actual host/hardware limitations.
+
+Completion evidence: 25/25 application tests with 216 assertions on each of SQLite and PostgreSQL; 9/9 Python tests; Pint and Composer/platform checks passed. Final Edge regressions passed token preservation and later-page actions; the original browser smoke passed CRUD, CSRF login/logout, assets and kiosk JS. The final ZIP manifest and extracted host passed before/after config/route/view caching. See the spec for the deferred minor UI issue and unavailable production-host/hardware checks.
